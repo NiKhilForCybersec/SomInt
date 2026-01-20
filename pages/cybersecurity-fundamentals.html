@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Fundamentals - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <div>IBU SECURITY</div>
+                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search (Ctrl+K)">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" data-page="index">
+                        <span class="nav-icon">🏠</span>
+                        <span>Dashboard</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item active" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">🛡️</span>
+                        <span>Cybersecurity Fundamentals</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">🚨</span>
+                        <span>Incident Response</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">🔍</span>
+                        <span>Vulnerability Management</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">🔐</span>
+                        <span>Identity & Access Mgmt</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">📋</span>
+                        <span>DLP & Compliance</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">🎓</span>
+                        <span>Security Awareness</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">💻</span>
+                        <span>Endpoint Protection</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">☁️</span>
+                        <span>Microsoft 365 Admin</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">🌐</span>
+                        <span>Network Infrastructure</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">💾</span>
+                        <span>Backup & DR</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="telephony">
+                        <span class="nav-icon">📞</span>
+                        <span>Telephony</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">🗣️</span>
+                        <span>Behavioral Questions</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">📝</span>
+                        <span>Scenario Exercises</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">📅</span>
+                        <span>30-60-90 Day Plan</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-overview">
+                    <div class="progress-label">
+                        <span>Overall Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Security</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Cybersecurity Fundamentals</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🛡️ Cybersecurity Fundamentals</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Core security concepts, frameworks, and methodologies essential for the Infrastructure & Cybersecurity Specialist role.
+                </p>
+                
+                <!-- Section: Concept Overview -->
+                <h2>2.1 Core Security Concepts</h2>
+                
+                <div class="card">
+                    <h3>What is Cybersecurity?</h3>
+                    <p class="answer-text">
+                        The practice of protecting systems, networks, and programs from digital attacks aimed at accessing, changing, or destroying sensitive information, extorting money from users, or interrupting normal business processes.
+                    </p>
+                </div>
+                
+                <!-- CIA Triad Diagram -->
+                <div class="card">
+                    <h3>The CIA Triad</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">CIA TRIAD - Foundation of Information Security</div>
+<pre>
+                         ┌─────────────────┐
+                         │ CONFIDENTIALITY │
+                         │   (Secrecy)     │
+                         └────────┬────────┘
+                                  │
+               ┌──────────────────┼──────────────────┐
+               │                  │                  │
+               ▼                  │                  ▼
+     ┌─────────────────┐         │         ┌─────────────────┐
+     │   INTEGRITY     │◄────────┴────────►│  AVAILABILITY   │
+     │  (Accuracy)     │                   │   (Access)      │
+     └─────────────────┘                   └─────────────────┘
+
+     CONFIDENTIALITY: Only authorized users can access data
+     INTEGRITY: Data is accurate and unaltered  
+     AVAILABILITY: Systems are accessible when needed
+</pre>
+                    </div>
+                    <div class="answer-text">
+                        <ul class="key-points">
+                            <li><strong>Confidentiality:</strong> Ensuring information is accessible only to authorized individuals. Implemented through encryption, access controls, and authentication.</li>
+                            <li><strong>Integrity:</strong> Ensuring data remains accurate and unmodified. Implemented through hashing, digital signatures, and checksums.</li>
+                            <li><strong>Availability:</strong> Ensuring systems and data are accessible when needed. Implemented through redundancy, backups, and disaster recovery.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Defense in Depth -->
+                <div class="card">
+                    <h3>Defense in Depth Model</h3>
+                    <div class="ascii-diagram green">
+                        <div class="ascii-diagram-title">LAYERED SECURITY ARCHITECTURE</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DEFENSE IN DEPTH                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  LAYER 1: POLICIES & PROCEDURES                                            │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Security policies, training, acceptable use, incident response plans  │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 2: PHYSICAL SECURITY                                                │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Access controls, cameras, locks, secure facilities, visitor logs      │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 3: PERIMETER SECURITY                                               │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Firewalls, DMZ, VPN, IDS/IPS, WAF, DDoS protection                   │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 4: NETWORK SECURITY                                                 │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Segmentation, VLANs, NAC, network monitoring, encryption             │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 5: ENDPOINT SECURITY                                                │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Antivirus, EDR, patch management, device hardening, MDM              │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 6: APPLICATION SECURITY                                             │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Secure coding, input validation, authentication, authorization       │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│  LAYER 7: DATA SECURITY                                                    │
+│  ┌───────────────────────────────────────────────────────────────────────┐ │
+│  │ Encryption, DLP, backup, access controls, classification             │ │
+│  └───────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Security Frameworks</span></div>
+                
+                <!-- Section: Frameworks -->
+                <h2>2.2 Security Frameworks Comparison</h2>
+                
+                <!-- Framework Selection Decision Tree -->
+                <div class="card">
+                    <h3>Framework Selection Decision Tree</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">CHOOSING THE RIGHT FRAMEWORK</div>
+<pre>
+                        ┌─────────────────────────┐
+                        │ What is your primary    │
+                        │ compliance requirement? │
+                        └───────────┬─────────────┘
+                                    │
+          ┌─────────────────────────┼─────────────────────────┐
+          │                         │                         │
+          ▼                         ▼                         ▼
+┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+│ Government/     │      │ Industry        │      │ General Best    │
+│ Regulatory      │      │ Specific        │      │ Practice        │
+└────────┬────────┘      └────────┬────────┘      └────────┬────────┘
+         │                        │                        │
+    ┌────┴────┐              ┌────┴────┐              ┌────┴────┐
+    ▼         ▼              ▼         ▼              ▼         ▼
+┌───────┐ ┌───────┐    ┌───────┐ ┌───────┐    ┌───────┐ ┌───────┐
+│ NIST  │ │FedRAMP│    │PCI DSS│ │ HIPAA │    │ISO    │ │ CIS   │
+│ CSF   │ │       │    │(Cards)│ │(Health)│   │27001  │ │Controls│
+└───────┘ └───────┘    └───────┘ └───────┘    └───────┘ └───────┘
+
+EDUCATION SECTOR SPECIFICS (Canada):
+├── PIPEDA (Personal Information Protection)
+├── FIPPA (Freedom of Information and Protection of Privacy)
+├── CASL (Canada's Anti-Spam Legislation)
+└── Provincial education ministry requirements
+</pre>
+                    </div>
+                </div>
+                
+                <!-- NIST CSF -->
+                <div class="card">
+                    <h3>NIST Cybersecurity Framework</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">NIST CSF - FIVE CORE FUNCTIONS</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    NIST CYBERSECURITY FRAMEWORK                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+│   │ IDENTIFY │───►│ PROTECT  │───►│  DETECT  │───►│ RESPOND  │───►│ RECOVER  │
+│   └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
+│        │              │               │               │               │
+│        ▼              ▼               ▼               ▼               ▼
+│   ┌──────────┐  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
+│   │• Asset   │  │• Access  │   │• Anomaly │   │• Response│   │• Recovery│
+│   │  Mgmt    │  │  Control │   │  Detection│  │  Planning│   │  Planning│
+│   │• Business│  │• Training│   │• Security│   │• Comms   │   │• Improve-│
+│   │  Context │  │• Data    │   │  Monitor │   │• Analysis│   │  ments   │
+│   │• Govern- │  │  Security│   │• Detection│  │• Mitigate│   │• Comms   │
+│   │  ance    │  │• Info    │   │  Processes│  │          │   │          │
+│   │• Risk    │  │  Protect │   │           │   │          │   │          │
+│   │  Assess  │  │• Maint   │   │           │   │          │   │          │
+│   └──────────┘  └──────────┘   └──────────┘   └──────────┘   └──────────┘
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <!-- ISO 27001 -->
+                <div class="card">
+                    <h3>ISO 27001:2022 Control Domains</h3>
+                    <div class="ascii-diagram purple">
+<pre>
+ISO 27001:2022 CONTROL DOMAINS
+═══════════════════════════════════════════════════════════════════════════════
+
+A.5  Organizational Controls (37 controls)
+     ├── Information security policies
+     ├── Organization of information security
+     ├── Human resource security
+     └── Asset management
+
+A.6  People Controls (8 controls)
+     ├── Screening
+     ├── Terms of employment
+     ├── Security awareness
+     └── Disciplinary process
+
+A.7  Physical Controls (14 controls)
+     ├── Secure areas
+     ├── Equipment security
+     └── Clear desk/screen
+
+A.8  Technological Controls (34 controls)
+     ├── User endpoint devices
+     ├── Privileged access
+     ├── Access control
+     ├── Cryptography
+     ├── Network security
+     └── Application security
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>MITRE ATT&CK Framework</span></div>
+                
+                <!-- MITRE ATT&CK -->
+                <h2>2.3 MITRE ATT&CK Framework</h2>
+                
+                <div class="card">
+                    <h3>Attack Lifecycle Tactics</h3>
+                    <div class="ascii-diagram orange">
+                        <div class="ascii-diagram-title">MITRE ATT&CK ENTERPRISE TACTICS</div>
+<pre>
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                           ATTACK PROGRESSION                                  │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+     INITIAL ACCESS          EXECUTION         PERSISTENCE        PRIVILEGE
+          │                      │                  │             ESCALATION
+          ▼                      ▼                  ▼                  │
+    ┌───────────┐          ┌───────────┐     ┌───────────┐            │
+    │• Phishing │          │• PowerShell│    │• Registry │            ▼
+    │• Exploit  │    ───►  │• Scripts  │ ─►  │  Run Keys │     ┌───────────┐
+    │  Public   │          │• WMI      │     │• Scheduled│     │• Token    │
+    │  App      │          │• Command  │     │  Tasks    │     │  Manipu-  │
+    │• Valid    │          │  Line     │     │• Services │     │  lation   │
+    │  Accounts │          └───────────┘     └───────────┘     │• Exploit  │
+    └───────────┘                                              │  Vulns    │
+                                                               └───────────┘
+          │
+          ▼
+    DEFENSE EVASION     CREDENTIAL ACCESS    DISCOVERY      LATERAL MOVEMENT
+          │                    │                 │                  │
+          ▼                    ▼                 ▼                  ▼
+    ┌───────────┐        ┌───────────┐    ┌───────────┐      ┌───────────┐
+    │• Disable  │        │• Brute    │    │• Network  │      │• RDP      │
+    │  Security │        │  Force    │    │  Scan     │      │• SMB/     │
+    │• Masquer- │        │• Keylog   │    │• Account  │      │  Admin    │
+    │  ading    │        │• Mimikatz │    │  Discovery│      │  Shares   │
+    │• Process  │        │• Pass-the-│    │• System   │      │• SSH      │
+    │  Injection│        │  Hash     │    │  Info     │      │• WinRM    │
+    └───────────┘        └───────────┘    └───────────┘      └───────────┘
+          │
+          ▼
+      COLLECTION         EXFILTRATION         IMPACT
+          │                    │                 │
+          ▼                    ▼                 ▼
+    ┌───────────┐        ┌───────────┐    ┌───────────┐
+    │• Data from│        │• Over C2  │    │• Ransomware│
+    │  Local    │        │• Cloud    │    │• Data      │
+    │  System   │        │  Storage  │    │  Destruction│
+    │• Screen   │        │• Web      │    │• Defacement│
+    │  Capture  │        │  Service  │    │• DoS       │
+    │• Email    │        │           │    │            │
+    └───────────┘        └───────────┘    └───────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Cyber Kill Chain</span></div>
+                
+                <!-- Cyber Kill Chain -->
+                <h2>2.4 Lockheed Martin Cyber Kill Chain</h2>
+                
+                <div class="card">
+                    <h3>Seven Phases of an Attack</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">CYBER KILL CHAIN WITH DEFENSES</div>
+<pre>
+    ┌─────────────┐
+    │   RECON     │  Research, identify targets, harvest emails
+    │   PHASE     │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: OSINT monitoring, social media policy
+           │
+           ▼
+    ┌─────────────┐
+    │ WEAPONIZE   │  Create malware, pair exploit with backdoor
+    │   PHASE     │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: Threat intelligence, malware analysis
+           │
+           ▼
+    ┌─────────────┐
+    │  DELIVERY   │  Transmit weapon via email, web, USB
+    │   PHASE     │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: Email filtering, web proxy, user training
+           │
+           ▼
+    ┌─────────────┐
+    │ EXPLOITATION│  Exploit vulnerability to execute code
+    │   PHASE     │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: Patching, DEP, ASLR, endpoint protection
+           │
+           ▼
+    ┌─────────────┐
+    │INSTALLATION │  Install malware, backdoor, rootkit
+    │   PHASE     │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: EDR, application whitelisting, HIPS
+           │
+           ▼
+    ┌─────────────┐
+    │  COMMAND &  │  Establish C2 channel for remote control
+    │  CONTROL    │  ────────────────────────────────────────────
+    └──────┬──────┘  DEFENSE: Network monitoring, DNS filtering, proxy
+           │
+           ▼
+    ┌─────────────┐
+    │  ACTIONS ON │  Achieve goals: data theft, destruction, ransom
+    │  OBJECTIVES │  ────────────────────────────────────────────
+    └─────────────┘  DEFENSE: DLP, access controls, monitoring, backup
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <!-- Interview Questions Section -->
+                <h2>2.5 Interview Questions & Answers</h2>
+                
+                <!-- Question 1 -->
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>Explain the NIST Cybersecurity Framework and how you would implement it at IBU.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Tests understanding of industry frameworks and ability to apply them practically in a real-world educational environment.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Answer Framework</div>
+                            <ul class="key-points">
+                                <li>Overview of NIST CSF (5 core functions)</li>
+                                <li>Current state assessment approach</li>
+                                <li>Gap identification methodology</li>
+                                <li>Implementation prioritization</li>
+                                <li>Specific IBU application examples</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"The NIST Cybersecurity Framework consists of five core functions: Identify, Protect, Detect, Respond, and Recover. At IBU, I would implement it as follows:</p>
+                                
+                                <p><strong>Identify:</strong> First, I'd conduct an asset inventory of all IT systems, including M365 tenants, Meraki network infrastructure, 8x8 phone systems, and endpoint devices. I'd classify data based on sensitivity—student records, financial data, research materials.</p>
+                                
+                                <p><strong>Protect:</strong> Implement controls like MFA on all accounts via Azure AD, deploy Intune compliance policies for devices, ensure Meraki firewall rules follow least-privilege principles, and establish security awareness training for faculty, staff, and students.</p>
+                                
+                                <p><strong>Detect:</strong> Configure Microsoft Defender XDR for unified threat detection across endpoints, email, and cloud apps. Set up real-time alerting with defined thresholds to minimize false positives while catching genuine threats.</p>
+                                
+                                <p><strong>Respond:</strong> Develop incident response playbooks specific to IBU scenarios—ransomware affecting student systems, data breach of academic records, phishing targeting faculty. Define communication procedures with the CIO and IT Director.</p>
+                                
+                                <p><strong>Recover:</strong> Ensure robust backup systems with tested recovery procedures. Document RTO/RPO for critical systems like the student portal, email, and learning management systems."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Points to Hit</div>
+                            <ul class="key-points">
+                                <li>Demonstrate framework knowledge with all 5 functions</li>
+                                <li>Show practical application with specific examples</li>
+                                <li>Reference IBU-specific systems (M365, Meraki, 8x8)</li>
+                                <li>Mention compliance requirements for education sector</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Common Mistakes</div>
+                            <ul class="mistakes-list">
+                                <li>Being too theoretical without practical examples</li>
+                                <li>Not connecting to the specific role/organization</li>
+                                <li>Forgetting to mention continuous improvement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Follow-up Questions</div>
+                            <ul class="followup-list">
+                                <li>"How would you measure the maturity of each function?"</li>
+                                <li>"What tools would you use to implement each function?"</li>
+                                <li>"How would you prioritize if resources were limited?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>What is the difference between NIST and ISO 27001, and when would you use each?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Tests depth of framework knowledge and ability to choose appropriate standards for different situations.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"NIST CSF and ISO 27001 serve different purposes but can be complementary:</p>
+                                
+                                <p><strong>NIST CSF:</strong></p>
+                                <ul class="key-points">
+                                    <li>Voluntary framework focused on cybersecurity risk management</li>
+                                    <li>Organized around five functions (Identify, Protect, Detect, Respond, Recover)</li>
+                                    <li>Flexible, scalable to any organization size</li>
+                                    <li>Free to implement, commonly used in North America</li>
+                                    <li>Focused on cybersecurity specifically</li>
+                                </ul>
+                                
+                                <p><strong>ISO 27001:</strong></p>
+                                <ul class="key-points">
+                                    <li>International standard for Information Security Management Systems (ISMS)</li>
+                                    <li>Certification-based with formal audit requirements</li>
+                                    <li>Organized around 93 controls in 4 domains (Annex A)</li>
+                                    <li>Requires ongoing compliance audits</li>
+                                    <li>Broader scope including physical security, HR, legal</li>
+                                </ul>
+                                
+                                <p><strong>When to Use:</strong></p>
+                                <p>For IBU, I'd recommend using NIST CSF as the operational framework for day-to-day security operations because it's practical and widely understood. If IBU wanted formal certification to demonstrate security maturity to partners or for regulatory reasons, I'd map NIST controls to ISO 27001 and pursue certification.</p>
+                                
+                                <p>In my previous role, we used NIST for internal security operations but maintained ISO 27001 certification for client-facing assurance."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Comparison Table</div>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Aspect</th>
+                                            <th>NIST CSF</th>
+                                            <th>ISO 27001</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Type</td>
+                                            <td>Framework/Guidelines</td>
+                                            <td>International Standard</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certification</td>
+                                            <td>No formal certification</td>
+                                            <td>Formal certification available</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cost</td>
+                                            <td>Free</td>
+                                            <td>Audit/certification costs</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Geography</td>
+                                            <td>Primarily North America</td>
+                                            <td>Globally recognized</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Scope</td>
+                                            <td>Cybersecurity focused</td>
+                                            <td>Broad information security</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>Explain the MITRE ATT&CK framework and how you use it in threat detection.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Demonstrates practical knowledge of threat intelligence and detection engineering - critical for the security monitoring aspects of this role.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"MITRE ATT&CK is a knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations. It's organized into a matrix with:</p>
+                                
+                                <ul class="key-points">
+                                    <li><strong>Tactics:</strong> The adversary's goals (Initial Access, Execution, Persistence, etc.)</li>
+                                    <li><strong>Techniques:</strong> How they achieve those goals (Phishing, PowerShell, Registry Run Keys)</li>
+                                    <li><strong>Sub-techniques:</strong> Specific variations of techniques</li>
+                                </ul>
+                                
+                                <p><strong>How I Use It:</strong></p>
+                                
+                                <p><strong>1. Detection Engineering:</strong> I map our SIEM detection rules to ATT&CK techniques. For example, a rule detecting PowerShell downloading content maps to T1059.001 (PowerShell) and potentially T1105 (Ingress Tool Transfer).</p>
+                                
+                                <p><strong>2. Gap Analysis:</strong> I use the ATT&CK Navigator to visualize which techniques we can detect versus blind spots. This helps prioritize new detection development.</p>
+                                
+                                <p><strong>3. Threat Hunting:</strong> When hunting, I select specific techniques relevant to our threat landscape. For a university, I'd focus on techniques used in ransomware (T1486), credential theft (T1003), and data exfiltration (T1041).</p>
+                                
+                                <p><strong>4. Incident Investigation:</strong> During incidents, I classify attacker actions using ATT&CK to understand their progression and predict next steps.</p>
+                                
+                                <p>For IBU, I'd ensure our Microsoft Defender XDR alerts are mapped to ATT&CK, creating a common language for the IT team when discussing threats."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Code Example - KQL Query Mapped to ATT&CK</div>
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span class="code-block-lang">KQL</span>
+                                    <button class="code-block-copy">Copy</button>
+                                </div>
+<pre><code><span class="comment">// T1059.001 - PowerShell - Detect encoded commands</span>
+<span class="variable">DeviceProcessEvents</span>
+| <span class="keyword">where</span> ProcessCommandLine <span class="keyword">contains</span> <span class="string">"-EncodedCommand"</span>
+    <span class="keyword">or</span> ProcessCommandLine <span class="keyword">contains</span> <span class="string">"-enc"</span>
+    <span class="keyword">or</span> ProcessCommandLine <span class="keyword">contains</span> <span class="string">"FromBase64String"</span>
+| <span class="keyword">project</span> TimeGenerated, DeviceName, AccountName, ProcessCommandLine
+| <span class="keyword">order by</span> TimeGenerated <span class="keyword">desc</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>How would you handle cybersecurity for a diverse user population (students, faculty, staff)?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">This directly addresses a key challenge of the role - balancing security with the needs of diverse user groups in an academic environment.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"A university environment presents unique challenges because you have:</p>
+                                <ul class="key-points">
+                                    <li>Students with varying technical expertise and personal devices</li>
+                                    <li>Faculty who prioritize academic freedom and may resist restrictions</li>
+                                    <li>Staff with access to sensitive administrative data</li>
+                                    <li>Visiting researchers and guests needing temporary access</li>
+                                </ul>
+                                
+                                <p><strong>My Approach:</strong></p>
+                                
+                                <p><strong>1. Segmented Security Policies:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Students:</strong> Focus on awareness training, MFA enforcement, acceptable use policy</li>
+                                    <li><strong>Faculty:</strong> Balance security with academic needs, provide secure research data handling</li>
+                                    <li><strong>Staff:</strong> Stricter controls on financial and student data systems</li>
+                                    <li><strong>Guests:</strong> Isolated network segment, time-limited access</li>
+                                </ul>
+                                
+                                <p><strong>2. User-Friendly Security:</strong></p>
+                                <ul class="key-points">
+                                    <li>Implement SSO to reduce password fatigue</li>
+                                    <li>Use risk-based authentication (allow low-risk logins, challenge high-risk)</li>
+                                    <li>Provide self-service password reset</li>
+                                </ul>
+                                
+                                <p><strong>3. Awareness Training:</strong></p>
+                                <ul class="key-points">
+                                    <li>Tailored training for each group (student-focused phishing examples)</li>
+                                    <li>Gamification to increase engagement</li>
+                                    <li>Regular simulated phishing tests</li>
+                                </ul>
+                                
+                                <p><strong>4. Technical Controls:</strong></p>
+                                <ul class="key-points">
+                                    <li>Conditional Access policies based on user risk, device compliance, location</li>
+                                    <li>DLP policies for sensitive data (student records, financial info)</li>
+                                    <li>Network segmentation (student WiFi vs. admin networks)</li>
+                                </ul>
+                                
+                                <p>The key is balancing security with the academic mission—being too restrictive will push users to workarounds that create bigger risks."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>What compliance frameworks are relevant to a Canadian university?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Tests knowledge of Canadian privacy laws and education-specific regulations - critical for compliance at IBU.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"For a Canadian university like IBU, several compliance frameworks apply:</p>
+                                
+                                <p><strong>Federal:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>PIPEDA (Personal Information Protection and Electronic Documents Act):</strong> Governs how private-sector organizations collect, use, and disclose personal information. Applies to student and employee data.</li>
+                                </ul>
+                                
+                                <p><strong>Provincial (Ontario):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>FIPPA (Freedom of Information and Protection of Privacy Act):</strong> Applies to Ontario universities regarding access to records and privacy protection.</li>
+                                </ul>
+                                
+                                <p><strong>International (if applicable):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>GDPR:</strong> If IBU has students or operations in the EU, GDPR requirements for data protection apply.</li>
+                                </ul>
+                                
+                                <p><strong>Industry Standards:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>PCI DSS:</strong> If processing student payments/tuition via credit card</li>
+                                    <li><strong>NIST CSF:</strong> Best practice framework for cybersecurity operations</li>
+                                </ul>
+                                
+                                <p><strong>Education-Specific:</strong></p>
+                                <ul class="key-points">
+                                    <li>DLI (Designated Learning Institution) requirements for international student data</li>
+                                    <li>Ministry of Colleges and Universities reporting requirements</li>
+                                </ul>
+                                
+                                <p><strong>My Implementation Approach:</strong></p>
+                                <ol class="key-points">
+                                    <li>Map all compliance requirements to a unified control framework</li>
+                                    <li>Identify overlapping controls to avoid duplicate effort</li>
+                                    <li>Implement technical controls (encryption, access controls, audit logging)</li>
+                                    <li>Document policies and procedures</li>
+                                    <li>Conduct regular audits and gap assessments</li>
+                                    <li>Maintain evidence of compliance for auditors</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Compliance Requirements Summary</div>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Framework</th>
+                                            <th>Scope</th>
+                                            <th>Key Requirements</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PIPEDA</td>
+                                            <td>Personal info in commercial activities</td>
+                                            <td>Consent, limited collection, safeguards</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FIPPA</td>
+                                            <td>Public sector records (Ontario)</td>
+                                            <td>Access to info, privacy protection</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PCI DSS</td>
+                                            <td>Credit card processing</td>
+                                            <td>Network security, encryption, access control</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CASL</td>
+                                            <td>Electronic communications</td>
+                                            <td>Consent for email marketing</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Reference Card -->
+                <div class="section-divider"><span>Quick Reference</span></div>
+                
+                <h2>Quick Reference Card</h2>
+                
+                <div class="card">
+                    <h3>Key Acronyms</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Acronym</th>
+                                    <th>Full Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>CIA</code></td>
+                                    <td>Confidentiality, Integrity, Availability</td>
+                                    <td>Core security principles</td>
+                                </tr>
+                                <tr>
+                                    <td><code>NIST</code></td>
+                                    <td>National Institute of Standards & Technology</td>
+                                    <td>US standards organization</td>
+                                </tr>
+                                <tr>
+                                    <td><code>CSF</code></td>
+                                    <td>Cybersecurity Framework</td>
+                                    <td>NIST's security framework</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ISMS</code></td>
+                                    <td>Information Security Management System</td>
+                                    <td>ISO 27001 concept</td>
+                                </tr>
+                                <tr>
+                                    <td><code>TTP</code></td>
+                                    <td>Tactics, Techniques, Procedures</td>
+                                    <td>MITRE ATT&CK terminology</td>
+                                </tr>
+                                <tr>
+                                    <td><code>APT</code></td>
+                                    <td>Advanced Persistent Threat</td>
+                                    <td>Sophisticated, long-term attacks</td>
+                                </tr>
+                                <tr>
+                                    <td><code>IOC</code></td>
+                                    <td>Indicator of Compromise</td>
+                                    <td>Evidence of potential breach</td>
+                                </tr>
+                                <tr>
+                                    <td><code>C2</code></td>
+                                    <td>Command and Control</td>
+                                    <td>Attacker's control infrastructure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="../index.html" class="page-nav-btn prev">
+                        <div>
+                            <div class="page-nav-label">Previous</div>
+                            <div class="page-nav-title">← Dashboard</div>
+                        </div>
+                    </a>
+                    <a href="incident-response.html" class="page-nav-btn next">
+                        <div>
+                            <div class="page-nav-label">Next Section</div>
+                            <div class="page-nav-title">Incident Response →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral Interview - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <div>IBU SECURITY</div>
+                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search (Ctrl+K)">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" data-page="index">
+                        <span class="nav-icon">🏠</span>
+                        <span>Dashboard</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">🛡️</span>
+                        <span>Cybersecurity Fundamentals</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">🚨</span>
+                        <span>Incident Response</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">🔍</span>
+                        <span>Vulnerability Management</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">🔐</span>
+                        <span>Identity & Access Mgmt</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">📋</span>
+                        <span>DLP & Compliance</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">🎓</span>
+                        <span>Security Awareness</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">💻</span>
+                        <span>Endpoint Protection</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">☁️</span>
+                        <span>Microsoft 365 Admin</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">🌐</span>
+                        <span>Network Infrastructure</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">💾</span>
+                        <span>Backup & DR</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="telephony">
+                        <span class="nav-icon">📞</span>
+                        <span>Telephony</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item active" data-page="behavioral-interview">
+                        <span class="nav-icon">🗣️</span>
+                        <span>Behavioral Questions</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">📝</span>
+                        <span>Scenario Exercises</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">📅</span>
+                        <span>30-60-90 Day Plan</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-overview">
+                    <div class="progress-label">
+                        <span>Overall Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Interview Prep</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Behavioral Questions</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🗣️ Behavioral Interview Questions</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    STAR method responses for leadership, conflict resolution, problem-solving, and teamwork scenarios.
+                </p>
+                
+                <!-- STAR Method Overview -->
+                <div class="card">
+                    <h3>The STAR Method Framework</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">STAR METHOD FOR BEHAVIORAL INTERVIEWS</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         STAR METHOD FRAMEWORK                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+   ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+   │                 │    │                 │    │                 │    │                 │
+   │   SITUATION     │───▶│     TASK        │───▶│    ACTION       │───▶│    RESULT       │
+   │                 │    │                 │    │                 │    │                 │
+   └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │                       │
+         │                       │                       │                       │
+         ▼                       ▼                       ▼                       ▼
+   ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+   │ Set the scene   │    │ Your specific   │    │ Steps YOU took  │    │ Measurable      │
+   │                 │    │ responsibility  │    │                 │    │ outcomes        │
+   │ • When/where    │    │                 │    │ • Be specific   │    │                 │
+   │ • Context       │    │ • Your role     │    │ • Use "I" not   │    │ • Quantify      │
+   │ • Challenge     │    │ • Goal to       │    │   "we"          │    │ • What changed  │
+   │                 │    │   achieve       │    │ • Show thinking │    │ • What learned  │
+   └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
+
+   ┌─────────────────────────────────────────────────────────────────────────────┐
+   │ TIMING: Situation + Task = 20%  |  Action = 60%  |  Result = 20%           │
+   └─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                    
+                    <div class="alert-box info">
+                        <div class="alert-title">💡 Pro Tips for STAR Responses</div>
+                        <ul class="key-points">
+                            <li><strong>Be specific:</strong> Use real examples with concrete details</li>
+                            <li><strong>Quantify results:</strong> "Reduced incidents by 40%" beats "improved security"</li>
+                            <li><strong>Own your actions:</strong> Say "I" not "we" when describing what you did</li>
+                            <li><strong>Include challenges:</strong> Show how you overcame obstacles</li>
+                            <li><strong>Keep it relevant:</strong> Choose examples that relate to the role</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Leadership & Initiative</span></div>
+                
+                <!-- Leadership Questions -->
+                <h2>11.1 Leadership & Initiative</h2>
+                
+                <!-- Question 1 -->
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>Tell me about a time you led a security initiative or project.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">IBU needs someone who can drive security improvements, not just respond to tickets. They want to see initiative and project management skills.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer (DLP Migration Project)</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"At my current organization, a Siemens subsidiary, we were using Symantec DLP which was approaching end-of-life. We had no centralized data protection strategy, and sensitive engineering documents were at risk of unauthorized sharing."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I was tasked with leading the migration from Symantec DLP to Microsoft Purview Endpoint DLP across 500+ endpoints, while maintaining continuous protection during the transition."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Planning:</strong> I created a phased migration plan - audit mode first, then warn, then block - to minimize business disruption</li>
+                                    <li><strong>Stakeholder Management:</strong> I conducted workshops with Legal, HR, and Engineering to understand their data classification needs and get buy-in</li>
+                                    <li><strong>Technical Execution:</strong> I designed the DLP policies to protect our most sensitive data types - CAD files, source code, customer PII - while allowing legitimate business workflows</li>
+                                    <li><strong>Testing:</strong> I ran a 30-day pilot with 50 users, gathering feedback and refining policies before broader rollout</li>
+                                    <li><strong>Documentation:</strong> I created end-user guides explaining what would change and why it mattered</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Successfully migrated 100% of endpoints with zero business-critical workflow disruptions</li>
+                                    <li>Detected and blocked 200+ potential data exfiltration attempts in the first month</li>
+                                    <li>Reduced our compliance audit findings related to data protection by 60%</li>
+                                    <li>Project became a template for other Siemens subsidiaries to follow</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Points to Hit</div>
+                            <ul class="key-points">
+                                <li>Show end-to-end ownership of the project</li>
+                                <li>Demonstrate stakeholder management</li>
+                                <li>Include measurable outcomes</li>
+                                <li>Show how it improved the organization's security posture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>Describe a time you identified a security risk that others had overlooked.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"During a routine review of our Azure AD configuration, I noticed that we had several legacy service accounts with passwords that hadn't been rotated in over two years. These accounts had been created during our initial cloud migration and were essentially forgotten."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to assess the risk, determine what these accounts had access to, and remediate without breaking any critical services that might depend on them."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li>I audited all service accounts, documenting their permissions and last sign-in activity</li>
+                                    <li>Discovered three accounts had Global Admin privileges but hadn't been used in 18+ months</li>
+                                    <li>Traced the accounts to their original purpose by reviewing old change tickets</li>
+                                    <li>Worked with the application owners to either decommission or convert to managed identities</li>
+                                    <li>Implemented a quarterly service account review process to prevent recurrence</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Removed 5 stale accounts with elevated privileges</li>
+                                    <li>Converted 8 accounts to managed identities (no more password management)</li>
+                                    <li>Created documentation and review process now used across all Siemens subsidiaries</li>
+                                    <li>Finding was praised in our next security audit as proactive risk management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Problem Solving & Troubleshooting</span></div>
+                
+                <!-- Problem Solving Questions -->
+                <h2>11.2 Problem Solving & Technical Challenges</h2>
+                
+                <!-- Question 3 -->
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>Tell me about a complex technical problem you solved.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"We were experiencing intermittent Cortex XDR agent crashes on about 15% of our engineering workstations. These were high-value assets running specialized CAD software, and the crashes were causing data loss and productivity issues."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to identify the root cause, implement a fix, and do so without leaving these critical systems unprotected."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Data Collection:</strong> I gathered crash dumps, event logs, and correlated them with the specific software versions running on affected machines</li>
+                                    <li><strong>Pattern Analysis:</strong> Discovered the crashes only occurred when a specific CAD plugin was active - the XDR agent's behavior monitoring was conflicting with the plugin's memory hooks</li>
+                                    <li><strong>Vendor Coordination:</strong> Opened cases with both Palo Alto (Cortex XDR) and the CAD vendor, providing detailed technical evidence</li>
+                                    <li><strong>Interim Solution:</strong> Created a targeted exception policy for the specific process while maintaining protection for everything else</li>
+                                    <li><strong>Validation:</strong> Tested the exception thoroughly in a lab environment before production deployment</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Crashes eliminated within 48 hours of identifying root cause</li>
+                                    <li>Palo Alto released a fix in their next agent update based on my bug report</li>
+                                    <li>Created a troubleshooting guide that helped other teams facing similar compatibility issues</li>
+                                    <li>Engineering team's productivity restored with no security coverage gaps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>Describe a time you had to make a quick decision with limited information.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"At 2 AM on a Saturday, I received an alert that our Defender XDR had detected what appeared to be Cobalt Strike beacon activity on a domain controller. I was on-call and had to make immediate decisions about containment."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to decide quickly whether to isolate the domain controller - which would cause significant business disruption - or risk allowing a potential attacker to maintain access to our most critical system."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Quick Assessment (5 minutes):</strong> Reviewed the alert details, saw the process was spawned from a legitimate admin tool but with suspicious network connections</li>
+                                    <li><strong>Risk Calculation:</strong> DC compromise = worst case scenario. Business disruption = recoverable. Decision: isolate</li>
+                                    <li><strong>Execution:</strong> Used Defender for Endpoint to isolate the machine while preserving network access for investigation</li>
+                                    <li><strong>Investigation:</strong> Discovered it was actually a red team exercise that hadn't been properly communicated to the SOC</li>
+                                    <li><strong>Documentation:</strong> Documented my decision-making process and recommended improvements to red team/blue team coordination</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Decision validated by leadership - "better to isolate and be wrong than not isolate and be wrong"</li>
+                                    <li>Created new red team engagement protocol requiring SOC notification</li>
+                                    <li>Response time (15 minutes to containment) was used as a positive metric in our security reports</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Takeaway</div>
+                            <p class="answer-text">Show that you can balance security vs. business needs, make defensible decisions under pressure, and learn from each incident.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Conflict & Communication</span></div>
+                
+                <!-- Conflict Questions -->
+                <h2>11.3 Conflict Resolution & Communication</h2>
+                
+                <!-- Question 5 -->
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>Tell me about a time you disagreed with a colleague or manager about a security decision.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Security often involves saying "no" or pushing back. They want to see you can advocate for security while maintaining relationships.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"Our IT Director wanted to whitelist a third-party file sharing application that a key vendor required us to use. The application had poor security ratings and required disabling several endpoint protection features to function."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to find a way to meet the business need while not creating an unacceptable security risk."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Understood the Need:</strong> I first listened to understand why this was important - the vendor was critical for a major project</li>
+                                    <li><strong>Quantified the Risk:</strong> I documented the specific security concerns with data from our vulnerability scanner and industry reports</li>
+                                    <li><strong>Proposed Alternatives:</strong> I researched and presented three alternatives: a secure file transfer solution, a sandboxed VM approach, and network isolation</li>
+                                    <li><strong>Collaborative Decision:</strong> I didn't just say "no" - I presented options with risk/benefit analysis for each</li>
+                                    <li><strong>Compromise:</strong> We agreed on the sandboxed VM approach - vendor could use their tool, but isolated from our production network</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Business need met without compromising our security posture</li>
+                                    <li>IT Director appreciated the solution-oriented approach</li>
+                                    <li>Created a template for evaluating risky third-party applications</li>
+                                    <li>Strengthened my working relationship with leadership by being a partner, not a blocker</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 6 -->
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q6</span>
+                            <span>How do you explain technical security concepts to non-technical stakeholders?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"I needed to get executive approval for MFA enforcement across the organization. The CFO was resistant, saying it would slow people down and he didn't understand why passwords weren't enough."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to communicate the risk in business terms and demonstrate the value proposition."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Skip the Jargon:</strong> Instead of talking about "credential stuffing" and "phishing vectors," I used an analogy: "A password is like a house key. If someone copies it, they can walk right in. MFA is like adding a doorbell camera that texts you when someone tries to enter."</li>
+                                    <li><strong>Business Impact:</strong> I showed examples of recent breaches at similar companies and the financial/reputational costs</li>
+                                    <li><strong>Address Concerns:</strong> I demonstrated how modern MFA (like Microsoft Authenticator) takes 3 seconds and showed satisfaction surveys from companies that implemented it</li>
+                                    <li><strong>ROI Data:</strong> Presented Microsoft's statistic that MFA blocks 99.9% of account compromise attacks</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>CFO became an advocate for the project</li>
+                                    <li>MFA rolled out with executive sponsorship, which drove 95%+ adoption in first month</li>
+                                    <li>Approach became my template for all security communications to leadership</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Communication Framework</div>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Audience</th>
+                                            <th>Focus On</th>
+                                            <th>Avoid</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Executives</td>
+                                            <td>Business risk, ROI, compliance</td>
+                                            <td>Technical details, acronyms</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Faculty/Staff</td>
+                                            <td>How it affects their work, why it matters</td>
+                                            <td>Fear-mongering, complex procedures</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IT Team</td>
+                                            <td>Technical implementation, integration</td>
+                                            <td>Over-simplification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Students</td>
+                                            <td>Personal benefit, ease of use</td>
+                                            <td>Corporate speak, lengthy policies</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Adaptability & Learning</span></div>
+                
+                <!-- Adaptability Questions -->
+                <h2>11.4 Adaptability & Continuous Learning</h2>
+                
+                <!-- Question 7 -->
+                <div class="question-card" id="q7">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q7</span>
+                            <span>Tell me about a time you had to learn a new technology quickly.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"When we decided to migrate to Microsoft Sentinel as our SIEM, I had deep experience with Splunk but had never worked with Azure's security ecosystem or KQL (Kusto Query Language)."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to become proficient enough in Sentinel within 6 weeks to lead the migration, including creating custom analytics rules and workbooks."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Structured Learning:</strong> I created a learning plan - Microsoft Learn modules first, then hands-on labs in our test environment</li>
+                                    <li><strong>Learn by Doing:</strong> I rebuilt our top 20 Splunk queries in KQL, which forced me to understand both the syntax and the underlying data model</li>
+                                    <li><strong>Community Resources:</strong> Joined the Sentinel community, followed key experts on LinkedIn, participated in webinars</li>
+                                    <li><strong>Documentation:</strong> As I learned, I documented everything - creating a "Splunk to KQL" translation guide for my team</li>
+                                    <li><strong>Certification:</strong> Earned SC-200 (Security Operations Analyst) to validate my knowledge</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Led successful Sentinel migration on schedule</li>
+                                    <li>Created 30+ custom analytics rules tailored to our environment</li>
+                                    <li>Built comprehensive documentation that reduced onboarding time for new analysts by 50%</li>
+                                    <li>Now considered the team's Sentinel SME</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 8 -->
+                <div class="question-card" id="q8">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q8</span>
+                            <span>Describe a failure or mistake you made and what you learned from it.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Everyone makes mistakes. They want to see self-awareness, accountability, and ability to learn. Choose a real mistake but not a catastrophic one.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>Situation:</strong></p>
+                                <p>"Early in my security career, I pushed a GPO update to enforce stronger password policies without adequate testing or communication. The change required all users to reset passwords immediately, causing chaos on a Monday morning."</p>
+                                
+                                <p><strong>Task:</strong></p>
+                                <p>"I needed to fix the immediate problem and ensure I never caused a similar disruption again."</p>
+                                
+                                <p><strong>Action:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Immediate:</strong> Worked with the help desk to triage password resets, prioritizing executives and critical staff</li>
+                                    <li><strong>Root Cause:</strong> I owned the mistake to my manager - I had rushed the change without following our change management process</li>
+                                    <li><strong>Remediation:</strong> Created a pre-deployment checklist for all GPO changes including test groups, communication plans, and rollback procedures</li>
+                                    <li><strong>Process Improvement:</strong> Proposed and implemented a "security change window" to coordinate with help desk</li>
+                                </ul>
+                                
+                                <p><strong>Result:</strong></p>
+                                <ul class="key-points">
+                                    <li>Haven't had a similar incident since - the checklist caught potential issues multiple times</li>
+                                    <li>The change management process I created was adopted by the broader IT team</li>
+                                    <li>Taught me that security changes must consider user experience, not just technical correctness</li>
+                                    <li>Manager appreciated how I handled it - took responsibility and created lasting improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Points</div>
+                            <ul class="key-points">
+                                <li>Own the mistake - don't blame others or circumstances</li>
+                                <li>Show what you learned and how you changed</li>
+                                <li>Demonstrate the positive outcome that resulted</li>
+                                <li>Keep it professional - not too personal or dramatic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>IBU-Specific Questions</span></div>
+                
+                <!-- IBU Specific -->
+                <h2>11.5 IBU-Specific Behavioral Questions</h2>
+                
+                <!-- Question 9 -->
+                <div class="question-card" id="q9">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q9</span>
+                            <span>Why are you interested in working at a university vs. corporate environment?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Several things attract me to higher education IT:</p>
+                                
+                                <p><strong>Mission-Driven Work:</strong> I find it meaningful to support education. Protecting student data and keeping learning systems running directly impacts people's futures."</p>
+                                
+                                <p><strong>Diverse Challenges:</strong> Universities have unique security challenges - balancing openness and security, protecting diverse user populations (students, faculty, staff, visitors), managing research data with various compliance requirements. This variety keeps the work interesting."</p>
+                                
+                                <p><strong>Community:</strong> I appreciate the collaborative culture in education vs. the sometimes competitive atmosphere in corporate environments."</p>
+                                
+                                <p><strong>IBU Specifically:</strong> As a growing institution, IBU offers the opportunity to build security programs rather than just maintain them. I'm excited about the chance to shape security culture from the ground up and implement modern solutions without legacy constraints."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 10 -->
+                <div class="question-card" id="q10">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q10</span>
+                            <span>How would you handle a professor who refuses to follow security policies?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd approach this as a relationship-building opportunity, not a confrontation:</p>
+                                
+                                <p><strong>1. Understand First:</strong> I'd meet with the professor to understand why they're not following the policy. Often resistance comes from a legitimate pain point - maybe the security control is interfering with their teaching or research."</p>
+                                
+                                <p><strong>2. Find Common Ground:</strong> I'd explain the 'why' behind the policy in terms that matter to them - protecting their research data, their students' information, their professional reputation."</p>
+                                
+                                <p><strong>3. Seek Alternatives:</strong> If the policy genuinely interferes with their work, I'd look for alternative controls that provide equivalent security without the friction."</p>
+                                
+                                <p><strong>4. Escalate Appropriately:</strong> If the issue can't be resolved directly, I'd involve their department head or our IT Director - not as a complaint, but as a request for guidance on balancing academic freedom with security requirements."</p>
+                                
+                                <p><strong>5. Document:</strong> I'd document the risk acceptance if they choose to proceed against recommendations, ensuring leadership is aware."</p>
+                                
+                                <p>I've found that most resistance comes from not understanding the risk or having a legitimate workflow concern. Very rarely do people actively want to create security problems."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="telephony.html" class="page-nav-btn prev">
+                        <div>
+                            <div class="page-nav-label">Previous</div>
+                            <div class="page-nav-title">← Telephony</div>
+                        </div>
+                    </a>
+                    <a href="scenario-exercises.html" class="page-nav-btn next">
+                        <div>
+                            <div class="page-nav-label">Next Section</div>
+                            <div class="page-nav-title">Scenario Exercises →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

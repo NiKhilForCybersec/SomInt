@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Infrastructure - IBU Interview Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div>
+                </div>
+            </div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section"><div class="nav-section-title">Security</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item active" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Network Infrastructure</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🌐 Network Infrastructure</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Cisco Meraki, LAN/WAN management, firewall configuration, and wireless network security for university environments.</p>
+                
+                <h2>6.1 Cisco Meraki Overview</h2>
+                <div class="card">
+                    <h3>Meraki Product Stack</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">CISCO MERAKI CLOUD-MANAGED ARCHITECTURE</div>
+<pre>
+                    ┌───────────────────────────────────────┐
+                    │      MERAKI CLOUD DASHBOARD          │
+                    │      dashboard.meraki.com            │
+                    └───────────────────┬───────────────────┘
+                                        │ HTTPS/TLS
+                                        │
+        ┌───────────────────────────────┼───────────────────────────────┐
+        │                               │                               │
+        ▼                               ▼                               ▼
+┌───────────────┐              ┌───────────────┐              ┌───────────────┐
+│  MX SECURITY  │              │  MS SWITCHES  │              │  MR WIRELESS  │
+│   APPLIANCE   │              │               │              │  ACCESS POINTS│
+│               │              │               │              │               │
+│ • Firewall    │              │ • L2/L3       │              │ • 802.11ax    │
+│ • VPN         │              │ • PoE         │              │ • WPA3        │
+│ • IDS/IPS     │              │ • VLAN        │              │ • RADIUS      │
+│ • Content     │              │ • STP         │              │ • Guest       │
+│   Filtering   │              │ • QoS         │              │   Portal      │
+└───────────────┘              └───────────────┘              └───────────────┘
+
+KEY BENEFITS:
+• Single pane of glass management      • Zero-touch deployment
+• Automatic firmware updates           • Built-in security features
+• API-driven automation                • Cloud-hosted analytics
+</pre>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>University Network Segmentation</h3>
+                    <div class="ascii-diagram green">
+                        <div class="ascii-diagram-title">NETWORK SEGMENTATION - VLAN DESIGN</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        UNIVERSITY NETWORK VLANS                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  VLAN 10: MANAGEMENT          VLAN 20: STAFF              VLAN 30: FACULTY │
+│  ┌─────────────────┐          ┌─────────────────┐         ┌────────────────┐│
+│  │ • Network devices│          │ • Admin staff   │         │ • Faculty PCs  ││
+│  │ • Servers (mgmt) │          │ • HR, Finance   │         │ • Research     ││
+│  │ • Highly secure  │          │ • Sensitive data│         │ • Lab systems  ││
+│  └─────────────────┘          └─────────────────┘         └────────────────┘│
+│                                                                             │
+│  VLAN 40: STUDENT             VLAN 50: GUEST              VLAN 60: IOT     │
+│  ┌─────────────────┐          ┌─────────────────┐         ┌────────────────┐│
+│  │ • Student devices│          │ • Visitors      │         │ • Printers     ││
+│  │ • Computer labs  │          │ • Limited access│         │ • AV equipment ││
+│  │ • Internet access│          │ • Internet only │         │ • HVAC/BMS     ││
+│  └─────────────────┘          └─────────────────┘         └────────────────┘│
+│                                                                             │
+│  FIREWALL RULES:                                                            │
+│  • Student → Staff: BLOCKED          • Guest → Internal: BLOCKED            │
+│  • IoT → Internet: RESTRICTED        • Management: ADMIN ONLY               │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                <h2>6.2 Interview Questions</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>How would you design network segmentation for a university campus?</span>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would implement VLAN-based segmentation using Meraki:</p>
+                                <ul class="key-points">
+                                    <li><strong>Management VLAN:</strong> Network devices, highly restricted</li>
+                                    <li><strong>Staff VLAN:</strong> Admin staff with access to sensitive systems</li>
+                                    <li><strong>Faculty VLAN:</strong> Academic staff, research systems</li>
+                                    <li><strong>Student VLAN:</strong> Labs, wireless for student devices</li>
+                                    <li><strong>Guest VLAN:</strong> Isolated, internet-only access</li>
+                                    <li><strong>IoT VLAN:</strong> Printers, cameras, building systems - restricted internet</li>
+                                </ul>
+                                <p>Firewall rules between VLANs enforce least-privilege access. Guest and IoT networks cannot reach internal resources."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>Explain your experience with Cisco Meraki and its advantages.</span>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Meraki's cloud-managed approach offers several advantages for a university:</p>
+                                <ul class="key-points">
+                                    <li><strong>Single Dashboard:</strong> Manage all network devices from one interface</li>
+                                    <li><strong>Zero-Touch Deployment:</strong> Pre-configure devices, they auto-configure on-site</li>
+                                    <li><strong>Automatic Updates:</strong> Firmware updates scheduled and automated</li>
+                                    <li><strong>Built-in Security:</strong> IDS/IPS, content filtering, malware protection</li>
+                                    <li><strong>Location Analytics:</strong> Track foot traffic, useful for campus planning</li>
+                                    <li><strong>API Integration:</strong> Automate with scripts, integrate with SIEM</li>
+                                </ul>
+                                <p>For IBU, I'd leverage Meraki's group policies to automatically apply appropriate restrictions based on whether a device is staff, student, or guest."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>How do you secure a wireless network for diverse users?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Multiple SSIDs with appropriate security for each user type:</p>
+                                <ul class="key-points">
+                                    <li><strong>IBU-Staff:</strong> WPA3-Enterprise, 802.1X with Azure AD, VLAN 20</li>
+                                    <li><strong>IBU-Student:</strong> WPA3-Enterprise, 802.1X authentication, VLAN 40</li>
+                                    <li><strong>IBU-Guest:</strong> Captive portal, terms acceptance, isolated VLAN 50</li>
+                                </ul>
+                                <p>Additional controls:</p>
+                                <ul class="key-points">
+                                    <li>Rogue AP detection enabled</li>
+                                    <li>Client isolation on guest network</li>
+                                    <li>Bandwidth limits per client</li>
+                                    <li>Air Marshal for wireless IDS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>What is 802.1X and how does it improve network security?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"802.1X is a port-based network access control standard that authenticates devices before granting network access:</p>
+                                
+                                <p><strong>How It Works:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Supplicant:</strong> The device requesting access (laptop, phone)</li>
+                                    <li><strong>Authenticator:</strong> The switch or access point</li>
+                                    <li><strong>Authentication Server:</strong> RADIUS server (like Azure AD with NPS)</li>
+                                </ul>
+                                
+                                <p><strong>Process Flow:</strong></p>
+                                <ol>
+                                    <li>Device connects to network port or SSID</li>
+                                    <li>Switch/AP blocks all traffic except authentication</li>
+                                    <li>Device presents credentials (certificate, username/password)</li>
+                                    <li>RADIUS validates against directory (Azure AD)</li>
+                                    <li>If valid, port opens and assigns appropriate VLAN</li>
+                                </ol>
+                                
+                                <p><strong>Security Benefits:</strong></p>
+                                <ul class="key-points">
+                                    <li>No network access without valid credentials</li>
+                                    <li>Dynamic VLAN assignment based on user/device</li>
+                                    <li>Prevents rogue devices on wired network</li>
+                                    <li>Audit trail of who connected where and when</li>
+                                    <li>Can enforce device compliance (certificate = managed device)</li>
+                                </ul>
+                                
+                                <p>For a university, 802.1X ensures only authenticated students and staff get campus network access."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>How would you troubleshoot slow network performance in a specific building?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Systematic troubleshooting approach:</p>
+                                
+                                <p><strong>1. Gather Information:</strong></p>
+                                <ul class="key-points">
+                                    <li>When did it start? (time-based = scheduled process or congestion)</li>
+                                    <li>Wired or WiFi? (different troubleshooting paths)</li>
+                                    <li>All users or specific ones? (user device vs. infrastructure)</li>
+                                    <li>All applications or specific ones? (app-specific vs. network)</li>
+                                </ul>
+                                
+                                <p><strong>2. Check Meraki Dashboard:</strong></p>
+                                <ul class="key-points">
+                                    <li>Switch/AP health - any devices showing errors?</li>
+                                    <li>Client count - is the building overloaded?</li>
+                                    <li>Bandwidth utilization - uplink saturated?</li>
+                                    <li>Latency graphs - when did performance degrade?</li>
+                                    <li>Top talkers - is one device consuming all bandwidth?</li>
+                                </ul>
+                                
+                                <p><strong>3. Common Causes & Fixes:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>WiFi interference:</strong> Check channel utilization, adjust channels</li>
+                                    <li><strong>Uplink saturation:</strong> Identify bandwidth hog, implement QoS</li>
+                                    <li><strong>Spanning tree issues:</strong> Check for topology changes, loops</li>
+                                    <li><strong>Failing hardware:</strong> Check error counters, replace if needed</li>
+                                    <li><strong>DNS issues:</strong> Slow DNS = slow everything, test resolution</li>
+                                </ul>
+                                
+                                <p><strong>4. Escalation Path:</strong></p>
+                                <ul class="key-points">
+                                    <li>If ISP issue: Contact provider with evidence</li>
+                                    <li>If Meraki issue: Open support case with dashboard data</li>
+                                </ul>
+                                
+                                <p>The key is using the dashboard data to narrow down the problem before physically investigating."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q6</span>
+                            <span>What is QoS and why is it important in a university network?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"QoS (Quality of Service) prioritizes certain types of network traffic over others:</p>
+                                
+                                <p><strong>Why It Matters:</strong></p>
+                                <ul class="key-points">
+                                    <li>Not all traffic is equal - voice calls need low latency, downloads can wait</li>
+                                    <li>During congestion, critical apps maintain performance</li>
+                                    <li>Prevents bandwidth hogs from impacting everyone</li>
+                                </ul>
+                                
+                                <p><strong>University QoS Priorities:</strong></p>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Priority</th><th>Traffic Type</th><th>DSCP Value</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1 (Highest)</td><td>Voice (VoIP, Teams calls)</td><td>46 (EF)</td></tr>
+                                        <tr><td>2</td><td>Video conferencing</td><td>34 (AF41)</td></tr>
+                                        <tr><td>3</td><td>Interactive apps (LMS, SIS)</td><td>26 (AF31)</td></tr>
+                                        <tr><td>4</td><td>Business apps, email</td><td>18 (AF21)</td></tr>
+                                        <tr><td>5 (Lowest)</td><td>Bulk downloads, streaming</td><td>0 (BE)</td></tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p><strong>Implementation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Tag traffic at source (endpoints, applications)</li>
+                                    <li>Honor tags at switches and APs</li>
+                                    <li>Configure WAN interface to prioritize during congestion</li>
+                                    <li>Monitor to ensure policies are working</li>
+                                </ul>
+                                
+                                <p>During registration week when bandwidth spikes, QoS ensures faculty Teams meetings still work while students stream Netflix."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="microsoft-365.html" class="page-nav-btn prev"><div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Microsoft 365 Admin</div></div></a>
+                    <a href="backup-dr.html" class="page-nav-btn next"><div><div class="page-nav-label">Next</div><div class="page-nav-title">Backup & DR →</div></div></a>
+                </div>
+                    <a href="backup-dr.html" class="page-nav-btn next"><div><div class="page-nav-label">Next</div><div class="page-nav-title">Backup & DR →</div></div></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

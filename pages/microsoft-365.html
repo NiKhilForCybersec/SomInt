@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft 365 Administration - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar (same as other pages) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <div>IBU SECURITY</div>
+                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search (Ctrl+K)">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
+                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
+                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
+                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item active" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
+                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-overview">
+                    <div class="progress-label"><span>Overall Progress</span><span>0%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Infrastructure</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Microsoft 365 Admin</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>☁️ Microsoft 365 Administration</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Azure AD/Entra ID, Conditional Access, licensing, Exchange Online, and M365 security configuration for university environments.
+                </p>
+                
+                <!-- M365 Admin Architecture -->
+                <h2>5.1 Microsoft 365 Admin Architecture</h2>
+                
+                <div class="card">
+                    <h3>M365 Admin Portals</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">MICROSOFT 365 ADMIN PORTAL ECOSYSTEM</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    MICROSOFT 365 ADMIN PORTALS                                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+    IDENTITY & ACCESS                      SECURITY
+    ┌─────────────────────────┐           ┌─────────────────────────┐
+    │ ENTRA ADMIN CENTER      │           │ SECURITY.MICROSOFT.COM  │
+    │ entra.microsoft.com     │           │                         │
+    │                         │           │ • Defender XDR          │
+    │ • Users & Groups        │           │ • Threat Analytics      │
+    │ • App Registrations     │           │ • Secure Score          │
+    │ • Conditional Access    │           │ • Attack Simulator      │
+    │ • Identity Protection   │           │ • Hunting               │
+    │ • PIM                   │           │                         │
+    └─────────────────────────┘           └─────────────────────────┘
+
+    COMPLIANCE                             ENDPOINT MANAGEMENT
+    ┌─────────────────────────┐           ┌─────────────────────────┐
+    │ PURVIEW COMPLIANCE      │           │ INTUNE ADMIN CENTER     │
+    │ compliance.microsoft.com│           │ intune.microsoft.com    │
+    │                         │           │                         │
+    │ • DLP Policies          │           │ • Device Management     │
+    │ • Sensitivity Labels    │           │ • App Management        │
+    │ • Retention Policies    │           │ • Compliance Policies   │
+    │ • eDiscovery            │           │ • Security Baselines    │
+    │ • Audit Logs            │           │ • Autopilot             │
+    └─────────────────────────┘           └─────────────────────────┘
+
+    COLLABORATION                          UNIFIED ADMIN
+    ┌─────────────────────────┐           ┌─────────────────────────┐
+    │ EXCHANGE ADMIN CENTER   │           │ M365 ADMIN CENTER       │
+    │ admin.exchange.microsoft│           │ admin.microsoft.com     │
+    │                         │           │                         │
+    │ • Mail Flow Rules       │           │ • User Management       │
+    │ • Mailbox Settings      │           │ • Licensing             │
+    │ • Anti-spam/Phishing    │           │ • Billing               │
+    │ • Connectors            │           │ • Service Health        │
+    └─────────────────────────┘           └─────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <!-- Conditional Access -->
+                <div class="section-divider"><span>Conditional Access</span></div>
+                
+                <h2>5.2 Conditional Access Policies</h2>
+                
+                <div class="card">
+                    <h3>Conditional Access Decision Flow</h3>
+                    <div class="ascii-diagram green">
+                        <div class="ascii-diagram-title">CONDITIONAL ACCESS EVALUATION FLOW</div>
+<pre>
+                         ┌───────────────────┐
+                         │   USER SIGN-IN    │
+                         │    ATTEMPT        │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │  FIRST FACTOR     │
+                         │  (Password/FIDO)  │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+              ┌────────────────────────────────────────────┐
+              │     CONDITIONAL ACCESS POLICY EVALUATION   │
+              └────────────────────────────────────────────┘
+                                   │
+         ┌─────────────────────────┼─────────────────────────┐
+         │                         │                         │
+         ▼                         ▼                         ▼
+   ┌───────────┐           ┌───────────┐           ┌───────────┐
+   │   USER/   │           │   APP     │           │ CONDITIONS│
+   │   GROUP   │           │           │           │           │
+   │  assigned │           │ targeted  │           │ • Location│
+   │    to     │           │    by     │           │ • Device  │
+   │  policy?  │           │  policy?  │           │ • Risk    │
+   └─────┬─────┘           └─────┬─────┘           └─────┬─────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │  ALL CONDITIONS MET?   │
+                    └───────────┬────────────┘
+                        ┌───────┴───────┐
+                        │ NO            │ YES
+                        ▼               ▼
+              ┌─────────────────┐  ┌─────────────────────────────┐
+              │ Policy doesn't  │  │   GRANT CONTROLS REQUIRED   │
+              │ apply - next    │  │                             │
+              │ policy or allow │  │  • Require MFA              │
+              └─────────────────┘  │  • Require compliant device │
+                                   │  • Require Hybrid AD Join   │
+                                   │  • Require approved app     │
+                                   │  • Require app protection   │
+                                   └─────────────┬───────────────┘
+                                                 │
+                                                 ▼
+                                    ┌────────────────────────┐
+                                    │ USER SATISFIES GRANTS? │
+                                    └───────────┬────────────┘
+                                        ┌───────┴───────┐
+                                        │ NO            │ YES
+                                        ▼               ▼
+                              ┌─────────────────┐  ┌─────────────────┐
+                              │  ACCESS DENIED  │  │ ACCESS GRANTED  │
+                              │  (or blocked)   │  │ (with session   │
+                              └─────────────────┘  │  controls)      │
+                                                   └─────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Essential Conditional Access Policies for IBU</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Policy</th>
+                                    <th>Target</th>
+                                    <th>Conditions</th>
+                                    <th>Grant Controls</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Require MFA for All Users</strong></td>
+                                    <td>All users (exclude break-glass)</td>
+                                    <td>All cloud apps</td>
+                                    <td>Require MFA</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Block Legacy Authentication</strong></td>
+                                    <td>All users</td>
+                                    <td>Legacy auth clients</td>
+                                    <td>Block access</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Require Compliant Device for Staff</strong></td>
+                                    <td>Staff/Faculty groups</td>
+                                    <td>Sensitive apps (HR, Finance)</td>
+                                    <td>Require compliant device</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Block High-Risk Sign-ins</strong></td>
+                                    <td>All users</td>
+                                    <td>High sign-in risk</td>
+                                    <td>Block access</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Require Password Change for Risky Users</strong></td>
+                                    <td>All users</td>
+                                    <td>High user risk</td>
+                                    <td>Require password change + MFA</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Restrict Admin Access</strong></td>
+                                    <td>Admin roles</td>
+                                    <td>All cloud apps</td>
+                                    <td>MFA + Compliant device + Named location</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="alert warning">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-content">
+                        <div class="alert-title">Always Have Break-Glass Accounts</div>
+                        <div class="alert-text">Exclude 2 emergency access accounts from all Conditional Access policies. These should be cloud-only, have long complex passwords, and be monitored for any use.</div>
+                    </div>
+                </div>
+                
+                <!-- Licensing -->
+                <div class="section-divider"><span>Licensing</span></div>
+                
+                <h2>5.3 Microsoft 365 Licensing for Education</h2>
+                
+                <div class="card">
+                    <h3>M365 Education License Comparison</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>A1</th>
+                                    <th>A3</th>
+                                    <th>A5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Office Web Apps</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Office Desktop Apps</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Azure AD P1 (Conditional Access)</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Azure AD P2 (Identity Protection, PIM)</td>
+                                    <td>✗</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Defender for Office 365 P1</td>
+                                    <td>✗</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Defender for Office 365 P2</td>
+                                    <td>✗</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Defender for Endpoint P1</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Defender for Endpoint P2</td>
+                                    <td>✗</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Information Protection (DLP, Labels)</td>
+                                    <td>Basic</td>
+                                    <td>✓</td>
+                                    <td>✓ (Auto-labeling)</td>
+                                </tr>
+                                <tr>
+                                    <td>Intune</td>
+                                    <td>✗</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="answer-text" style="margin-top: 1rem;">
+                        <strong>Recommendation for IBU:</strong> A3 for students (basic protection + Office apps), A5 for IT/Security staff (full security stack), A5 add-ons for faculty with sensitive data.
+                    </p>
+                </div>
+                
+                <!-- Interview Questions -->
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <h2>5.4 Interview Questions & Answers</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>How would you design Conditional Access policies for a university with students, faculty, and staff?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would create a tiered Conditional Access strategy:</p>
+                                
+                                <p><strong>Baseline Policies (All Users):</strong></p>
+                                <ul class="key-points">
+                                    <li>Require MFA for all users on all apps</li>
+                                    <li>Block legacy authentication protocols</li>
+                                    <li>Block access from high-risk locations (threat intelligence)</li>
+                                </ul>
+                                
+                                <p><strong>Student-Specific Policies:</strong></p>
+                                <ul class="key-points">
+                                    <li>Allow access from personal devices with app protection policies (MAM)</li>
+                                    <li>Block access to admin portals</li>
+                                    <li>Allow web-based access to most resources</li>
+                                </ul>
+                                
+                                <p><strong>Faculty/Staff Policies:</strong></p>
+                                <ul class="key-points">
+                                    <li>Require compliant or hybrid joined device for full access</li>
+                                    <li>Allow limited access from unmanaged devices (web only, no downloads)</li>
+                                    <li>Require compliant device for accessing HR/Finance systems</li>
+                                </ul>
+                                
+                                <p><strong>IT Admin Policies:</strong></p>
+                                <ul class="key-points">
+                                    <li>Require MFA + compliant device + trusted location</li>
+                                    <li>Use Privileged Identity Management for just-in-time access</li>
+                                    <li>Block access from outside Canada for privileged roles</li>
+                                </ul>
+                                
+                                <p><strong>Always exclude break-glass accounts from all policies</strong> and monitor them closely."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>A user is locked out and can't access their account. How do you troubleshoot?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Systematic troubleshooting approach:</p>
+                                
+                                <p><strong>1. Check Azure AD Sign-in Logs:</strong></p>
+                                <ul class="key-points">
+                                    <li>Go to Entra Admin Center → Sign-in logs</li>
+                                    <li>Filter by user and look for recent failures</li>
+                                    <li>Check the failure reason code</li>
+                                </ul>
+                                
+                                <p><strong>2. Common Causes:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Conditional Access blocked:</strong> Check which policy blocked, verify if user should be excluded</li>
+                                    <li><strong>MFA issues:</strong> Check MFA registration, may need to reset MFA methods</li>
+                                    <li><strong>Account disabled:</strong> Check account status in Azure AD</li>
+                                    <li><strong>Password expired:</strong> Reset password or extend policy</li>
+                                    <li><strong>Identity Protection:</strong> Check if user flagged as risky - may need to confirm safe or reset password</li>
+                                </ul>
+                                
+                                <p><strong>3. Quick Fixes:</strong></p>
+                                <div class="code-block">
+                                    <div class="code-block-header">
+                                        <span class="code-block-lang">PowerShell - Account Troubleshooting</span>
+                                        <button class="code-block-copy">Copy</button>
+                                    </div>
+<pre><code><span class="comment"># Check account status</span>
+<span class="function">Get-MgUser</span> -UserId <span class="string">"user@ibu.ca"</span> | 
+    <span class="function">Select</span> AccountEnabled, UserType, SignInSessionsValidFromDateTime
+
+<span class="comment"># Reset MFA</span>
+<span class="function">Reset-MgUserAuthenticationMethodMicrosoftAuthenticator</span> -UserId <span class="string">"user@ibu.ca"</span>
+
+<span class="comment"># Check sign-in logs</span>
+<span class="function">Get-MgAuditLogSignIn</span> -Filter <span class="string">"userPrincipalName eq 'user@ibu.ca'"</span> -Top 10</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>How do you secure privileged admin accounts in Azure AD?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Multi-layered approach to protect privileged accounts:</p>
+                                
+                                <p><strong>1. Privileged Identity Management (PIM):</strong></p>
+                                <ul class="key-points">
+                                    <li>Just-in-time access - admins activate roles when needed</li>
+                                    <li>Time-limited - roles expire after set duration</li>
+                                    <li>Require approval for highly privileged roles</li>
+                                    <li>Require justification for activation</li>
+                                </ul>
+                                
+                                <p><strong>2. Conditional Access for Admins:</strong></p>
+                                <ul class="key-points">
+                                    <li>Require phishing-resistant MFA (FIDO2 keys)</li>
+                                    <li>Require compliant device</li>
+                                    <li>Restrict to trusted network locations</li>
+                                    <li>Block risky sign-ins completely</li>
+                                </ul>
+                                
+                                <p><strong>3. Account Separation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Separate admin accounts from daily-use accounts</li>
+                                    <li>Cloud-only admin accounts (no on-prem sync)</li>
+                                    <li>No email/Teams on admin accounts</li>
+                                </ul>
+                                
+                                <p><strong>4. Monitoring:</strong></p>
+                                <ul class="key-points">
+                                    <li>Alert on all privileged role activations</li>
+                                    <li>Regular access reviews</li>
+                                    <li>Monitor break-glass account usage (should be zero)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Reference -->
+                <div class="section-divider"><span>Quick Reference</span></div>
+                
+                <h2>5.5 Quick Reference Commands</h2>
+                
+                <div class="card">
+                    <h3>Essential Microsoft Graph PowerShell Commands</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">PowerShell - M365 Administration</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code><span class="comment"># Connect to Microsoft Graph</span>
+<span class="function">Connect-MgGraph</span> -Scopes <span class="string">"User.ReadWrite.All"</span>, <span class="string">"Directory.ReadWrite.All"</span>
+
+<span class="comment"># Get user details</span>
+<span class="function">Get-MgUser</span> -UserId <span class="string">"user@ibu.ca"</span> | <span class="function">Format-List</span>
+
+<span class="comment"># Get user's group memberships</span>
+<span class="function">Get-MgUserMemberOf</span> -UserId <span class="string">"user@ibu.ca"</span>
+
+<span class="comment"># Get all Conditional Access policies</span>
+<span class="function">Get-MgIdentityConditionalAccessPolicy</span>
+
+<span class="comment"># Get sign-in logs for a user</span>
+<span class="function">Get-MgAuditLogSignIn</span> -Filter <span class="string">"userPrincipalName eq 'user@ibu.ca'"</span> -Top 50
+
+<span class="comment"># Get risky users</span>
+<span class="function">Get-MgRiskyUser</span> -Filter <span class="string">"riskLevel eq 'high'"</span>
+
+<span class="comment"># Get directory roles and members</span>
+<span class="function">Get-MgDirectoryRole</span> | <span class="keyword">ForEach-Object</span> {
+    <span class="variable">$role</span> = <span class="variable">$_</span>
+    <span class="function">Get-MgDirectoryRoleMember</span> -DirectoryRoleId <span class="variable">$role</span>.Id | 
+        <span class="function">Select</span> @{N=<span class="string">'Role'</span>;E={<span class="variable">$role</span>.DisplayName}}, DisplayName
+}</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="endpoint-protection.html" class="page-nav-btn prev">
+                        <div>
+                            <div class="page-nav-label">Previous</div>
+                            <div class="page-nav-title">← Endpoint Protection</div>
+                        </div>
+                    </a>
+                    <a href="network-infrastructure.html" class="page-nav-btn next">
+                        <div>
+                            <div class="page-nav-label">Next Section</div>
+                            <div class="page-nav-title">Network Infrastructure →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

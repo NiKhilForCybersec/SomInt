@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endpoint Protection - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <div>IBU SECURITY</div>
+                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search (Ctrl+K)">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" data-page="index">
+                        <span class="nav-icon">🏠</span>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">🛡️</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </div>
+                    <div class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">🚨</span>
+                        <span>Incident Response</span>
+                    </div>
+                    <div class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">🔍</span>
+                        <span>Vulnerability Management</span>
+                    </div>
+                    <div class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">🔐</span>
+                        <span>Identity & Access Mgmt</span>
+                    </div>
+                    <div class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">📋</span>
+                        <span>DLP & Compliance</span>
+                    </div>
+                    <div class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">🎓</span>
+                        <span>Security Awareness</span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item active" data-page="endpoint-protection">
+                        <span class="nav-icon">💻</span>
+                        <span>Endpoint Protection</span>
+                    </div>
+                    <div class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">☁️</span>
+                        <span>Microsoft 365 Admin</span>
+                    </div>
+                    <div class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">🌐</span>
+                        <span>Network Infrastructure</span>
+                    </div>
+                    <div class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">💾</span>
+                        <span>Backup & DR</span>
+                    </div>
+                    <div class="nav-item" data-page="telephony">
+                        <span class="nav-icon">📞</span>
+                        <span>Telephony</span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">🗣️</span>
+                        <span>Behavioral Questions</span>
+                    </div>
+                    <div class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">📝</span>
+                        <span>Scenario Exercises</span>
+                    </div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">📅</span>
+                        <span>30-60-90 Day Plan</span>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-overview">
+                    <div class="progress-label">
+                        <span>Overall Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Infrastructure</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Endpoint Protection</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>💻 Endpoint Protection</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Microsoft Defender for Endpoint, Intune MDM, and comprehensive endpoint security strategies for university environments.
+                </p>
+                
+                <!-- Endpoint Security Architecture -->
+                <h2>4.1 Endpoint Security Architecture</h2>
+                
+                <div class="card">
+                    <h3>Microsoft Endpoint Security Stack</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">MICROSOFT ENDPOINT SECURITY ECOSYSTEM</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    MICROSOFT DEFENDER XDR (Unified Portal)                      │
+│                         security.microsoft.com                                   │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  ┌────────────┐ │
+│  │   DEFENDER FOR  │  │   DEFENDER FOR  │  │   DEFENDER FOR  │  │  DEFENDER  │ │
+│  │    ENDPOINT     │  │   OFFICE 365    │  │    IDENTITY     │  │  FOR CLOUD │ │
+│  │                 │  │                 │  │                 │  │    APPS    │ │
+│  │  • EDR          │  │  • Safe Links   │  │  • Azure AD     │  │  • CASB    │ │
+│  │  • AV           │  │  • Safe Attach  │  │    Protection   │  │  • Shadow  │ │
+│  │  • ASR Rules    │  │  • Anti-phish   │  │  • Risk-based   │  │    IT      │ │
+│  │  • Device Ctrl  │  │  • ZAP          │  │    Access       │  │  • App     │ │
+│  │                 │  │                 │  │                 │  │    Control │ │
+│  └────────┬────────┘  └────────┬────────┘  └────────┬────────┘  └─────┬──────┘ │
+│           │                    │                    │                  │        │
+│           └────────────────────┴────────────────────┴──────────────────┘        │
+│                                       │                                         │
+│                                       ▼                                         │
+│                    ┌─────────────────────────────────────┐                      │
+│                    │      MICROSOFT SENTINEL (SIEM)      │                      │
+│                    │   • Log aggregation & correlation   │                      │
+│                    │   • Advanced hunting (KQL)          │                      │
+│                    │   • Automated playbooks (SOAR)      │                      │
+│                    └─────────────────────────────────────┘                      │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                      MICROSOFT INTUNE (Device Management)                        │
+│                          intune.microsoft.com                                    │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  ┌────────────┐ │
+│  │   COMPLIANCE    │  │ CONFIGURATION   │  │      APP        │  │  SECURITY  │ │
+│  │    POLICIES     │  │    PROFILES     │  │   MANAGEMENT    │  │  BASELINES │ │
+│  │                 │  │                 │  │                 │  │            │ │
+│  │  • Device health│  │  • WiFi/VPN     │  │  • App deploy   │  │  • Win 11  │ │
+│  │  • Encryption   │  │  • Email config │  │  • App protect  │  │  • Edge    │ │
+│  │  • Password     │  │  • Restrictions │  │  • MAM policies │  │  • M365    │ │
+│  │  • OS version   │  │  • Certificates │  │  • Store apps   │  │  • Defender│ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘  └────────────┘ │
+│                                                                                 │
+│  SUPPORTED PLATFORMS: Windows 10/11, macOS, iOS/iPadOS, Android, Linux          │
+└─────────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <!-- Defender for Endpoint Features -->
+                <div class="card">
+                    <h3>Microsoft Defender for Endpoint - Key Features</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Description</th>
+                                    <th>IBU Use Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>EDR (Endpoint Detection & Response)</strong></td>
+                                    <td>Behavioral detection, investigation, automated response</td>
+                                    <td>Detect and respond to advanced threats across all university devices</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Attack Surface Reduction (ASR)</strong></td>
+                                    <td>Rules to block common attack techniques</td>
+                                    <td>Block Office macros, script execution, credential theft</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Device Control</strong></td>
+                                    <td>Control USB devices, removable storage</td>
+                                    <td>Prevent data exfiltration via USB on lab computers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Web Content Filtering</strong></td>
+                                    <td>Block access to malicious/inappropriate sites</td>
+                                    <td>Protect students on university networks</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Threat Analytics</strong></td>
+                                    <td>Real-time threat intelligence and exposure assessment</td>
+                                    <td>Understand university's exposure to emerging threats</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Automated Investigation</strong></td>
+                                    <td>AI-driven investigation and remediation</td>
+                                    <td>Handle high alert volume with limited security staff</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Intune MDM</span></div>
+                
+                <!-- Intune Section -->
+                <h2>4.2 Microsoft Intune Device Management</h2>
+                
+                <div class="card">
+                    <h3>Enrollment Methods Comparison</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Ownership</th>
+                                    <th>Management Level</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Azure AD Join + Autopilot</strong></td>
+                                    <td>Corporate</td>
+                                    <td>Full device management</td>
+                                    <td>Staff/faculty Windows devices</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hybrid Azure AD Join</strong></td>
+                                    <td>Corporate</td>
+                                    <td>Full (with on-prem AD)</td>
+                                    <td>Existing domain-joined devices</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BYOD (Personal)</strong></td>
+                                    <td>Personal</td>
+                                    <td>App-level only (MAM)</td>
+                                    <td>Student personal devices</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Apple DEP/ABM</strong></td>
+                                    <td>Corporate</td>
+                                    <td>Supervised (full control)</td>
+                                    <td>University-owned iPads/Macs</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Android Enterprise</strong></td>
+                                    <td>Both</td>
+                                    <td>Work profile or fully managed</td>
+                                    <td>Android tablets in classrooms</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>University Compliance Policy Example</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">JSON - Intune Compliance Policy</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code>{
+  <span class="string">"displayName"</span>: <span class="string">"IBU Windows Compliance Policy"</span>,
+  <span class="string">"description"</span>: <span class="string">"Baseline compliance for university devices"</span>,
+  <span class="string">"platform"</span>: <span class="string">"windows10"</span>,
+  <span class="string">"settings"</span>: {
+    <span class="comment">// Password Requirements</span>
+    <span class="string">"passwordRequired"</span>: <span class="keyword">true</span>,
+    <span class="string">"passwordMinimumLength"</span>: <span class="number">12</span>,
+    <span class="string">"passwordRequiredType"</span>: <span class="string">"alphanumeric"</span>,
+    <span class="string">"passwordMinutesOfInactivityBeforeLock"</span>: <span class="number">15</span>,
+    
+    <span class="comment">// Encryption</span>
+    <span class="string">"bitLockerEnabled"</span>: <span class="keyword">true</span>,
+    <span class="string">"storageRequireEncryption"</span>: <span class="keyword">true</span>,
+    
+    <span class="comment">// System Security</span>
+    <span class="string">"secureBootEnabled"</span>: <span class="keyword">true</span>,
+    <span class="string">"codeIntegrityEnabled"</span>: <span class="keyword">true</span>,
+    <span class="string">"defenderEnabled"</span>: <span class="keyword">true</span>,
+    <span class="string">"defenderVersion"</span>: <span class="string">"latest"</span>,
+    <span class="string">"antivirusRequired"</span>: <span class="keyword">true</span>,
+    <span class="string">"antiSpywareRequired"</span>: <span class="keyword">true</span>,
+    
+    <span class="comment">// OS Version</span>
+    <span class="string">"osMinimumVersion"</span>: <span class="string">"10.0.19044"</span>,
+    
+    <span class="comment">// Firewall</span>
+    <span class="string">"firewallEnabled"</span>: <span class="keyword">true</span>
+  },
+  <span class="string">"scheduledActionsForRule"</span>: [
+    {
+      <span class="string">"ruleName"</span>: <span class="string">"Mark device non-compliant"</span>,
+      <span class="string">"gracePeriodHours"</span>: <span class="number">24</span>,
+      <span class="string">"notificationTemplateId"</span>: <span class="string">"compliance-warning"</span>
+    }
+  ]
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Attack Surface Reduction</span></div>
+                
+                <!-- ASR Rules -->
+                <h2>4.3 Attack Surface Reduction (ASR) Rules</h2>
+                
+                <div class="card">
+                    <h3>Recommended ASR Rules for Education</h3>
+                    <div class="ascii-diagram green">
+                        <div class="ascii-diagram-title">ASR RULES - PRIORITY DEPLOYMENT</div>
+<pre>
+CRITICAL RULES (Deploy Immediately)
+═══════════════════════════════════════════════════════════════════════════════
+
+RULE: Block Office apps from creating executable content
+GUID: 3b576869-a4ec-4529-8536-b80a7769e899
+├── Blocks: Office creating .exe, .dll, .scr files
+├── Impact: Low (minimal legitimate use)
+└── IBU Use: Prevent macro-based malware
+
+RULE: Block Office apps from creating child processes  
+GUID: d4f940ab-401b-4efc-aadc-ad5f3c50688a
+├── Blocks: Word/Excel spawning cmd.exe, PowerShell
+├── Impact: Low-Medium
+└── IBU Use: Stop fileless malware from Office docs
+
+RULE: Block executable content from email client and webmail
+GUID: be9ba2d9-53ea-4cdc-84e5-9b1eeee46550
+├── Blocks: Running executables from Outlook
+├── Impact: Low
+└── IBU Use: Prevent email-delivered malware
+
+RULE: Block credential stealing from LSASS
+GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+├── Blocks: Mimikatz-style credential dumps
+├── Impact: Low
+└── IBU Use: Protect against lateral movement
+
+HIGH PRIORITY RULES (Deploy in Audit First)
+═══════════════════════════════════════════════════════════════════════════════
+
+RULE: Block process creations from PSExec and WMI commands
+GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c
+├── Blocks: Remote execution via PSExec/WMI
+├── Impact: Medium (may affect IT tools)
+└── IBU Use: Block lateral movement
+
+RULE: Block untrusted and unsigned processes from USB
+GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+├── Blocks: Running unsigned code from removable media
+├── Impact: Medium
+└── IBU Use: Protect lab computers from USB threats
+
+RULE: Use advanced protection against ransomware
+GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
+├── Blocks: Suspicious ransomware behaviors
+├── Impact: Low
+└── IBU Use: Additional ransomware protection layer
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Deploying ASR Rules via Intune</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">PowerShell - ASR Configuration</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code><span class="comment"># ASR Rule States: 0=Disabled, 1=Block, 2=Audit, 6=Warn</span>
+
+<span class="comment"># View current ASR rule status</span>
+<span class="function">Get-MpPreference</span> | <span class="function">Select-Object</span> -ExpandProperty AttackSurfaceReductionRules_Ids
+
+<span class="comment"># Enable ASR rule in Block mode</span>
+<span class="function">Add-MpPreference</span> -AttackSurfaceReductionRules_Ids <span class="string">"3b576869-a4ec-4529-8536-b80a7769e899"</span> `
+    -AttackSurfaceReductionRules_Actions <span class="number">1</span>
+
+<span class="comment"># Enable ASR rule in Audit mode (for testing)</span>
+<span class="function">Add-MpPreference</span> -AttackSurfaceReductionRules_Ids <span class="string">"d4f940ab-401b-4efc-aadc-ad5f3c50688a"</span> `
+    -AttackSurfaceReductionRules_Actions <span class="number">2</span>
+
+<span class="comment"># Check for ASR events in Event Viewer</span>
+<span class="function">Get-WinEvent</span> -LogName <span class="string">"Microsoft-Windows-Windows Defender/Operational"</span> | 
+    <span class="function">Where-Object</span> { <span class="variable">$_</span>.Id -in (1121, 1122, 1125, 1126) } |
+    <span class="function">Select-Object</span> TimeCreated, Id, Message -First 20</code></pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <!-- Interview Questions -->
+                <h2>4.4 Interview Questions & Answers</h2>
+                
+                <!-- Question 1 -->
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>How would you implement device management for a mix of university-owned and student personal devices?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Universities have complex device ecosystems. This tests your ability to balance security with privacy and user experience for different device ownership models.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would implement a tiered approach using Microsoft Intune that respects ownership while maintaining security:</p>
+                                
+                                <p><strong>Tier 1: University-Owned Devices (Full MDM)</strong></p>
+                                <ul class="key-points">
+                                    <li>Enroll via Windows Autopilot or Apple Business Manager</li>
+                                    <li>Full device management with compliance policies</li>
+                                    <li>BitLocker/FileVault encryption mandatory</li>
+                                    <li>Security baselines applied</li>
+                                    <li>Software deployment and updates controlled</li>
+                                    <li>Device wipe capability for offboarding</li>
+                                </ul>
+                                
+                                <p><strong>Tier 2: Student/Staff Personal Devices (MAM-only)</strong></p>
+                                <ul class="key-points">
+                                    <li>App Protection Policies (no device enrollment required)</li>
+                                    <li>Only manage university data within apps (Outlook, Teams, OneDrive)</li>
+                                    <li>Require PIN/biometric to access work apps</li>
+                                    <li>Prevent copy/paste from work to personal apps</li>
+                                    <li>Selective wipe (university data only) if needed</li>
+                                    <li>Respects privacy - cannot see personal apps or data</li>
+                                </ul>
+                                
+                                <p><strong>Conditional Access Integration:</strong></p>
+                                <ul class="key-points">
+                                    <li>Require compliant device OR app protection policy</li>
+                                    <li>Block access from unmanaged devices to sensitive data</li>
+                                    <li>Allow web access with limited functionality for unmanaged devices</li>
+                                </ul>
+                                
+                                <p>This approach gives us security controls over university data while respecting that students own their devices and have privacy expectations."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Points to Hit</div>
+                            <ul class="key-points">
+                                <li>Different management levels for different ownership</li>
+                                <li>MAM (Mobile Application Management) for BYOD</li>
+                                <li>Privacy considerations for personal devices</li>
+                                <li>Conditional Access to enforce policies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>Explain how Microsoft Defender for Endpoint detects and responds to threats.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Defender for Endpoint uses multiple detection layers:</p>
+                                
+                                <p><strong>Detection Methods:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Signature-based:</strong> Traditional AV signatures for known malware</li>
+                                    <li><strong>Behavioral analysis:</strong> Machine learning models detect suspicious process behavior</li>
+                                    <li><strong>Cloud intelligence:</strong> Real-time queries to Microsoft's threat intelligence</li>
+                                    <li><strong>Attack surface reduction:</strong> Blocks common attack techniques proactively</li>
+                                </ul>
+                                
+                                <p><strong>EDR Capabilities:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Process tree analysis:</strong> Track parent-child process relationships</li>
+                                    <li><strong>File activity monitoring:</strong> Track file creation, modification, deletion</li>
+                                    <li><strong>Network connections:</strong> Monitor outbound connections, detect C2</li>
+                                    <li><strong>Registry changes:</strong> Track persistence mechanisms</li>
+                                </ul>
+                                
+                                <p><strong>Response Actions:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Automated remediation:</strong> Auto-quarantine malware, undo malicious changes</li>
+                                    <li><strong>Device isolation:</strong> Network isolate while preserving cloud connectivity</li>
+                                    <li><strong>Live Response:</strong> Remote shell for investigation and remediation</li>
+                                    <li><strong>Custom detection rules:</strong> Create rules for organization-specific threats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Code Example - Threat Investigation</div>
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span class="code-block-lang">KQL - Hunt for Suspicious PowerShell</span>
+                                    <button class="code-block-copy">Copy</button>
+                                </div>
+<pre><code><span class="comment">// Hunt for encoded PowerShell commands (common malware technique)</span>
+<span class="variable">DeviceProcessEvents</span>
+| <span class="keyword">where</span> Timestamp > <span class="function">ago</span>(7d)
+| <span class="keyword">where</span> FileName =~ <span class="string">"powershell.exe"</span>
+| <span class="keyword">where</span> ProcessCommandLine <span class="keyword">has_any</span> (<span class="string">"-enc"</span>, <span class="string">"-EncodedCommand"</span>, <span class="string">"FromBase64String"</span>)
+| <span class="keyword">project</span> Timestamp, DeviceName, AccountName, ProcessCommandLine
+| <span class="keyword">order by</span> Timestamp <span class="keyword">desc</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>What are Attack Surface Reduction rules and which would you prioritize for a university?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"ASR rules are proactive controls that block common attack techniques before they execute. They're part of Defender for Endpoint and can be deployed via Intune or Group Policy.</p>
+                                
+                                <p><strong>Top Priority Rules for IBU:</strong></p>
+                                
+                                <p><strong>1. Block Office macros from creating executable content</strong> - Universities receive many documents from external sources. This blocks macro malware which is extremely common.</p>
+                                
+                                <p><strong>2. Block credential stealing from LSASS</strong> - Prevents tools like Mimikatz from dumping credentials. Critical for stopping lateral movement if an attacker gets initial access.</p>
+                                
+                                <p><strong>3. Block executable content from email</strong> - Prevents running executables attached to or downloaded from emails. Students and faculty are prime phishing targets.</p>
+                                
+                                <p><strong>4. Block untrusted processes from USB</strong> - Lab computers are high risk for USB-based threats. This protects shared computers.</p>
+                                
+                                <p><strong>Deployment Strategy:</strong></p>
+                                <ul class="key-points">
+                                    <li>Start in <strong>Audit mode</strong> to identify false positives</li>
+                                    <li>Review logs for 1-2 weeks</li>
+                                    <li>Add exclusions for legitimate applications</li>
+                                    <li>Move to <strong>Block mode</strong> after validation</li>
+                                    <li>Monitor for user impact and adjust as needed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>A device is detected with malware. Walk me through your response using Defender for Endpoint.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd use Defender for Endpoint's investigation capabilities:</p>
+                                
+                                <p><strong>1. Initial Assessment (in Security Portal):</strong></p>
+                                <ul class="key-points">
+                                    <li>Review the alert details - what was detected, severity, file path</li>
+                                    <li>Check if automated investigation already ran</li>
+                                    <li>Note the device name, user, and time of detection</li>
+                                </ul>
+                                
+                                <p><strong>2. Device Investigation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Open the device page and review Timeline</li>
+                                    <li>Trace back: What process created the malicious file? How did it get there?</li>
+                                    <li>Check for lateral movement - did it spread?</li>
+                                    <li>Review network connections - any C2 communication?</li>
+                                </ul>
+                                
+                                <p><strong>3. Containment (if needed):</strong></p>
+                                <ul class="key-points">
+                                    <li>Use 'Isolate Device' to cut network access while maintaining cloud management</li>
+                                    <li>This prevents spread while allowing continued investigation</li>
+                                </ul>
+                                
+                                <p><strong>4. Remediation:</strong></p>
+                                <ul class="key-points">
+                                    <li>If auto-remediation completed - verify malware was removed</li>
+                                    <li>If manual action needed - use Live Response to investigate and clean</li>
+                                    <li>Run full AV scan to check for additional threats</li>
+                                </ul>
+                                
+                                <p><strong>5. Post-Incident:</strong></p>
+                                <ul class="key-points">
+                                    <li>Check if other devices are affected (Threat Analytics)</li>
+                                    <li>Determine root cause - user action? Vulnerability?</li>
+                                    <li>Update detection rules if needed</li>
+                                    <li>User education if phishing-related</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>How do you handle endpoint security for remote users and work-from-home scenarios?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Remote work requires a cloud-first security approach. For IBU:</p>
+                                
+                                <p><strong>Identity & Access:</strong></p>
+                                <ul class="key-points">
+                                    <li>MFA required for all remote access</li>
+                                    <li>Conditional Access policies: block risky sign-ins, require compliant device</li>
+                                    <li>Risk-based authentication - challenge suspicious logins</li>
+                                </ul>
+                                
+                                <p><strong>Device Security:</strong></p>
+                                <ul class="key-points">
+                                    <li>Defender for Endpoint provides protection regardless of network location</li>
+                                    <li>Cloud-delivered protection - always up-to-date signatures</li>
+                                    <li>Compliance policies enforced through Intune</li>
+                                    <li>Always-on VPN for sensitive operations (optional)</li>
+                                </ul>
+                                
+                                <p><strong>Data Protection:</strong></p>
+                                <ul class="key-points">
+                                    <li>DLP policies prevent data leakage from managed apps</li>
+                                    <li>Sensitivity labels encrypt documents automatically</li>
+                                    <li>Block downloads to unmanaged devices via Conditional Access</li>
+                                </ul>
+                                
+                                <p><strong>Network Security:</strong></p>
+                                <ul class="key-points">
+                                    <li>Defender for Endpoint web filtering works everywhere</li>
+                                    <li>DNS protection through Defender (even off-network)</li>
+                                    <li>VPN split tunneling configured to protect corporate traffic</li>
+                                </ul>
+                                
+                                <p>The key is that security follows the user, not the network perimeter."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Reference -->
+                <div class="section-divider"><span>Quick Reference</span></div>
+                
+                <h2>4.5 Quick Reference</h2>
+                
+                <div class="card">
+                    <h3>Key PowerShell Commands</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">PowerShell - Defender Commands</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code><span class="comment"># Check Defender status</span>
+<span class="function">Get-MpComputerStatus</span>
+
+<span class="comment"># Run quick scan</span>
+<span class="function">Start-MpScan</span> -ScanType QuickScan
+
+<span class="comment"># Run full scan</span>
+<span class="function">Start-MpScan</span> -ScanType FullScan
+
+<span class="comment"># Update signatures</span>
+<span class="function">Update-MpSignature</span>
+
+<span class="comment"># Check ASR rules</span>
+<span class="function">Get-MpPreference</span> | <span class="function">Select-Object</span> AttackSurfaceReductionRules_Ids, AttackSurfaceReductionRules_Actions
+
+<span class="comment"># View threat detections</span>
+<span class="function">Get-MpThreatDetection</span>
+
+<span class="comment"># View quarantined items</span>
+<span class="function">Get-MpThreat</span></code></pre>
+                    </div>
+                </div>
+                
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="incident-response.html" class="page-nav-btn prev">
+                        <div>
+                            <div class="page-nav-label">Previous</div>
+                            <div class="page-nav-title">← Incident Response</div>
+                        </div>
+                    </a>
+                    <a href="microsoft-365.html" class="page-nav-btn next">
+                        <div>
+                            <div class="page-nav-label">Next Section</div>
+                            <div class="page-nav-title">Microsoft 365 Admin →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

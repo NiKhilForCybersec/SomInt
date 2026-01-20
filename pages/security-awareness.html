@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Awareness - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
+                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
+                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
+                    <div class="nav-item active" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
+                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Security</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Security Awareness</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🎓 Security Awareness Training</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Building a security culture through effective training, phishing simulations, and measurable awareness programs.
+                </p>
+                
+                <h2>12.1 Security Awareness Program Framework</h2>
+                
+                <div class="card">
+                    <h3>Program Components</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">COMPREHENSIVE SECURITY AWARENESS PROGRAM</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    SECURITY AWARENESS PROGRAM                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                      TRAINING DELIVERY                              │   │
+│   │                                                                     │   │
+│   │   ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌───────────┐    │   │
+│   │   │ Onboarding│   │ Annual    │   │ Role-Based│   │ Just-in-  │    │   │
+│   │   │ Training  │   │ Refresher │   │ Training  │   │ Time Tips │    │   │
+│   │   └───────────┘   └───────────┘   └───────────┘   └───────────┘    │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                    SIMULATED ATTACKS                                │   │
+│   │                                                                     │   │
+│   │   ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌───────────┐    │   │
+│   │   │ Phishing  │   │ Vishing   │   │  Smishing │   │ USB Drop  │    │   │
+│   │   │ Campaigns │   │ (Voice)   │   │  (SMS)    │   │   Tests   │    │   │
+│   │   └───────────┘   └───────────┘   └───────────┘   └───────────┘    │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                    METRICS & REPORTING                              │   │
+│   │                                                                     │   │
+│   │   ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌───────────┐    │   │
+│   │   │ Click     │   │ Report    │   │ Training  │   │ Trend     │    │   │
+│   │   │ Rates     │   │ Rates     │   │ Completion│   │ Analysis  │    │   │
+│   │   └───────────┘   └───────────┘   └───────────┘   └───────────┘    │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Key Training Topics</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Audience</th>
+                                    <th>Frequency</th>
+                                    <th>Format</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Phishing Recognition</td>
+                                    <td>All users</td>
+                                    <td>Quarterly</td>
+                                    <td>Interactive + Simulation</td>
+                                </tr>
+                                <tr>
+                                    <td>Password Security</td>
+                                    <td>All users</td>
+                                    <td>Annual</td>
+                                    <td>Video + Quiz</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Classification</td>
+                                    <td>Staff/Faculty</td>
+                                    <td>Annual</td>
+                                    <td>Module + Examples</td>
+                                </tr>
+                                <tr>
+                                    <td>Incident Reporting</td>
+                                    <td>All users</td>
+                                    <td>Annual</td>
+                                    <td>Quick reference guide</td>
+                                </tr>
+                                <tr>
+                                    <td>PIPEDA/Privacy</td>
+                                    <td>Staff handling data</td>
+                                    <td>Annual</td>
+                                    <td>Compliance training</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h2>12.2 Phishing Simulation Program</h2>
+                
+                <div class="card">
+                    <h3>Phishing Campaign Best Practices</h3>
+                    <ul class="key-points">
+                        <li><strong>Gradual difficulty:</strong> Start easy, increase sophistication over time</li>
+                        <li><strong>Varied themes:</strong> IT alerts, HR notifications, package deliveries, current events</li>
+                        <li><strong>Immediate feedback:</strong> Educate users who click at the moment of failure</li>
+                        <li><strong>Positive reinforcement:</strong> Recognize users who report phishing attempts</li>
+                        <li><strong>No public shaming:</strong> Focus on improvement, not punishment</li>
+                        <li><strong>Regular cadence:</strong> Monthly campaigns to maintain vigilance</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Metrics to Track</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">&lt;5%</div>
+                            <div class="stat-label">Target Click Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">&gt;70%</div>
+                            <div class="stat-label">Report Rate Target</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Training Completion</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">&lt;1%</div>
+                            <div class="stat-label">Credential Submission</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <h2>12.3 Interview Questions & Answers</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>How would you build a security awareness program for a university?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"A university presents unique challenges - diverse users, academic freedom culture, and limited time for training. My approach:</p>
+                                
+                                <p><strong>1. Audience Segmentation:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Students:</strong> Short, mobile-friendly content focused on personal security</li>
+                                    <li><strong>Faculty:</strong> Research data protection, classroom device security</li>
+                                    <li><strong>Staff:</strong> Compliance-focused, data handling procedures</li>
+                                    <li><strong>IT:</strong> Advanced technical training, incident response</li>
+                                </ul>
+                                
+                                <p><strong>2. Delivery Methods:</strong></p>
+                                <ul class="key-points">
+                                    <li>Micro-learning modules (5-10 minutes)</li>
+                                    <li>Integration with LMS for tracking</li>
+                                    <li>Lunch-and-learn sessions</li>
+                                    <li>Security awareness month campaigns</li>
+                                </ul>
+                                
+                                <p><strong>3. Phishing Simulations:</strong></p>
+                                <ul class="key-points">
+                                    <li>Monthly campaigns with university-themed scenarios</li>
+                                    <li>Immediate training for those who click</li>
+                                    <li>Recognition for reporters</li>
+                                </ul>
+                                
+                                <p><strong>4. Metrics & Improvement:</strong></p>
+                                <ul class="key-points">
+                                    <li>Track click rates, report rates, training completion</li>
+                                    <li>Quarterly reports to leadership</li>
+                                    <li>Adjust content based on results</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>How do you handle users who repeatedly fail phishing tests?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Repeat clickers need additional support, not punishment:</p>
+                                
+                                <p><strong>Progressive Approach:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>First failure:</strong> Immediate training module, reset baseline</li>
+                                    <li><strong>Second failure:</strong> One-on-one coaching session, identify why they click</li>
+                                    <li><strong>Third failure:</strong> Manager notification, mandatory additional training</li>
+                                    <li><strong>Continued issues:</strong> Consider access restrictions, closer monitoring</li>
+                                </ul>
+                                
+                                <p><strong>Root Cause Analysis:</strong></p>
+                                <ul class="key-points">
+                                    <li>Is the training effective for their learning style?</li>
+                                    <li>Are they under time pressure that causes rushed decisions?</li>
+                                    <li>Do they understand the consequences?</li>
+                                </ul>
+                                
+                                <p>The goal is behavior change, not punishment. People who feel shamed become disengaged from security entirely."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>What metrics would you use to measure security awareness program effectiveness?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd track metrics across multiple dimensions to get a complete picture:</p>
+                                
+                                <p><strong>Phishing Simulation Metrics:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Click rate:</strong> % who clicked the phishing link (target: &lt;5%)</li>
+                                    <li><strong>Report rate:</strong> % who reported to IT/security (target: &gt;70%)</li>
+                                    <li><strong>Credential submission rate:</strong> % who entered credentials (target: &lt;1%)</li>
+                                    <li><strong>Time to report:</strong> How quickly are phishing emails reported?</li>
+                                    <li><strong>Trend over time:</strong> Are metrics improving quarter-over-quarter?</li>
+                                </ul>
+                                
+                                <p><strong>Training Metrics:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Completion rate:</strong> % completing required training (target: 100%)</li>
+                                    <li><strong>Quiz scores:</strong> Average assessment scores and pass rates</li>
+                                    <li><strong>Time to complete:</strong> Are people rushing through or engaging?</li>
+                                    <li><strong>Feedback scores:</strong> User satisfaction with training content</li>
+                                </ul>
+                                
+                                <p><strong>Behavioral Metrics:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>DLP policy violations:</strong> Trending down indicates better data handling</li>
+                                    <li><strong>Password reset requests:</strong> Fewer resets may indicate better password practices</li>
+                                    <li><strong>Security incident reports:</strong> More reports = users are paying attention</li>
+                                    <li><strong>Clean desk audit results:</strong> Physical security awareness</li>
+                                </ul>
+                                
+                                <p><strong>Reporting Approach:</strong></p>
+                                <ul class="key-points">
+                                    <li>Monthly dashboard for security team</li>
+                                    <li>Quarterly executive summary for leadership</li>
+                                    <li>Department-level breakdowns to identify high-risk groups</li>
+                                    <li>Year-over-year comparison to show program impact</li>
+                                </ul>
+                                
+                                <p>The key is demonstrating ROI - when click rates drop from 20% to 5%, that's real risk reduction leadership can understand."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>How would you handle a real phishing attack that bypassed your filters?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"This is exactly why awareness training matters - it's our last line of defense. Here's my response plan:</p>
+                                
+                                <p><strong>Immediate Response (First 15 Minutes):</strong></p>
+                                <ul class="key-points">
+                                    <li>Confirm it's a real phishing attack, not a simulation</li>
+                                    <li>Use Exchange admin to search for all recipients of the email</li>
+                                    <li>Purge/quarantine unread copies from mailboxes</li>
+                                    <li>Block the sender and malicious URLs at the email gateway and web filter</li>
+                                </ul>
+                                
+                                <p><strong>User Communication (Within 1 Hour):</strong></p>
+                                <ul class="key-points">
+                                    <li>Send organization-wide alert: 'Phishing Alert - Do Not Click'</li>
+                                    <li>Include screenshot of the phishing email so people recognize it</li>
+                                    <li>Clear instructions: delete if received, report if clicked</li>
+                                    <li>Contact info for concerned users</li>
+                                </ul>
+                                
+                                <p><strong>Victim Triage:</strong></p>
+                                <ul class="key-points">
+                                    <li>Review email logs to identify who clicked</li>
+                                    <li>For clickers: Check if credentials were harvested, force password reset</li>
+                                    <li>For credential submitters: Immediate password reset, check for account compromise, review recent activity</li>
+                                    <li>Scan affected endpoints for malware if payload was involved</li>
+                                </ul>
+                                
+                                <p><strong>Post-Incident:</strong></p>
+                                <ul class="key-points">
+                                    <li>Report phishing domain to registrar for takedown</li>
+                                    <li>Update email filters with new IOCs</li>
+                                    <li>Consider targeted training for affected users</li>
+                                    <li>Document lessons learned</li>
+                                </ul>
+                                
+                                <p>Speed is critical - every minute the phishing email sits in inboxes is another chance for someone to click."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>What's the difference between security awareness and security training?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"They're related but serve different purposes:</p>
+                                
+                                <p><strong>Security Awareness:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Goal:</strong> Change behavior and culture around security</li>
+                                    <li><strong>Audience:</strong> All users, regardless of role</li>
+                                    <li><strong>Content:</strong> Why security matters, what threats exist, how to recognize attacks</li>
+                                    <li><strong>Format:</strong> Posters, newsletters, phishing simulations, lunch-and-learns</li>
+                                    <li><strong>Outcome:</strong> Users think before they click, report suspicious activity</li>
+                                </ul>
+                                
+                                <p><strong>Security Training:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Goal:</strong> Build specific skills and knowledge</li>
+                                    <li><strong>Audience:</strong> Role-based - different training for different roles</li>
+                                    <li><strong>Content:</strong> How to use specific tools, procedures, compliance requirements</li>
+                                    <li><strong>Format:</strong> Courses, certifications, hands-on labs, assessments</li>
+                                    <li><strong>Outcome:</strong> Users know HOW to do security tasks correctly</li>
+                                </ul>
+                                
+                                <p><strong>Example Distinction:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Awareness:</strong> 'Phishing emails can steal your credentials' (why it matters)</li>
+                                    <li><strong>Training:</strong> 'Here's how to report a phishing email using the Report Message button in Outlook' (how to do it)</li>
+                                </ul>
+                                
+                                <p>A complete program needs both - awareness creates the motivation, training provides the skills."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q6</span>
+                            <span>How would you tailor security awareness for different user groups at a university?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Universities have diverse user populations with different needs and risk profiles:</p>
+                                
+                                <p><strong>Students:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Challenges:</strong> Short attention spans, BYOD, sharing accounts, financial aid scams</li>
+                                    <li><strong>Approach:</strong> Short, mobile-friendly content; social media style; focus on personal security</li>
+                                    <li><strong>Topics:</strong> Phishing, password managers, public WiFi dangers, identity theft</li>
+                                    <li><strong>Delivery:</strong> Orientation, LMS modules, social media campaigns, peer ambassadors</li>
+                                </ul>
+                                
+                                <p><strong>Faculty:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Challenges:</strong> Research data protection, academic freedom culture, external collaboration</li>
+                                    <li><strong>Approach:</strong> Respect their expertise; focus on protecting their research and reputation</li>
+                                    <li><strong>Topics:</strong> Data classification, secure file sharing, conference travel security, research data handling</li>
+                                    <li><strong>Delivery:</strong> Department meetings, email updates, one-on-one consultations for researchers</li>
+                                </ul>
+                                
+                                <p><strong>Administrative Staff:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Challenges:</strong> Handle sensitive data daily, targeted by social engineering, process-driven</li>
+                                    <li><strong>Approach:</strong> Compliance-focused; clear procedures; emphasize data protection</li>
+                                    <li><strong>Topics:</strong> PIPEDA compliance, data handling, incident reporting, business email compromise</li>
+                                    <li><strong>Delivery:</strong> Mandatory annual training, role-specific modules, department-level sessions</li>
+                                </ul>
+                                
+                                <p><strong>IT Staff:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Challenges:</strong> Privileged access, targeted attacks, security fatigue</li>
+                                    <li><strong>Approach:</strong> Advanced technical content; peer learning; stay current on threats</li>
+                                    <li><strong>Topics:</strong> Privileged account security, incident response, emerging threats, secure development</li>
+                                    <li><strong>Delivery:</strong> Technical workshops, threat briefings, CTF exercises, certifications</li>
+                                </ul>
+                                
+                                <p>One-size-fits-all training doesn't work - people engage when content is relevant to their world."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="dlp-compliance.html" class="page-nav-btn prev">
+                        <div><div class="page-nav-label">Previous</div><div class="page-nav-title">← DLP & Compliance</div></div>
+                    </a>
+                    <a href="behavioral-interview.html" class="page-nav-btn next">
+                        <div><div class="page-nav-label">Next Section</div><div class="page-nav-title">Behavioral Interview →</div></div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

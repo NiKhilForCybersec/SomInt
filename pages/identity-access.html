@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity & Access Management - IBU Interview Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
+                    <div class="nav-item active" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
+                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-separator">/</span><span class="breadcrumb-item current">Identity & Access Management</span></div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🔐 Identity & Access Management</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Azure AD/Entra ID, MFA, SSO, Conditional Access, and Privileged Identity Management.</p>
+                
+                <h2>10.1 Zero Trust Identity Architecture</h2>
+                
+                <div class="card">
+                    <h3>Zero Trust Principles</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">ZERO TRUST IDENTITY MODEL</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        ZERO TRUST PRINCIPLES                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│                    "NEVER TRUST, ALWAYS VERIFY"                            │
+│                                                                             │
+│   ┌───────────────┐   ┌───────────────┐   ┌───────────────┐               │
+│   │   VERIFY      │   │   USE LEAST   │   │   ASSUME      │               │
+│   │   EXPLICITLY  │   │   PRIVILEGE   │   │   BREACH      │               │
+│   │               │   │               │   │               │               │
+│   │ • Strong auth │   │ • JIT access  │   │ • Segment     │               │
+│   │ • Device state│   │ • JEA access  │   │   network     │               │
+│   │ • Location    │   │ • Risk-based  │   │ • Encrypt all │               │
+│   │ • Risk level  │   │   policies    │   │ • Monitor all │               │
+│   └───────────────┘   └───────────────┘   └───────────────┘               │
+│                                                                             │
+│   IDENTITY AS THE NEW PERIMETER                                            │
+│   ┌─────────────────────────────────────────────────────────────────────┐ │
+│   │                                                                     │ │
+│   │    USER ──► IDENTITY ──► CONDITIONAL ──► RESOURCE                  │ │
+│   │             PROVIDER     ACCESS          ACCESS                     │ │
+│   │             (Azure AD)   POLICIES                                   │ │
+│   │                                                                     │ │
+│   │    Every access request is:                                        │ │
+│   │    • Authenticated (who are you?)                                  │ │
+│   │    • Authorized (what can you access?)                             │ │
+│   │    • Encrypted (protect the data)                                  │ │
+│   │    • Logged (audit everything)                                     │ │
+│   │                                                                     │ │
+│   └─────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>MFA Methods Comparison</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Security Level</th>
+                                    <th>Phishing Resistant</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>FIDO2 Security Key</strong></td>
+                                    <td><span class="card-badge success">Highest</span></td>
+                                    <td>✓ Yes</td>
+                                    <td>Admins, high-risk users</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Windows Hello</strong></td>
+                                    <td><span class="card-badge success">Highest</span></td>
+                                    <td>✓ Yes</td>
+                                    <td>Corporate Windows devices</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Authenticator App (Push)</strong></td>
+                                    <td><span class="card-badge high">High</span></td>
+                                    <td>Partial (number matching)</td>
+                                    <td>All users</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Authenticator App (TOTP)</strong></td>
+                                    <td><span class="card-badge medium">Medium</span></td>
+                                    <td>✗ No</td>
+                                    <td>Fallback option</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SMS/Phone Call</strong></td>
+                                    <td><span class="card-badge low">Low</span></td>
+                                    <td>✗ No</td>
+                                    <td>Last resort only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                <h2>10.2 Interview Questions</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q1</span><span>How would you implement MFA for a university with diverse user populations?</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would implement a tiered MFA strategy considering different user needs:"</p>
+                                <p><strong>IT Administrators:</strong></p>
+                                <ul class="key-points">
+                                    <li>FIDO2 security keys required (phishing-resistant)</li>
+                                    <li>No SMS fallback allowed</li>
+                                    <li>Conditional Access requiring compliant device + MFA</li>
+                                </ul>
+                                <p><strong>Faculty & Staff:</strong></p>
+                                <ul class="key-points">
+                                    <li>Microsoft Authenticator with number matching (default)</li>
+                                    <li>Windows Hello on managed devices</li>
+                                    <li>FIDO2 keys offered as option</li>
+                                </ul>
+                                <p><strong>Students:</strong></p>
+                                <ul class="key-points">
+                                    <li>Microsoft Authenticator app (primary)</li>
+                                    <li>Allow TOTP as backup</li>
+                                    <li>SMS as last resort with plan to phase out</li>
+                                </ul>
+                                <p><strong>Rollout Strategy:</strong></p>
+                                <ul class="key-points">
+                                    <li>Clear communication before enforcement</li>
+                                    <li>Registration campaign with help desk support</li>
+                                    <li>Grace period for registration</li>
+                                    <li>Self-service password reset to reduce support calls</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q2</span><span>Explain Privileged Identity Management (PIM) and how you would use it.</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"PIM provides just-in-time privileged access to reduce the attack surface:"</p>
+                                <p><strong>Key Features:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Eligible vs Active:</strong> Users are eligible for roles but must activate when needed</li>
+                                    <li><strong>Time-Limited:</strong> Activated roles expire after set duration (e.g., 8 hours)</li>
+                                    <li><strong>Approval Workflow:</strong> High-privilege roles require manager approval</li>
+                                    <li><strong>Justification:</strong> Users must provide reason for activation</li>
+                                    <li><strong>MFA Required:</strong> Additional verification on activation</li>
+                                </ul>
+                                <p><strong>IBU Implementation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Global Admin: Require approval, 4-hour max, full audit</li>
+                                    <li>Exchange Admin: Self-activate with MFA, 8-hour max</li>
+                                    <li>Helpdesk roles: Eligible assignment, activate as needed</li>
+                                </ul>
+                                <p>"This means even if an admin's account is compromised, the attacker doesn't have standing privileges to exploit."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q3</span><span>What is Identity Protection and how does it work?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Azure AD Identity Protection uses machine learning to detect identity-based risks:"</p>
+                                <p><strong>Risk Types:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>User Risk:</strong> Account likely compromised (leaked credentials, anomalous activity patterns)</li>
+                                    <li><strong>Sign-in Risk:</strong> Specific sign-in is suspicious (impossible travel, anonymous IP, malware-linked IP)</li>
+                                </ul>
+                                <p><strong>Risk Levels:</strong> Low, Medium, High</p>
+                                <p><strong>Response Policies:</strong></p>
+                                <ul class="key-points">
+                                    <li>High user risk → Force password reset</li>
+                                    <li>High sign-in risk → Block access or require MFA</li>
+                                    <li>Medium risk → Require MFA challenge</li>
+                                </ul>
+                                <p>Identity Protection is part of Azure AD P2, which comes with M365 A5 licensing."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q4</span><span>How would you handle access for a departing employee?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Employee offboarding is critical for security - a single overlooked account can be a breach vector:</p>
+                                
+                                <p><strong>Immediate Actions (Day of Departure):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Disable Azure AD account:</strong> Prevents all M365 and SSO access immediately</li>
+                                    <li><strong>Revoke active sessions:</strong> Force sign-out from all devices</li>
+                                    <li><strong>Reset password:</strong> Even though disabled, prevents reactivation abuse</li>
+                                    <li><strong>Remove from all groups:</strong> Clears SharePoint, Teams, app access</li>
+                                </ul>
+                                
+                                <p><strong>Data Preservation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Convert mailbox to shared mailbox for manager access</li>
+                                    <li>Transfer OneDrive ownership to manager or archive</li>
+                                    <li>Document what access they had (for audit purposes)</li>
+                                    <li>Place litigation hold if required by legal</li>
+                                </ul>
+                                
+                                <p><strong>Secondary Systems Check:</strong></p>
+                                <ul class="key-points">
+                                    <li>VPN access revoked</li>
+                                    <li>Badge/physical access disabled (coordinate with facilities)</li>
+                                    <li>Third-party SaaS apps (check for personal accounts)</li>
+                                    <li>Service accounts they may have created</li>
+                                    <li>Shared credentials they knew about</li>
+                                </ul>
+                                
+                                <p><strong>Automation:</strong></p>
+                                <p>Ideally, this is triggered automatically by HR ticket, not manual notification. Integration between HR system and Azure AD can automate most of this."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q5</span><span>What is Privileged Access Management (PAM) and why does it matter?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"PAM protects the 'keys to the kingdom' - admin accounts that can access everything:</p>
+                                
+                                <p><strong>Why It Matters:</strong></p>
+                                <ul class="key-points">
+                                    <li>Admin credentials are #1 target for attackers</li>
+                                    <li>One compromised admin = entire environment compromised</li>
+                                    <li>Insider threat risk - admins have excessive standing access</li>
+                                    <li>Compliance requirements (SOC 2, PCI) mandate privileged access controls</li>
+                                </ul>
+                                
+                                <p><strong>Key PAM Principles:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Least Privilege:</strong> Only the access needed for the specific task</li>
+                                    <li><strong>Just-in-Time (JIT):</strong> Access granted only when needed, auto-expires</li>
+                                    <li><strong>Separate Accounts:</strong> Admins use different account for admin tasks</li>
+                                    <li><strong>Session Recording:</strong> Audit trail of what admins do</li>
+                                    <li><strong>Approval Workflow:</strong> Someone approves before access granted</li>
+                                </ul>
+                                
+                                <p><strong>Microsoft PAM Options:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Azure AD PIM:</strong> Just-in-time elevation for Azure AD roles</li>
+                                    <li><strong>Privileged Access Workstations (PAWs):</strong> Dedicated hardened devices for admin work</li>
+                                    <li><strong>Emergency Access Accounts:</strong> Break-glass accounts for when PIM fails</li>
+                                </ul>
+                                
+                                <p>Without PAM, admins typically have 24/7 access to everything - that's a massive attack surface."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q6</span><span>How do you handle access reviews?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Access reviews ensure people still need the access they have - permissions accumulate over time:</p>
+                                
+                                <p><strong>Why Reviews Matter:</strong></p>
+                                <ul class="key-points">
+                                    <li>People change roles but keep old access (privilege creep)</li>
+                                    <li>Group memberships accumulate</li>
+                                    <li>Temporary access becomes permanent</li>
+                                    <li>Compliance requires periodic recertification</li>
+                                </ul>
+                                
+                                <p><strong>Azure AD Access Reviews Process:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Create review:</strong> Select scope (group, app, role)</li>
+                                    <li><strong>Assign reviewers:</strong> Managers, resource owners, or self-review</li>
+                                    <li><strong>Set cadence:</strong> Quarterly for sensitive access, annually for general</li>
+                                    <li><strong>Reviewer action:</strong> Approve, deny, or don't know</li>
+                                    <li><strong>Auto-apply:</strong> Remove access for denied/non-response</li>
+                                </ul>
+                                
+                                <p><strong>What to Review:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Monthly:</strong> Global Admin, Exchange Admin, Security Admin roles</li>
+                                    <li><strong>Quarterly:</strong> Privileged groups, sensitive SharePoint sites</li>
+                                    <li><strong>Semi-annually:</strong> All group memberships, application access</li>
+                                    <li><strong>Annually:</strong> Guest accounts, external sharing</li>
+                                </ul>
+                                
+                                <p>The key is making reviews easy for managers - if it's too burdensome, they rubber-stamp everything 'approved'."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="vulnerability-management.html" class="page-nav-btn prev"><div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Vulnerability Management</div></div></a>
+                    <a href="dlp-compliance.html" class="page-nav-btn next"><div><div class="page-nav-label">Next</div><div class="page-nav-title">DLP & Compliance →</div></div></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

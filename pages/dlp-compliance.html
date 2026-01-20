@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLP & Compliance - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
+                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
+                    <div class="nav-item active" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
+                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
+                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Security</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">DLP & Compliance</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>📋 Data Loss Prevention & Compliance</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Comprehensive guide to protecting sensitive data and ensuring regulatory compliance in Canadian educational institutions.
+                </p>
+                
+                <h2>10.1 What is Data Loss Prevention (DLP)?</h2>
+                
+                <div class="card">
+                    <h3>DLP Fundamentals - Plain English Explanation</h3>
+                    <p><strong>Simple Definition:</strong> DLP is a set of tools and processes that prevent sensitive data from leaving your organization through unauthorized channels - whether accidentally or maliciously.</p>
+                    
+                    <p><strong>Think of it like this:</strong> Imagine a security guard at a building exit who checks everyone's bags. But instead of physical items, DLP checks digital content (emails, file uploads, USB transfers) for sensitive information like credit card numbers, student records, or confidential documents.</p>
+                    
+                    <div class="alert-box alert-info">
+                        <div class="alert-icon">💡</div>
+                        <div class="alert-content">
+                            <strong>Why Universities Need DLP</strong><br>
+                            Universities handle massive amounts of sensitive data: student grades, financial aid information, Social Insurance Numbers, health records, research data, and payment information. A single data breach can result in regulatory fines, lawsuits, and severe reputational damage.
+                        </div>
+                    </div>
+                    
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">HOW DLP WORKS - THE INSPECTION FLOW</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         DATA LOSS PREVENTION FLOW                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   USER ACTION                 DLP INSPECTION              RESPONSE          │
+│   ───────────                 ──────────────              ────────          │
+│                                                                             │
+│   ┌─────────────┐            ┌─────────────┐            ┌─────────────┐    │
+│   │ Send Email  │───────────▶│ Scan for    │───────────▶│ ALLOW       │    │
+│   │ with        │            │ Sensitive   │  No Match  │ (Log only)  │    │
+│   │ Attachment  │            │ Data Types  │            └─────────────┘    │
+│   └─────────────┘            │             │                               │
+│                              │ • SIN #s    │            ┌─────────────┐    │
+│   ┌─────────────┐            │ • Credit    │  Match     │ WARN        │    │
+│   │ Upload to   │───────────▶│   Cards     │───────────▶│ (User sees  │    │
+│   │ Cloud       │            │ • Student   │            │  popup)     │    │
+│   │ Storage     │            │   Records   │            └─────────────┘    │
+│   └─────────────┘            │ • Keywords  │                               │
+│                              │ • Document  │            ┌─────────────┐    │
+│   ┌─────────────┐            │   Types     │  Critical  │ BLOCK       │    │
+│   │ Copy to     │───────────▶│             │───────────▶│ (Prevented  │    │
+│   │ USB Drive   │            └─────────────┘            │  + Alert)   │    │
+│   └─────────────┘                                       └─────────────┘    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>The Three States of Data</h3>
+                    <p>Understanding where data exists helps you protect it effectively:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Data State</th><th>What It Means</th><th>Examples</th><th>DLP Protection</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Data at Rest</strong></td>
+                                <td>Data stored and not actively moving</td>
+                                <td>Files on SharePoint, databases, laptops, file servers</td>
+                                <td>Discovery scans to find sensitive data, encryption, access controls</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data in Motion</strong></td>
+                                <td>Data being transmitted between locations</td>
+                                <td>Emails, file uploads, web forms, network transfers</td>
+                                <td>Email inspection, web filtering, network monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data in Use</strong></td>
+                                <td>Data actively being accessed or processed</td>
+                                <td>Open documents, copy/paste, printing, screen sharing</td>
+                                <td>Endpoint agents, clipboard monitoring, print controls</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>10.2 Microsoft Purview DLP - Deep Dive</h2>
+                
+                <div class="card">
+                    <h3>What is Microsoft Purview?</h3>
+                    <p>Microsoft Purview (formerly Microsoft 365 Compliance Center) is Microsoft's unified data governance platform. It combines:</p>
+                    <ul class="key-points">
+                        <li><strong>Data Loss Prevention:</strong> Prevent sensitive data from leaving</li>
+                        <li><strong>Information Protection:</strong> Classify and encrypt data</li>
+                        <li><strong>Data Lifecycle Management:</strong> Retain and delete data appropriately</li>
+                        <li><strong>Compliance Manager:</strong> Track regulatory compliance</li>
+                        <li><strong>eDiscovery:</strong> Find data for legal holds</li>
+                    </ul>
+                    
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">MICROSOFT PURVIEW DLP COVERAGE</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      MICROSOFT PURVIEW DLP                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                    UNIFIED POLICY ENGINE                            │   │
+│   │              (Create once, apply everywhere)                        │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│           ┌────────────────────────┼────────────────────────┐               │
+│           ▼                        ▼                        ▼               │
+│   ┌───────────────┐       ┌───────────────┐       ┌───────────────┐        │
+│   │   EXCHANGE    │       │  SHAREPOINT   │       │    TEAMS      │        │
+│   │   ONLINE      │       │  & ONEDRIVE   │       │               │        │
+│   │               │       │               │       │               │        │
+│   │ • Email body  │       │ • Documents   │       │ • Chat msgs   │        │
+│   │ • Attachments │       │ • Sharing     │       │ • File shares │        │
+│   │ • Recipients  │       │ • Downloads   │       │ • Channels    │        │
+│   └───────────────┘       └───────────────┘       └───────────────┘        │
+│           │                        │                        │               │
+│           └────────────────────────┼────────────────────────┘               │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                    ENDPOINT DLP                                     │   │
+│   │              (Windows 10/11 via Intune)                             │   │
+│   │                                                                     │   │
+│   │  • USB/removable media    • Cloud uploads (Dropbox, Google Drive)  │   │
+│   │  • Printing sensitive     • Copy/paste to other apps               │   │
+│   │  • Network shares         • Bluetooth transfers                    │   │
+│   │  • Screen capture         • RDP clipboard                          │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Sensitive Information Types (SITs) Explained</h3>
+                    <p>SITs are the patterns DLP uses to detect sensitive data. They use a combination of:</p>
+                    <ul class="key-points">
+                        <li><strong>Regular expressions:</strong> Pattern matching (e.g., 9 digits in XXX-XXX-XXX format for SIN)</li>
+                        <li><strong>Keywords:</strong> Context words near the pattern (e.g., "SIN", "Social Insurance")</li>
+                        <li><strong>Checksums:</strong> Mathematical validation (Luhn algorithm for credit cards)</li>
+                        <li><strong>Confidence levels:</strong> High, Medium, Low based on how many indicators match</li>
+                    </ul>
+                    
+                    <p><strong>Key Built-in Canadian SITs:</strong></p>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Sensitive Information Type</th><th>Pattern</th><th>Use Case</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Canada Social Insurance Number</td>
+                                <td>9 digits with Luhn check</td>
+                                <td>Employee records, student financial aid</td>
+                            </tr>
+                            <tr>
+                                <td>Canada Bank Account Number</td>
+                                <td>7-12 digits with institution code</td>
+                                <td>Payroll, tuition refunds</td>
+                            </tr>
+                            <tr>
+                                <td>Canada Driver's License Number</td>
+                                <td>Province-specific formats</td>
+                                <td>ID verification</td>
+                            </tr>
+                            <tr>
+                                <td>Canada Health Service Number</td>
+                                <td>10 digits (province-specific)</td>
+                                <td>Student health services</td>
+                            </tr>
+                            <tr>
+                                <td>Canada Passport Number</td>
+                                <td>2 letters + 6 digits</td>
+                                <td>International student records</td>
+                            </tr>
+                            <tr>
+                                <td>Credit Card Number</td>
+                                <td>13-16 digits with Luhn check</td>
+                                <td>Payment processing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Creating Custom SITs for IBU:</strong></p>
+                    <p>You might create custom SITs for:</p>
+                    <ul class="key-points">
+                        <li><strong>Student ID:</strong> e.g., "IBU" + 7 digits</li>
+                        <li><strong>Grade patterns:</strong> Keywords like "final grade", "GPA", "transcript"</li>
+                        <li><strong>Research data codes:</strong> Project identifiers for sensitive research</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>DLP Policy Actions - When to Use Each</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Action</th><th>User Experience</th><th>When to Use</th><th>Example</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Audit Only</strong></td>
+                                <td>User sees nothing; event logged</td>
+                                <td>Initial deployment, testing, baseline metrics</td>
+                                <td>First 30 days of any new policy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Warn (with override)</strong></td>
+                                <td>Popup warning; user can justify and proceed</td>
+                                <td>Most business scenarios; legitimate exceptions exist</td>
+                                <td>Sharing student info with authorized third party</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Warn (no override)</strong></td>
+                                <td>Warning shown; must modify to proceed</td>
+                                <td>High-sensitivity where exceptions are rare</td>
+                                <td>Bulk student records in email</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Block</strong></td>
+                                <td>Action completely prevented</td>
+                                <td>Critical data that should never leave</td>
+                                <td>SIN numbers to personal email domains</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Block + Notify</strong></td>
+                                <td>Blocked; admin alerted</td>
+                                <td>Potential malicious activity</td>
+                                <td>Large volume data exfiltration attempt</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>10.3 Sensitivity Labels - Classification & Protection</h2>
+                
+                <div class="card">
+                    <h3>What Are Sensitivity Labels?</h3>
+                    <p>Sensitivity labels are like stamps that classify documents and can automatically apply protections. Unlike DLP (which inspects content), labels travel WITH the document permanently.</p>
+                    
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">SENSITIVITY LABELS - HOW THEY WORK</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       SENSITIVITY LABEL LIFECYCLE                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
+│   │  LABEL APPLIED  │────▶│   PROTECTIONS   │────▶│  TRAVELS WITH   │      │
+│   │                 │     │   ACTIVATED     │     │  DOCUMENT       │      │
+│   └─────────────────┘     └─────────────────┘     └─────────────────┘      │
+│                                                                             │
+│   HOW LABELS GET APPLIED:                                                   │
+│                                                                             │
+│   ┌─────────────┐  User selects label manually in Word/Excel/Outlook       │
+│   │   MANUAL    │  "I know this document is Confidential"                  │
+│   └─────────────┘                                                          │
+│                                                                             │
+│   ┌─────────────┐  Auto-labeling based on content detection                │
+│   │   AUTO      │  "This doc contains SIN, auto-apply Restricted"          │
+│   └─────────────┘                                                          │
+│                                                                             │
+│   ┌─────────────┐  Forced label for certain locations/groups               │
+│   │   DEFAULT   │  "All HR folder docs default to Confidential"            │
+│   └─────────────┘                                                          │
+│                                                                             │
+│   WHAT LABELS CAN DO:                                                       │
+│                                                                             │
+│   ┌────────────────────────────────────────────────────────────────────┐   │
+│   │ ENCRYPT     │ WATERMARK   │ RESTRICT    │ PREVENT    │ TRACK      │   │
+│   │ Document    │ Headers/    │ Printing,   │ External   │ Access &   │   │
+│   │ Contents    │ Footers     │ Copy/Paste  │ Sharing    │ Usage      │   │
+│   └────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                    
+                    <p><strong>Sample Label Taxonomy for IBU:</strong></p>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Label</th><th>Color</th><th>Protections Applied</th><th>Example Use</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Public</strong></td>
+                                <td style="color: #2ecc71;">🟢 Green</td>
+                                <td>None - can be shared freely</td>
+                                <td>Course catalog, press releases</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internal</strong></td>
+                                <td style="color: #3498db;">🔵 Blue</td>
+                                <td>Block external sharing</td>
+                                <td>Meeting notes, internal memos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Confidential</strong></td>
+                                <td style="color: #f39c12;">🟡 Yellow</td>
+                                <td>Encrypt + Watermark + Restrict to specific groups</td>
+                                <td>Budget documents, HR policies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Highly Confidential</strong></td>
+                                <td style="color: #e74c3c;">🔴 Red</td>
+                                <td>Encrypt + No print + No copy + Track access</td>
+                                <td>Student grades, SIN data, financial aid</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>10.4 PIPEDA Compliance - Canadian Privacy Law</h2>
+                
+                <div class="card">
+                    <h3>Understanding PIPEDA</h3>
+                    <p><strong>What is PIPEDA?</strong> The Personal Information Protection and Electronic Documents Act is Canada's federal privacy law governing how private-sector organizations collect, use, and disclose personal information in the course of commercial activities.</p>
+                    
+                    <div class="alert-box alert-warning">
+                        <div class="alert-icon">⚠️</div>
+                        <div class="alert-content">
+                            <strong>Important: Which Law Applies?</strong><br>
+                            • <strong>Private universities (like IBU):</strong> PIPEDA applies<br>
+                            • <strong>Public universities in Ontario:</strong> FIPPA (Freedom of Information and Protection of Privacy Act) applies<br>
+                            • <strong>Both:</strong> If handling health info, PHIPA may also apply<br>
+                            Know which regulations apply to YOUR institution!
+                        </div>
+                    </div>
+                    
+                    <p><strong>PIPEDA's 10 Fair Information Principles:</strong></p>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>#</th><th>Principle</th><th>Plain English</th><th>IT Implementation</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Accountability</strong></td>
+                                <td>Someone must be responsible for privacy</td>
+                                <td>Designate Privacy Officer; document data handling</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Identifying Purposes</strong></td>
+                                <td>Tell people WHY you're collecting their data</td>
+                                <td>Privacy notices on forms; clear consent language</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Consent</strong></td>
+                                <td>Get permission before collecting/using data</td>
+                                <td>Opt-in checkboxes; consent management system</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Limiting Collection</strong></td>
+                                <td>Only collect what you actually need</td>
+                                <td>Audit data collection forms; minimize fields</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Limiting Use/Disclosure/Retention</strong></td>
+                                <td>Use data only for stated purposes; don't keep forever</td>
+                                <td>Retention policies; data lifecycle management</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Accuracy</strong></td>
+                                <td>Keep personal info accurate and current</td>
+                                <td>Self-service portals; regular data quality reviews</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Safeguards</strong></td>
+                                <td>Protect data with appropriate security</td>
+                                <td>Encryption, DLP, access controls, monitoring</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Openness</strong></td>
+                                <td>Make privacy policies available</td>
+                                <td>Published privacy policy; easy to understand</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Individual Access</strong></td>
+                                <td>People can see what data you have about them</td>
+                                <td>Subject Access Request (SAR) process</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Challenging Compliance</strong></td>
+                                <td>People can complain and you must respond</td>
+                                <td>Complaint handling process; audit trails</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h3>PIPEDA Breach Notification Requirements</h3>
+                    <p>Since November 2018, PIPEDA requires mandatory breach notification when there's a "Real Risk of Significant Harm" (RROSH):</p>
+                    
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">BREACH NOTIFICATION DECISION TREE</div>
+<pre>
+                    ┌─────────────────────────────┐
+                    │     BREACH DETECTED         │
+                    │  (unauthorized access,      │
+                    │   disclosure, or loss)      │
+                    └──────────────┬──────────────┘
+                                   │
+                                   ▼
+                    ┌─────────────────────────────┐
+                    │  Is there "REAL RISK OF     │
+                    │  SIGNIFICANT HARM" (RROSH)? │
+                    └──────────────┬──────────────┘
+                          │                │
+                         YES              NO
+                          │                │
+                          ▼                ▼
+       ┌─────────────────────────┐  ┌─────────────────────┐
+       │   MANDATORY ACTIONS:    │  │  Record breach      │
+       │                         │  │  internally (keep   │
+       │ 1. Notify Privacy       │  │  records 24 months) │
+       │    Commissioner of      │  │                     │
+       │    Canada "as soon as   │  │  No external        │
+       │    feasible"            │  │  notification       │
+       │                         │  │  required           │
+       │ 2. Notify affected      │  └─────────────────────┘
+       │    individuals          │
+       │    directly             │
+       │                         │
+       │ 3. Notify other orgs    │
+       │    that can reduce      │
+       │    harm (e.g., banks)   │
+       └─────────────────────────┘
+
+       RROSH FACTORS TO CONSIDER:
+       ├─ Sensitivity of information (SIN = high, email = lower)
+       ├─ Probability data will be misused  
+       ├─ Was data encrypted? (encrypted = lower risk)
+       ├─ Who accessed it? (opportunistic vs. targeted attack)
+       └─ Potential consequences (identity theft, financial loss)
+</pre>
+                    </div>
+                    
+                    <p><strong>Penalties for Non-Compliance:</strong></p>
+                    <ul class="key-points">
+                        <li>Failure to report breach: Up to <strong>$100,000 per violation</strong></li>
+                        <li>Failure to maintain records: Up to <strong>$100,000 per violation</strong></li>
+                        <li>Reputational damage: Often MORE costly than fines</li>
+                    </ul>
+                </div>
+                
+                <h2>10.5 Data Classification for Higher Education</h2>
+                
+                <div class="card">
+                    <h3>University Data Classification Scheme</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Level</th><th>Description</th><th>University Examples</th><th>Required Controls</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color: #e74c3c;">RESTRICTED</strong></td>
+                                <td>Highest sensitivity; legal/regulatory protection required</td>
+                                <td>SINs, financial aid data, health records, credit cards, research with human subjects</td>
+                                <td>Encryption mandatory, strict access controls, DLP blocking, audit logging</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: #f39c12;">CONFIDENTIAL</strong></td>
+                                <td>Sensitive; limited to specific roles</td>
+                                <td>Student grades, employee records, salaries, non-public financials, disciplinary records</td>
+                                <td>Encryption recommended, DLP warnings, need-to-know access</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: #3498db;">INTERNAL</strong></td>
+                                <td>For internal use; not public</td>
+                                <td>Internal memos, meeting notes, draft policies, operational procedures</td>
+                                <td>No external sharing without approval, basic access controls</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: #2ecc71;">PUBLIC</strong></td>
+                                <td>Approved for public release</td>
+                                <td>Course catalog, press releases, public website, marketing materials</td>
+                                <td>No restrictions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <h2>10.6 Interview Questions & Answers</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>How would you implement DLP to protect student data at a university?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd implement a phased approach using Microsoft Purview DLP:</p>
+                                
+                                <p><strong>Phase 1 - Discovery (Weeks 1-4):</strong></p>
+                                <ul class="key-points">
+                                    <li>Enable policies in audit-only mode to understand current data flows</li>
+                                    <li>Run content searches to find where sensitive data lives (SharePoint, OneDrive, email)</li>
+                                    <li>Identify high-risk sharing patterns and establish baseline metrics</li>
+                                    <li>Interview stakeholders (Registrar, Financial Aid, HR) about legitimate data sharing needs</li>
+                                </ul>
+                                
+                                <p><strong>Phase 2 - Policy Development (Weeks 5-8):</strong></p>
+                                <ul class="key-points">
+                                    <li>Create custom Sensitive Information Types for student IDs, grade patterns</li>
+                                    <li>Design policies for different sensitivity levels (SIN = block, grades = warn)</li>
+                                    <li>Define exceptions for legitimate business processes (e.g., transcript requests)</li>
+                                    <li>Build user communication and training materials</li>
+                                </ul>
+                                
+                                <p><strong>Phase 3 - Warn Mode (Weeks 9-12):</strong></p>
+                                <ul class="key-points">
+                                    <li>Deploy policies in 'warn with override' mode</li>
+                                    <li>Users see policy tips but can proceed with justification</li>
+                                    <li>Monitor override reasons to identify policy gaps or false positives</li>
+                                    <li>Provide just-in-time training when warnings appear</li>
+                                </ul>
+                                
+                                <p><strong>Phase 4 - Enforcement (Weeks 13+):</strong></p>
+                                <ul class="key-points">
+                                    <li>Move critical policies (SIN, credit cards) to block mode</li>
+                                    <li>Keep lower-sensitivity policies in warn mode</li>
+                                    <li>Establish ongoing review process for false positives</li>
+                                    <li>Report metrics to leadership monthly</li>
+                                </ul>
+                                
+                                <p>This phased approach ensures we don't disrupt legitimate work while progressively improving protection."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>What is the difference between DLP and sensitivity labels?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"They're complementary but serve different purposes:</p>
+                                
+                                <p><strong>DLP (Data Loss Prevention):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Focus:</strong> Inspects content at boundaries (email, file sharing, USB)</li>
+                                    <li><strong>Mechanism:</strong> Pattern matching - looks FOR sensitive data</li>
+                                    <li><strong>Action:</strong> Block, warn, or audit based on content detected</li>
+                                    <li><strong>Scope:</strong> Active only at inspection points (send email, upload file)</li>
+                                    <li><strong>User involvement:</strong> Often invisible until triggered</li>
+                                </ul>
+                                
+                                <p><strong>Sensitivity Labels:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Focus:</strong> Classification that travels WITH the document</li>
+                                    <li><strong>Mechanism:</strong> Manual or auto-applied classification</li>
+                                    <li><strong>Action:</strong> Persistent protection (encryption, watermarks, access controls)</li>
+                                    <li><strong>Scope:</strong> Protection follows document everywhere, even outside the organization</li>
+                                    <li><strong>User involvement:</strong> Users often select labels manually</li>
+                                </ul>
+                                
+                                <p><strong>How They Work Together:</strong></p>
+                                <ul class="key-points">
+                                    <li>DLP can trigger auto-labeling: 'If SIN detected, apply Highly Confidential label'</li>
+                                    <li>DLP can use labels as conditions: 'Block external sharing of Restricted-labeled files'</li>
+                                    <li>Labels provide persistent protection; DLP provides boundary enforcement</li>
+                                </ul>
+                                
+                                <p>Think of DLP as the security guard checking bags at the door, while labels are like a lock on the briefcase that stays locked wherever it goes."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>A data breach is discovered - student records found online. Walk me through your response.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would follow a structured incident response approach:</p>
+                                
+                                <p><strong>1. Immediate Containment (First Hour):</strong></p>
+                                <ul class="key-points">
+                                    <li>Verify the breach - confirm data is authentic, not fabricated</li>
+                                    <li>Identify and close the attack vector if still active</li>
+                                    <li>Preserve evidence - don't modify or delete logs</li>
+                                    <li>Escalate to IT Director and initiate incident response plan</li>
+                                </ul>
+                                
+                                <p><strong>2. Assessment (Hours 2-24):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Scope:</strong> How many records? What data fields? What time period?</li>
+                                    <li><strong>Source:</strong> How did the breach occur? External attack? Insider? Third party?</li>
+                                    <li><strong>RROSH Analysis:</strong> Is there 'Real Risk of Significant Harm'? (SIN = definitely yes)</li>
+                                    <li>Engage legal counsel and consider external forensics if needed</li>
+                                </ul>
+                                
+                                <p><strong>3. Notification (As Soon as Feasible):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Privacy Commissioner:</strong> Report via OPC breach reporting form if RROSH exists</li>
+                                    <li><strong>Affected individuals:</strong> Direct notification with: what happened, what data exposed, what we're doing, what they should do (credit monitoring, password changes)</li>
+                                    <li><strong>Other organizations:</strong> Notify banks if financial data; credit bureaus if identity theft risk</li>
+                                </ul>
+                                
+                                <p><strong>4. Remediation & Recovery:</strong></p>
+                                <ul class="key-points">
+                                    <li>Close vulnerability that allowed the breach</li>
+                                    <li>Reset credentials if compromised</li>
+                                    <li>Consider offering credit monitoring to affected individuals</li>
+                                    <li>Request takedown of exposed data</li>
+                                </ul>
+                                
+                                <p><strong>5. Post-Incident:</strong></p>
+                                <ul class="key-points">
+                                    <li>Conduct lessons learned review</li>
+                                    <li>Update policies and controls</li>
+                                    <li>Document everything for PIPEDA's 24-month record requirement</li>
+                                    <li>Report to board/leadership on improvements made</li>
+                                </ul>
+                                
+                                <p>The key is speed on containment and transparency in communication - trying to hide a breach makes everything worse."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>How do you handle DLP false positives while maintaining security?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"False positives are the #1 challenge in DLP - too many and users ignore warnings entirely. Here's my approach:</p>
+                                
+                                <p><strong>Prevention - Design Policies Well:</strong></p>
+                                <ul class="key-points">
+                                    <li>Use high confidence levels (require multiple indicators, not just pattern)</li>
+                                    <li>Add context requirements (keyword proximity: 'SIN' near the number)</li>
+                                    <li>Set appropriate thresholds (don't alert on 1 credit card number; alert on 10)</li>
+                                    <li>Test extensively in audit mode before enforcement</li>
+                                </ul>
+                                
+                                <p><strong>Detection - Monitor Continuously:</strong></p>
+                                <ul class="key-points">
+                                    <li>Review override reasons weekly - patterns indicate policy issues</li>
+                                    <li>Track false positive rates per policy</li>
+                                    <li>Maintain feedback channel for users to report issues</li>
+                                </ul>
+                                
+                                <p><strong>Response - Handle Quickly:</strong></p>
+                                <ul class="key-points">
+                                    <li>When legitimate false positive reported, create exception quickly (same day if possible)</li>
+                                    <li>Use scoped exceptions (specific user/group/location) rather than broad exclusions</li>
+                                    <li>Document why exception was granted for audit purposes</li>
+                                </ul>
+                                
+                                <p><strong>Continuous Improvement:</strong></p>
+                                <ul class="key-points">
+                                    <li>Monthly policy review meetings</li>
+                                    <li>Tune policies based on actual results, not assumptions</li>
+                                    <li>Balance security with usability - a policy everyone bypasses provides zero security</li>
+                                </ul>
+                                
+                                <p>The goal is to make DLP invisible for legitimate work while catching actual violations."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>What's the difference between PIPEDA and FIPPA, and which applies to IBU?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Great question - this is crucial for compliance planning:</p>
+                                
+                                <p><strong>PIPEDA (Personal Information Protection and Electronic Documents Act):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Jurisdiction:</strong> Federal law, applies to private sector organizations</li>
+                                    <li><strong>Scope:</strong> Collection, use, disclosure of personal information in commercial activities</li>
+                                    <li><strong>Key features:</strong> Mandatory breach notification, consent requirements, 10 fair information principles</li>
+                                    <li><strong>Enforcement:</strong> Privacy Commissioner of Canada; up to $100K penalties</li>
+                                </ul>
+                                
+                                <p><strong>FIPPA (Freedom of Information and Protection of Privacy Act - Ontario):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Jurisdiction:</strong> Provincial law, applies to Ontario public institutions</li>
+                                    <li><strong>Scope:</strong> Public universities, hospitals, school boards, government bodies</li>
+                                    <li><strong>Key features:</strong> Freedom of information requests, privacy protection, data residency (some interpretations require Canadian storage)</li>
+                                    <li><strong>Enforcement:</strong> Information and Privacy Commissioner of Ontario</li>
+                                </ul>
+                                
+                                <p><strong>For IBU (Private University):</strong></p>
+                                <ul class="key-points">
+                                    <li>As a private institution, <strong>PIPEDA applies</strong></li>
+                                    <li>This means mandatory breach notification requirements</li>
+                                    <li>Less restrictive on cloud services than FIPPA (no Canadian data residency requirement)</li>
+                                    <li>Still need strong privacy controls but more flexibility in implementation</li>
+                                </ul>
+                                
+                                <p><strong>Important:</strong> If IBU partners with public institutions or handles Ontario health data (PHIPA), additional regulations may overlap. Always verify specific requirements with legal counsel."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q6</span>
+                            <span>How would you implement Endpoint DLP for USB and printing controls?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Endpoint DLP extends protection beyond cloud services to local device actions:</p>
+                                
+                                <p><strong>Prerequisites:</strong></p>
+                                <ul class="key-points">
+                                    <li>Devices must be onboarded to Microsoft Defender for Endpoint</li>
+                                    <li>Windows 10/11 Enterprise or Education editions</li>
+                                    <li>Devices enrolled in Intune for policy deployment</li>
+                                    <li>Appropriate M365 licensing (E5 or E5 Compliance add-on)</li>
+                                </ul>
+                                
+                                <p><strong>USB/Removable Media Controls:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Option 1 - Block All:</strong> Simplest but may disrupt legitimate needs</li>
+                                    <li><strong>Option 2 - Allow Approved Devices:</strong> Whitelist encrypted corporate USB drives by hardware ID</li>
+                                    <li><strong>Option 3 - DLP Inspection:</strong> Allow USB but scan for sensitive content; block if detected</li>
+                                    <li>My recommendation: Start with audit mode to understand usage patterns</li>
+                                </ul>
+                                
+                                <p><strong>Printing Controls:</strong></p>
+                                <ul class="key-points">
+                                    <li>Block printing of documents with sensitivity labels (e.g., 'Highly Confidential')</li>
+                                    <li>Allow printing but apply watermarks automatically</li>
+                                    <li>Audit printing of sensitive content without blocking (for awareness)</li>
+                                    <li>Consider: some departments (HR, Finance) may have legitimate print needs</li>
+                                </ul>
+                                
+                                <p><strong>Other Endpoint Controls:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Clipboard:</strong> Block copy/paste of sensitive data to non-approved apps</li>
+                                    <li><strong>Cloud Upload:</strong> Block uploads to personal Dropbox/Google Drive</li>
+                                    <li><strong>Network Shares:</strong> Restrict copying sensitive files to non-approved locations</li>
+                                </ul>
+                                
+                                <p><strong>Implementation Approach:</strong></p>
+                                <ol>
+                                    <li>Start with audit mode for 30 days</li>
+                                    <li>Review activity logs to identify legitimate use cases</li>
+                                    <li>Create exception groups for users with valid needs</li>
+                                    <li>Move to warn mode, then block for highest-sensitivity data</li>
+                                </ol>
+                                
+                                <p>The key is balancing security with usability - overly restrictive controls lead to shadow IT workarounds that are even less secure."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="identity-access.html" class="page-nav-btn prev">
+                        <div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Identity & Access</div></div>
+                    </a>
+                    <a href="security-awareness.html" class="page-nav-btn next">
+                        <div><div class="page-nav-label">Next Section</div><div class="page-nav-title">Security Awareness →</div></div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

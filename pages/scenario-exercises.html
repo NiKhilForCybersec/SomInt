@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario Exercises - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
+                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
+                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
+                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
+                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
+                    <div class="nav-item active" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Interview Prep</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Scenario Exercises</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>📝 Scenario-Based Exercises</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Practice responding to realistic technical scenarios you may encounter during your interview at IBU.
+                </p>
+                
+                <h2>14.1 How to Approach Scenario Questions</h2>
+                
+                <div class="card">
+                    <h3>Structured Problem-Solving Framework</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">SCENARIO RESPONSE FRAMEWORK</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    STRUCTURED PROBLEM-SOLVING APPROACH                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  1. CLARIFY THE SITUATION                                           │   │
+│   │  ─────────────────────────────────────────────────────────────────  │   │
+│   │  • Ask clarifying questions before diving in                        │   │
+│   │  • Understand scope, constraints, and priorities                    │   │
+│   │  • "Can I ask a few questions to make sure I understand?"           │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  2. THINK OUT LOUD                                                  │   │
+│   │  ─────────────────────────────────────────────────────────────────  │   │
+│   │  • Share your thought process - interviewers want to see HOW        │   │
+│   │  • "My first thought is... but I should also consider..."           │   │
+│   │  • Don't jump to solutions - show your analysis                     │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  3. PRIORITIZE                                                      │   │
+│   │  ─────────────────────────────────────────────────────────────────  │   │
+│   │  • For incidents: life safety → containment → eradication           │   │
+│   │  • For projects: quick wins → high impact → foundation building     │   │
+│   │  • State your prioritization logic explicitly                       │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  4. PROPOSE ACTIONS                                                 │   │
+│   │  ─────────────────────────────────────────────────────────────────  │   │
+│   │  • Specific, actionable steps with clear sequence                   │   │
+│   │  • Include who, what, when where relevant                           │   │
+│   │  • Address both immediate and long-term needs                       │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  5. CONSIDER RISKS & ALTERNATIVES                                   │   │
+│   │  ─────────────────────────────────────────────────────────────────  │   │
+│   │  • What could go wrong with your approach?                          │   │
+│   │  • What alternatives exist?                                         │   │
+│   │  • What tradeoffs are you making?                                   │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="alert-box alert-info">
+                    <div class="alert-icon">💡</div>
+                    <div class="alert-content">
+                        <strong>Pro Tip: It's Okay to Ask Questions</strong><br>
+                        In scenario questions, interviewers often intentionally leave out details. Asking smart clarifying questions shows real-world problem-solving skills. Questions like "Is this during business hours?", "What's our backup situation?", or "Who else needs to be notified?" demonstrate experience.
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Security Incident Scenarios</span></div>
+                
+                <h2>14.2 Security Incident Scenarios</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S1</span>
+                            <span>Ransomware Detection: Multiple endpoints show encryption activity at 2 AM.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>You're the on-call security engineer. At 2:15 AM, your phone alerts you to multiple high-severity detections from Defender for Endpoint. Five faculty office computers are showing signs of file encryption activity. The ransomware appears to be spreading.</p>
+                                <p><strong>Context:</strong> It's end of semester. Faculty are uploading final grades this week.</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions I'd Ask:</strong></p>
+                                <ul class="key-points">
+                                    <li>Are the affected machines still online/connected to the network?</li>
+                                    <li>Do we have remote isolation capabilities?</li>
+                                    <li>When was the last known good backup of file shares?</li>
+                                    <li>Is the grading system cloud-based or on local servers?</li>
+                                </ul>
+                                
+                                <p><strong>Immediate Actions (First 15 minutes):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Isolate:</strong> Use Defender for Endpoint to isolate all affected machines immediately - this is the priority to stop lateral movement</li>
+                                    <li><strong>Assess scope:</strong> Check if any file servers or the grading system shows activity</li>
+                                    <li><strong>Preserve evidence:</strong> Start logging everything - timestamps, affected systems, alert details</li>
+                                    <li><strong>Notification:</strong> Text IT Director that we have an active incident - they need to know even at 2 AM</li>
+                                </ul>
+                                
+                                <p><strong>Short-term Actions (Next 2 hours):</strong></p>
+                                <ul class="key-points">
+                                    <li>Identify patient zero - trace back through logs to find the entry point</li>
+                                    <li>Block IOCs at firewall and email gateway</li>
+                                    <li>Verify backup integrity before we need it</li>
+                                    <li>If spreading continues, consider isolating the entire faculty VLAN</li>
+                                </ul>
+                                
+                                <p><strong>Communication Plan:</strong></p>
+                                <ul class="key-points">
+                                    <li>Prepare an incident brief for leadership by 6 AM</li>
+                                    <li>Draft faculty communication (without causing panic) about temporary system unavailability</li>
+                                    <li>Coordinate with Registrar about grading deadline implications</li>
+                                </ul>
+                                
+                                <p><strong>Why This Approach:</strong></p>
+                                <p>Containment is the absolute priority with ransomware - every minute of spread means more data at risk. The timing near grade submission is critical context, so I'd ensure the grading system is protected/isolated. Communication is key because faculty will notice when their computers are isolated.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S2</span>
+                            <span>Phishing Campaign: Students receiving fake financial aid emails.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>The Financial Aid office calls you: students are reporting emails claiming to be from the university, asking them to "verify their banking information" to receive their tuition refund. Multiple students have already clicked the link. It's the start of the semester when refunds are actually being processed.</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions:</strong></p>
+                                <ul class="key-points">
+                                    <li>How many students have reported this so far?</li>
+                                    <li>Did anyone actually enter their banking information?</li>
+                                    <li>Can I see a copy of the email and the link?</li>
+                                </ul>
+                                
+                                <p><strong>Immediate Technical Actions:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Block the malicious URL</strong> at our web filter/firewall immediately</li>
+                                    <li><strong>Search email logs</strong> to identify all recipients of the phishing email</li>
+                                    <li><strong>Quarantine remaining unread copies</strong> in student mailboxes using Exchange admin tools</li>
+                                    <li><strong>Add sender to blocklist</strong> if external, or investigate if internal account compromise</li>
+                                </ul>
+                                
+                                <p><strong>Victim Triage:</strong></p>
+                                <ul class="key-points">
+                                    <li>For students who clicked: Check for credential submission, scan their devices if possible</li>
+                                    <li>For students who entered banking info: Urgent outreach - they need to contact their bank immediately</li>
+                                    <li>Force password reset for anyone who entered credentials on the phishing page</li>
+                                </ul>
+                                
+                                <p><strong>Communication (Critical):</strong></p>
+                                <ul class="key-points">
+                                    <li>Coordinate with Financial Aid to send official "this is a scam" notice immediately</li>
+                                    <li>Use multiple channels: email, student portal alert, social media if available</li>
+                                    <li>Include clear guidance: "We will never ask for banking information via email"</li>
+                                    <li>Provide contact info for students who may have been compromised</li>
+                                </ul>
+                                
+                                <p><strong>Follow-up:</strong></p>
+                                <ul class="key-points">
+                                    <li>Report the phishing domain for takedown</li>
+                                    <li>Document for potential reporting to law enforcement if students suffered financial loss</li>
+                                    <li>Consider targeted security awareness for students around financial aid season</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S3</span>
+                            <span>Data Breach: Student records found on dark web forum.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>Your threat intelligence feed alerts you that a dataset claiming to be from your university is being sold on a dark web forum. The sample includes what appears to be student names, email addresses, student IDs, and program enrollment information for approximately 2,000 students.</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions:</strong></p>
+                                <ul class="key-points">
+                                    <li>Can we verify this is actually our data vs. fabricated?</li>
+                                    <li>What's the date range of the student records?</li>
+                                    <li>Does it include any financial information (SIN, banking)?</li>
+                                </ul>
+                                
+                                <p><strong>Verification Phase:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Validate the data:</strong> Cross-reference sample records with our student database to confirm authenticity</li>
+                                    <li><strong>Assess the scope:</strong> What data fields are included? Is this a partial or complete dump?</li>
+                                    <li><strong>Timeline:</strong> Based on the data, can we estimate when the breach occurred?</li>
+                                </ul>
+                                
+                                <p><strong>Immediate Escalation:</strong></p>
+                                <ul class="key-points">
+                                    <li>This is a <strong>reportable incident</strong> under PIPEDA - escalate to leadership and legal immediately</li>
+                                    <li>Engage our incident response plan for data breaches</li>
+                                    <li>Consider engaging external forensics if we can't determine the source</li>
+                                </ul>
+                                
+                                <p><strong>Investigation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Audit access logs for the student information system</li>
+                                    <li>Check for any unusual data exports or queries</li>
+                                    <li>Review any third-party integrations that have access to student data</li>
+                                    <li>Look for compromised accounts with access to this data</li>
+                                </ul>
+                                
+                                <p><strong>Regulatory Requirements (PIPEDA):</strong></p>
+                                <ul class="key-points">
+                                    <li>Report to Privacy Commissioner if there's "real risk of significant harm"</li>
+                                    <li>Notify affected individuals as soon as feasible</li>
+                                    <li>Keep records of the breach and our response</li>
+                                </ul>
+                                
+                                <p><strong>What I Would NOT Do:</strong></p>
+                                <ul class="key-points">
+                                    <li>Attempt to contact or engage with the threat actor</li>
+                                    <li>Delay notification to "wait and see"</li>
+                                    <li>Assume it's fake without verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Infrastructure Scenarios</span></div>
+                
+                <h2>14.3 Infrastructure & Operations Scenarios</h2>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S4</span>
+                            <span>Network Outage: Campus WiFi goes down during peak hours.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>It's 10 AM on a Tuesday - peak class time. The help desk is being flooded with calls that WiFi isn't working across campus. Students can't access online exams, faculty can't use their presentation materials, and administrators can't access cloud applications. The Meraki dashboard is showing multiple access points offline.</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions:</strong></p>
+                                <ul class="key-points">
+                                    <li>Is this affecting all buildings or specific areas?</li>
+                                    <li>Are wired connections still working?</li>
+                                    <li>Did anything change recently (firmware update, configuration change)?</li>
+                                </ul>
+                                
+                                <p><strong>Immediate Triage (First 5 minutes):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Check Meraki Dashboard:</strong> What's the status showing? How many APs are offline vs. online?</li>
+                                    <li><strong>Pattern recognition:</strong> Is it random APs or entire buildings/switches?</li>
+                                    <li><strong>Check upstream:</strong> Is internet connectivity working? Can we reach Meraki cloud?</li>
+                                </ul>
+                                
+                                <p><strong>Common Causes to Check:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>DHCP exhaustion:</strong> Check DHCP scope - are we out of addresses?</li>
+                                    <li><strong>Licensing:</strong> Meraki requires active license - did it expire?</li>
+                                    <li><strong>Core switch issue:</strong> If all APs are offline, check the core network infrastructure</li>
+                                    <li><strong>ISP outage:</strong> If dashboard is unreachable, could be upstream issue</li>
+                                </ul>
+                                
+                                <p><strong>Communication:</strong></p>
+                                <ul class="key-points">
+                                    <li>Acknowledge to help desk: "We're aware and investigating"</li>
+                                    <li>Post status update to internal channels</li>
+                                    <li>If exams are affected: Notify Registrar/Faculty Affairs immediately for contingency</li>
+                                </ul>
+                                
+                                <p><strong>Escalation Path:</strong></p>
+                                <ul class="key-points">
+                                    <li>If ISP issue: Contact provider immediately with business impact</li>
+                                    <li>If hardware failure: Meraki support (or vendor depending on support contract)</li>
+                                    <li>If cause unknown after 15 minutes: Escalate to IT Director</li>
+                                </ul>
+                                
+                                <p><strong>Post-Incident:</strong></p>
+                                <ul class="key-points">
+                                    <li>Root cause analysis</li>
+                                    <li>Consider monitoring improvements to detect earlier</li>
+                                    <li>Review backup connectivity options for critical functions like exams</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S5</span>
+                            <span>New Employee Onboarding: Design the Day 1 IT experience.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>IBU is hiring 15 new staff members starting next month, including faculty, administrative staff, and IT support. Currently, new employee IT setup is inconsistent and takes 2-3 days. Leadership wants Day 1 to be productive. Design the process.</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions:</strong></p>
+                                <ul class="key-points">
+                                    <li>What's the current lead time between HR confirming hire and start date?</li>
+                                    <li>Do we have standard hardware ready or is it ordered per person?</li>
+                                    <li>What role-based access templates exist today?</li>
+                                </ul>
+                                
+                                <p><strong>Pre-Day 1 Process (HR triggers IT):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>T-5 days:</strong> HR submits new hire ticket with: name, role, department, manager, start date</li>
+                                    <li><strong>T-4 days:</strong> Create AD account, email, assign to appropriate security groups based on role template</li>
+                                    <li><strong>T-3 days:</strong> Provision M365 licenses, Teams membership, department SharePoint access</li>
+                                    <li><strong>T-2 days:</strong> Configure device (laptop/desktop), install standard software, enroll in Intune</li>
+                                    <li><strong>T-1 day:</strong> Stage equipment at employee's desk or reception, prepare welcome packet</li>
+                                </ul>
+                                
+                                <p><strong>Day 1 Experience:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Morning:</strong> Equipment waiting at desk, pre-printed credentials in sealed envelope</li>
+                                    <li><strong>First login:</strong> Guided MFA setup (Authenticator app), password change</li>
+                                    <li><strong>Welcome email auto-sent:</strong> Links to IT resources, help desk info, key policies</li>
+                                    <li><strong>Security awareness:</strong> Assign initial training module in LMS</li>
+                                </ul>
+                                
+                                <p><strong>Role-Based Templates:</strong></p>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Role Type</th><th>Standard Access</th><th>Special Considerations</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Faculty</td><td>LMS admin, course sites, research drives</td><td>May need specialized software</td></tr>
+                                        <tr><td>Admin Staff</td><td>SharePoint, department shares, SIS read</td><td>Financial system access via manager request</td></tr>
+                                        <tr><td>IT Staff</td><td>Admin tools, elevated permissions</td><td>Separate admin accounts, PAM access</td></tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p><strong>Success Metrics:</strong></p>
+                                <ul class="key-points">
+                                    <li>100% of employees productive within 2 hours of arrival</li>
+                                    <li>Zero Day 1 help desk tickets for account issues</li>
+                                    <li>All security training assigned within 24 hours</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Strategic Scenarios</span></div>
+                
+                <h2>14.4 Strategic Planning Scenarios</h2>
+                
+                <div class="question-card" id="q6">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S6</span>
+                            <span>Budget Prioritization: You have $50K for security improvements. What do you do?</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>You've been given $50,000 in budget for security improvements at IBU. The university currently has M365 E3 licensing, Cisco Meraki network, and basic endpoint protection. What would you prioritize?</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Clarifying Questions:</strong></p>
+                                <ul class="key-points">
+                                    <li>What's the biggest pain point or risk today?</li>
+                                    <li>Any recent incidents that highlighted gaps?</li>
+                                    <li>Is this one-time money or ongoing annual budget?</li>
+                                    <li>Are there any compliance deadlines driving priorities?</li>
+                                </ul>
+                                
+                                <p><strong>My Recommended Approach:</strong></p>
+                                <p>I'd focus on maximizing what we already own before buying new tools:</p>
+                                
+                                <p><strong>Option A: Maximize M365 (if E3 → E5 is possible)</strong></p>
+                                <ul class="key-points">
+                                    <li>Upgrade to M365 E5 Security add-on (~$12/user/month)</li>
+                                    <li>Unlocks: Defender for Endpoint P2, Defender for Identity, Cloud App Security, Advanced eDiscovery</li>
+                                    <li>For 100 users: ~$15,000/year - huge capability gain</li>
+                                </ul>
+                                
+                                <p><strong>Option B: If staying with E3, invest in:</strong></p>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Investment</th><th>Est. Cost</th><th>Risk Addressed</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Backup solution (Veeam/Datto)</td><td>$15-20K</td><td>Ransomware recovery</td></tr>
+                                        <tr><td>Security awareness training (KnowBe4)</td><td>$5-8K</td><td>Phishing risk</td></tr>
+                                        <tr><td>Vulnerability scanner (Nessus)</td><td>$3-5K</td><td>Unknown vulnerabilities</td></tr>
+                                        <tr><td>PAM solution (basic)</td><td>$10-15K</td><td>Admin credential theft</td></tr>
+                                        <tr><td>Incident response retainer</td><td>$5-10K</td><td>Expert help when needed</td></tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p><strong>My Top 3 Priorities:</strong></p>
+                                <ol>
+                                    <li><strong>Backup & Recovery ($20K):</strong> Non-negotiable foundation - everything else fails without reliable backups</li>
+                                    <li><strong>Security Awareness ($7K):</strong> Biggest ROI per dollar - reduces phishing success significantly</li>
+                                    <li><strong>Remaining $23K:</strong> Either E5 upgrade or vulnerability scanning + PAM depending on current maturity</li>
+                                </ol>
+                                
+                                <p><strong>What I Would NOT Do:</strong></p>
+                                <ul class="key-points">
+                                    <li>Buy a SIEM with this budget - too expensive to operate properly</li>
+                                    <li>Invest in advanced tools before basics are solid</li>
+                                    <li>Spend it all on hardware with ongoing maintenance costs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q7">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">S7</span>
+                            <span>Policy Creation: Develop a BYOD policy for students and faculty.</span>
+                        </div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Scenario Details</div>
+                            <div class="answer-text">
+                                <p>IBU wants to allow students and faculty to access university resources from personal devices. Currently there's no formal BYOD policy. What elements would you include and how would you enforce it?</p>
+                            </div>
+                        </div>
+                        <div class="question-section">
+                            <div class="question-section-title">Model Response</div>
+                            <div class="answer-text">
+                                <p><strong>Policy Framework:</strong></p>
+                                
+                                <p><strong>1. Scope & Definitions:</strong></p>
+                                <ul class="key-points">
+                                    <li>Define "personal device" (phones, tablets, laptops)</li>
+                                    <li>Define "university resources" (email, LMS, SharePoint, WiFi)</li>
+                                    <li>Specify who is covered (students, faculty, staff)</li>
+                                </ul>
+                                
+                                <p><strong>2. Minimum Security Requirements:</strong></p>
+                                <ul class="key-points">
+                                    <li>Device must have passcode/biometric lock enabled</li>
+                                    <li>Operating system must be within 2 versions of current (no XP, no Android 8)</li>
+                                    <li>Device must not be jailbroken/rooted</li>
+                                    <li>Encryption must be enabled (default on modern devices)</li>
+                                </ul>
+                                
+                                <p><strong>3. Technical Enforcement (Intune MAM):</strong></p>
+                                <ul class="key-points">
+                                    <li>Use App Protection Policies - containerize university data without managing entire device</li>
+                                    <li>Require PIN to access Outlook/Teams/OneDrive apps</li>
+                                    <li>Block copy/paste from work apps to personal apps</li>
+                                    <li>Remote wipe capability for university data only (not personal photos)</li>
+                                </ul>
+                                
+                                <p><strong>4. Network Segmentation:</strong></p>
+                                <ul class="key-points">
+                                    <li>BYOD devices connect to separate SSID</li>
+                                    <li>Limited access to internet and cloud services only</li>
+                                    <li>No direct access to internal servers or sensitive systems</li>
+                                </ul>
+                                
+                                <p><strong>5. User Responsibilities:</strong></p>
+                                <ul class="key-points">
+                                    <li>Report lost/stolen devices immediately</li>
+                                    <li>Accept that university can wipe university data remotely</li>
+                                    <li>Keep device updated and malware-free</li>
+                                    <li>Not attempt to circumvent security controls</li>
+                                </ul>
+                                
+                                <p><strong>6. Privacy Protections (Important for buy-in):</strong></p>
+                                <ul class="key-points">
+                                    <li>IT cannot see personal apps, photos, messages, or browsing history</li>
+                                    <li>Only university app data is visible and manageable</li>
+                                    <li>Personal device location is not tracked</li>
+                                </ul>
+                                
+                                <p><strong>Implementation Approach:</strong></p>
+                                <ul class="key-points">
+                                    <li>Start with optional enrollment - incentivize with better WiFi access</li>
+                                    <li>Provide clear documentation and FAQ</li>
+                                    <li>Phase in requirements over time rather than hard cutoff</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="behavioral-interview.html" class="page-nav-btn prev">
+                        <div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Behavioral Questions</div></div>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="page-nav-btn next">
+                        <div><div class="page-nav-label">Next Section</div><div class="page-nav-title">30-60-90 Day Plan →</div></div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

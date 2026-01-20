@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response - IBU Interview Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">🛡️</div>
+                    <div>
+                        <div>IBU SECURITY</div>
+                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search (Ctrl+K)">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <div class="nav-item" data-page="index">
+                        <span class="nav-icon">🏠</span>
+                        <span>Dashboard</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <div class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">🛡️</span>
+                        <span>Cybersecurity Fundamentals</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item active" data-page="incident-response">
+                        <span class="nav-icon">🚨</span>
+                        <span>Incident Response</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">🔍</span>
+                        <span>Vulnerability Management</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">🔐</span>
+                        <span>Identity & Access Mgmt</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">📋</span>
+                        <span>DLP & Compliance</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">🎓</span>
+                        <span>Security Awareness</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">💻</span>
+                        <span>Endpoint Protection</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">☁️</span>
+                        <span>Microsoft 365 Admin</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">🌐</span>
+                        <span>Network Infrastructure</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">💾</span>
+                        <span>Backup & DR</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="telephony">
+                        <span class="nav-icon">📞</span>
+                        <span>Telephony</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <div class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">🗣️</span>
+                        <span>Behavioral Questions</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">📝</span>
+                        <span>Scenario Exercises</span>
+                        <span class="nav-status"></span>
+                    </div>
+                    <div class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">📅</span>
+                        <span>30-60-90 Day Plan</span>
+                        <span class="nav-status"></span>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="progress-overview">
+                    <div class="progress-label">
+                        <span>Overall Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item">Security</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Incident Response</span>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
+                    <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <h1>🚨 Incident Response</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    Methodologies, playbooks, and practical approaches to security incident handling for the university environment.
+                </p>
+                
+                <!-- IR Lifecycle -->
+                <h2>3.1 Incident Response Lifecycle</h2>
+                
+                <div class="card">
+                    <h3>NIST SP 800-61 IR Lifecycle</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">INCIDENT RESPONSE PHASES</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                    NIST INCIDENT RESPONSE LIFECYCLE                             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+    │   PREPARATION   │      │   DETECTION &   │      │  CONTAINMENT,   │
+    │                 │─────►│   ANALYSIS      │─────►│  ERADICATION &  │
+    │                 │      │                 │      │  RECOVERY       │
+    └─────────────────┘      └─────────────────┘      └────────┬────────┘
+            ▲                                                   │
+            │                                                   │
+            │            ┌─────────────────┐                    │
+            │            │  POST-INCIDENT  │                    │
+            └────────────│    ACTIVITY     │◄───────────────────┘
+                         │ (Lessons Learned)│
+                         └─────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ PHASE 1: PREPARATION                                                            │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ • Develop IR plan and playbooks          • Configure logging and monitoring     │
+│ • Establish IR team and contacts         • Deploy security tools (SIEM, EDR)    │
+│ • Conduct training and exercises         • Create communication templates       │
+│ • Define incident severity levels        • Prepare forensic toolkit             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ PHASE 2: DETECTION & ANALYSIS                                                   │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ • Monitor security alerts                • Determine incident scope             │
+│ • Correlate events from multiple sources • Identify affected systems            │
+│ • Validate and triage incidents          • Document initial findings            │
+│ • Classify severity and priority         • Preserve evidence                    │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ PHASE 3: CONTAINMENT, ERADICATION & RECOVERY                                    │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ CONTAINMENT:           ERADICATION:           RECOVERY:                         │
+│ • Isolate systems      • Remove malware       • Restore from backups            │
+│ • Block IPs/domains    • Close vulnerabilities• Rebuild if needed               │
+│ • Disable accounts     • Reset credentials    • Verify system integrity         │
+│ • Short vs long-term   • Patch systems        • Monitor for recurrence          │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ PHASE 4: POST-INCIDENT ACTIVITY                                                 │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ • Conduct lessons learned meeting        • Update playbooks and procedures      │
+│ • Document incident timeline             • Improve detection capabilities       │
+│ • Calculate impact and costs             • Train staff on findings              │
+│ • Report to stakeholders                 • Share threat intel (if appropriate)  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <!-- Incident Severity Matrix -->
+                <div class="card">
+                    <h3>Incident Severity Classification</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Severity</th>
+                                    <th>Description</th>
+                                    <th>Examples</th>
+                                    <th>Response Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="card-badge critical">Critical</span></td>
+                                    <td>Active attack, data breach, major outage</td>
+                                    <td>Ransomware, active exfiltration, student data breach</td>
+                                    <td>Immediate (15 min)</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="card-badge high">High</span></td>
+                                    <td>Significant threat requiring urgent response</td>
+                                    <td>Compromised admin account, malware on server</td>
+                                    <td>1 hour</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="card-badge medium">Medium</span></td>
+                                    <td>Confirmed security incident, limited scope</td>
+                                    <td>Phishing success (single user), unauthorized access attempt</td>
+                                    <td>4 hours</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="card-badge low">Low</span></td>
+                                    <td>Minor security event, no immediate threat</td>
+                                    <td>Policy violation, suspicious but benign activity</td>
+                                    <td>24 hours</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Ransomware Playbook</span></div>
+                
+                <!-- Ransomware Playbook -->
+                <h2>3.2 Ransomware Response Playbook</h2>
+                
+                <div class="card">
+                    <h3>Ransomware Response Decision Tree</h3>
+                    <div class="ascii-diagram orange">
+                        <div class="ascii-diagram-title">RANSOMWARE INCIDENT DECISION TREE</div>
+<pre>
+                    ┌───────────────────────────────┐
+                    │   RANSOMWARE DETECTED/        │
+                    │   REPORTED                    │
+                    └──────────────┬────────────────┘
+                                   │
+                                   ▼
+                    ┌───────────────────────────────┐
+                    │ IMMEDIATE ACTIONS (First 15m) │
+                    │ • DO NOT power off systems    │
+                    │ • Disconnect from network     │
+                    │ • Photograph ransom note      │
+                    │ • Notify IT Director/CIO      │
+                    └──────────────┬────────────────┘
+                                   │
+                                   ▼
+              ┌────────────────────────────────────────────┐
+              │         Is it spreading actively?          │
+              └─────────────────────┬──────────────────────┘
+                        ┌───────────┴───────────┐
+                        │ YES                   │ NO
+                        ▼                       ▼
+         ┌─────────────────────┐    ┌─────────────────────┐
+         │ EMERGENCY ISOLATION │    │ CONTROLLED RESPONSE │
+         │ • Disable network   │    │ • Isolate affected  │
+         │   ports at switch   │    │   systems only      │
+         │ • Block SMB (445)   │    │ • Preserve evidence │
+         │ • Shut down shares  │    │ • Begin analysis    │
+         └──────────┬──────────┘    └──────────┬──────────┘
+                    │                          │
+                    └───────────┬──────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────────┐
+                    │     SCOPE ASSESSMENT          │
+                    │ • What systems encrypted?     │
+                    │ • What data affected?         │
+                    │ • Entry point identified?     │
+                    └──────────────┬────────────────┘
+                                   │
+                                   ▼
+              ┌────────────────────────────────────────────┐
+              │      Are clean backups available?          │
+              └─────────────────────┬──────────────────────┘
+                        ┌───────────┴───────────┐
+                        │ YES                   │ NO
+                        ▼                       ▼
+         ┌─────────────────────┐    ┌─────────────────────┐
+         │ RESTORE FROM BACKUP │    │ ASSESS OPTIONS      │
+         │ • Verify backup      │    │ • Decryptor exists? │
+         │   integrity          │    │ • Data criticality? │
+         │ • Rebuild systems    │    │ • Legal/insurance   │
+         │ • Restore data       │    │   consultation      │
+         └─────────────────────┘    └─────────────────────┘
+                                   │
+                                   ▼
+                    ┌───────────────────────────────┐
+                    │     POST-INCIDENT             │
+                    │ • Root cause analysis         │
+                    │ • Report to PIPEDA (72 hrs)   │
+                    │ • Update security controls    │
+                    │ • Lessons learned             │
+                    └───────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="alert danger">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-content">
+                        <div class="alert-title">Critical: Never Pay Ransom Without Consultation</div>
+                        <div class="alert-text">Payment decisions must involve executive leadership, legal counsel, and potentially law enforcement. Payment does not guarantee data recovery and may violate sanctions laws.</div>
+                    </div>
+                </div>
+                
+                <!-- Ransomware Response Steps -->
+                <div class="card">
+                    <h3>Step-by-Step Ransomware Response</h3>
+                    <div class="flow-diagram">
+                        <div class="flow-step">
+                            <div class="flow-step-marker">
+                                <div class="flow-step-number">1</div>
+                                <div class="flow-step-line"></div>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-title">Initial Detection (0-15 minutes)</div>
+                                <div class="flow-step-desc">
+                                    <ul class="key-points">
+                                        <li>Identify patient zero (first infected system)</li>
+                                        <li>Document ransomware variant (photograph ransom note, note file extensions)</li>
+                                        <li>Disconnect affected systems from network (unplug cable, disable WiFi)</li>
+                                        <li>DO NOT power off - preserve memory for forensics</li>
+                                        <li>Escalate to IT Director immediately</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-step-marker">
+                                <div class="flow-step-number">2</div>
+                                <div class="flow-step-line"></div>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-title">Containment (15-60 minutes)</div>
+                                <div class="flow-step-desc">
+                                    <ul class="key-points">
+                                        <li>Block lateral movement: disable SMB (port 445), RDP (3389)</li>
+                                        <li>Isolate network segments if spreading</li>
+                                        <li>Disable compromised accounts</li>
+                                        <li>Block known malicious IPs/domains at firewall</li>
+                                        <li>Preserve affected systems for forensics</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-step-marker">
+                                <div class="flow-step-number">3</div>
+                                <div class="flow-step-line"></div>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-title">Assessment (1-4 hours)</div>
+                                <div class="flow-step-desc">
+                                    <ul class="key-points">
+                                        <li>Determine scope: which systems, what data, how many users</li>
+                                        <li>Identify entry vector (phishing, RDP, vulnerability)</li>
+                                        <li>Check for data exfiltration (double extortion)</li>
+                                        <li>Verify backup integrity (not encrypted/corrupted)</li>
+                                        <li>Check No More Ransom (nomoreransom.org) for decryptors</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-step-marker">
+                                <div class="flow-step-number">4</div>
+                                <div class="flow-step-line"></div>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-title">Eradication & Recovery (4-48+ hours)</div>
+                                <div class="flow-step-desc">
+                                    <ul class="key-points">
+                                        <li>Remove malware from all systems (may require reimaging)</li>
+                                        <li>Patch the vulnerability used for entry</li>
+                                        <li>Reset all potentially compromised credentials</li>
+                                        <li>Restore from clean backups (verify before restoring)</li>
+                                        <li>Rebuild systems that cannot be cleaned</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="flow-step-marker">
+                                <div class="flow-step-number">5</div>
+                                <div class="flow-step-line"></div>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-title">Post-Incident (48+ hours)</div>
+                                <div class="flow-step-desc">
+                                    <ul class="key-points">
+                                        <li>Report to Privacy Commissioner (PIPEDA requires 72-hour notification for breaches)</li>
+                                        <li>Notify affected individuals if personal data involved</li>
+                                        <li>Conduct root cause analysis</li>
+                                        <li>Document lessons learned</li>
+                                        <li>Update security controls to prevent recurrence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Phishing Response</span></div>
+                
+                <!-- Phishing Playbook -->
+                <h2>3.3 Phishing Response Playbook</h2>
+                
+                <div class="card">
+                    <h3>Phishing Incident Decision Tree</h3>
+                    <div class="ascii-diagram green">
+                        <div class="ascii-diagram-title">PHISHING RESPONSE DECISION TREE</div>
+<pre>
+                    ┌───────────────────────────────┐
+                    │   PHISHING REPORTED/DETECTED  │
+                    └──────────────┬────────────────┘
+                                   │
+                                   ▼
+              ┌────────────────────────────────────────────┐
+              │      Did the user interact with it?        │
+              └─────────────────────┬──────────────────────┘
+                        ┌───────────┴───────────┐
+                        │ NO                    │ YES
+                        ▼                       ▼
+         ┌─────────────────────┐    ┌─────────────────────────┐
+         │ LOW PRIORITY        │    │ What type of interaction?│
+         │ • Block sender      │    └────────────┬────────────┘
+         │ • Delete from inbox │           ┌─────┴─────┐
+         │ • Report to M365    │           │           │
+         │ • Update filters    │           ▼           ▼
+         └─────────────────────┘    ┌───────────┐ ┌───────────────┐
+                                    │ Clicked   │ │ Entered       │
+                                    │ Link Only │ │ Credentials   │
+                                    └─────┬─────┘ └───────┬───────┘
+                                          │               │
+                                          ▼               ▼
+                               ┌─────────────────┐ ┌─────────────────┐
+                               │ MEDIUM PRIORITY │ │ HIGH PRIORITY   │
+                               │ • Scan endpoint │ │ • Reset password│
+                               │ • Check for     │ │   IMMEDIATELY   │
+                               │   downloads     │ │ • Revoke tokens │
+                               │ • Monitor user  │ │ • Check for     │
+                               │   activity      │ │   inbox rules   │
+                               └─────────────────┘ │ • Audit account │
+                                                   │   activity      │
+                                                   │ • Scan endpoint │
+                                                   └─────────────────┘
+                                                           │
+                                                           ▼
+                               ┌────────────────────────────────────────┐
+                               │    Was there unauthorized access?      │
+                               └───────────────────┬────────────────────┘
+                                           ┌───────┴───────┐
+                                           │ YES           │ NO
+                                           ▼               ▼
+                            ┌─────────────────────┐   ┌─────────────┐
+                            │ CRITICAL - BREACH   │   │ Close       │
+                            │ • Full account audit│   │ incident    │
+                            │ • Check for data    │   │ Document    │
+                            │   access/exfil      │   │ Train user  │
+                            │ • Incident report   │   └─────────────┘
+                            │ • Privacy assessment│
+                            └─────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Credential Compromise Response Commands</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">PowerShell - Microsoft Graph</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code><span class="comment"># 1. Force password reset and revoke all sessions</span>
+<span class="function">Connect-MgGraph</span> -Scopes <span class="string">"User.ReadWrite.All"</span>
+
+<span class="variable">$userId</span> = <span class="string">"compromised.user@ibu.ca"</span>
+
+<span class="comment"># Revoke all refresh tokens (forces re-authentication)</span>
+<span class="function">Revoke-MgUserSignInSession</span> -UserId <span class="variable">$userId</span>
+
+<span class="comment"># 2. Check for suspicious inbox rules (common persistence method)</span>
+<span class="function">Get-MgUserMailFolderMessageRule</span> -UserId <span class="variable">$userId</span> -MailFolderId <span class="string">"Inbox"</span> | 
+    <span class="function">Where-Object</span> { <span class="variable">$_</span>.Actions.ForwardTo -or <span class="variable">$_</span>.Actions.RedirectTo }
+
+<span class="comment"># 3. Check recent sign-in activity</span>
+<span class="function">Get-MgAuditLogSignIn</span> -Filter <span class="string">"userPrincipalName eq '$userId'"</span> -Top 50 |
+    <span class="function">Select-Object</span> CreatedDateTime, IpAddress, Location, Status, AppDisplayName
+
+<span class="comment"># 4. Check for OAuth app consents (token theft)</span>
+<span class="function">Get-MgUserOAuth2PermissionGrant</span> -UserId <span class="variable">$userId</span></code></pre>
+                    </div>
+                    
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">KQL - Hunt for Compromised Account Activity</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code><span class="comment">// Hunt for suspicious activity after credential compromise</span>
+<span class="keyword">let</span> compromisedUser = <span class="string">"compromised.user@ibu.ca"</span>;
+<span class="keyword">let</span> compromiseTime = <span class="function">datetime</span>(<span class="string">2024-01-15T10:00:00Z</span>);
+
+<span class="comment">// Check for data exfiltration patterns</span>
+<span class="variable">CloudAppEvents</span>
+| <span class="keyword">where</span> Timestamp > compromiseTime
+| <span class="keyword">where</span> AccountObjectId == compromisedUser
+| <span class="keyword">where</span> ActionType <span class="keyword">in</span> (<span class="string">"FileDownloaded"</span>, <span class="string">"FileSyncDownloadedFull"</span>, <span class="string">"FileModified"</span>)
+| <span class="keyword">summarize</span> TotalFiles=<span class="function">count</span>(), TotalSize=<span class="function">sum</span>(tolong(RawEventData.FileSizeBytes)) 
+    <span class="keyword">by</span> <span class="function">bin</span>(Timestamp, 1h), ActionType
+| <span class="keyword">order by</span> Timestamp <span class="keyword">asc</span></code></pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                
+                <!-- Interview Questions Section -->
+                <h2>3.4 Interview Questions & Answers</h2>
+                
+                <!-- Question 1 -->
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>Walk me through how you would respond to a ransomware attack at IBU.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Ransomware is one of the top threats to educational institutions. This tests your practical incident response abilities and decision-making under pressure.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would follow a structured approach based on the NIST incident response framework:</p>
+                                
+                                <p><strong>First 15 Minutes - Initial Response:</strong></p>
+                                <ul class="key-points">
+                                    <li>Immediately isolate affected systems by disconnecting from the network - but NOT powering off (preserves forensic evidence in memory)</li>
+                                    <li>Photograph the ransom note to identify the variant</li>
+                                    <li>Escalate to the IT Director and begin incident documentation</li>
+                                </ul>
+                                
+                                <p><strong>Containment (15-60 minutes):</strong></p>
+                                <ul class="key-points">
+                                    <li>Block lateral movement by disabling SMB (port 445) and RDP (3389) at the Meraki firewall</li>
+                                    <li>Isolate the affected network segment if the ransomware is spreading</li>
+                                    <li>Disable any accounts that may be compromised</li>
+                                    <li>Block known malicious IPs and domains associated with the ransomware C2</li>
+                                </ul>
+                                
+                                <p><strong>Assessment:</strong></p>
+                                <ul class="key-points">
+                                    <li>Determine scope: how many systems, what data types (student records? financial?)</li>
+                                    <li>Identify the entry point using Defender XDR timeline and logs</li>
+                                    <li>Check if data was exfiltrated (common in modern double-extortion ransomware)</li>
+                                    <li>Verify backup integrity - ensure backups aren't encrypted</li>
+                                </ul>
+                                
+                                <p><strong>Recovery:</strong></p>
+                                <ul class="key-points">
+                                    <li>Check No More Ransom project for available decryptors</li>
+                                    <li>Restore from clean backups after confirming they're uncompromised</li>
+                                    <li>Rebuild systems that cannot be cleaned</li>
+                                    <li>Reset all credentials before bringing systems back online</li>
+                                </ul>
+                                
+                                <p><strong>Post-Incident:</strong></p>
+                                <ul class="key-points">
+                                    <li>If student data was affected, report to the Privacy Commissioner within 72 hours per PIPEDA</li>
+                                    <li>Conduct root cause analysis and implement preventive measures</li>
+                                    <li>Document lessons learned and update playbooks</li>
+                                </ul>
+                                
+                                <p>Throughout the process, I would maintain clear communication with leadership, providing regular status updates and recommendations."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Key Points to Hit</div>
+                            <ul class="key-points">
+                                <li>Demonstrate structured methodology (NIST framework)</li>
+                                <li>Show understanding of forensic preservation</li>
+                                <li>Reference specific tools (Meraki, Defender XDR)</li>
+                                <li>Include compliance requirements (PIPEDA)</li>
+                                <li>Emphasize communication and documentation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Follow-up Questions</div>
+                            <ul class="followup-list">
+                                <li>"How would you determine if data was exfiltrated before encryption?"</li>
+                                <li>"Would you recommend paying the ransom? Why or why not?"</li>
+                                <li>"How would you communicate with students and faculty during the incident?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>A faculty member reports they clicked a phishing link. What do you do?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Phishing is the #1 attack vector. This tests your response to the most common security incident you'll face.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd first thank them for reporting it promptly - we want to encourage reporting without fear of blame. Then I'd follow our phishing response playbook:</p>
+                                
+                                <p><strong>Immediate Questions (30 seconds):</strong></p>
+                                <ul class="key-points">
+                                    <li>Did you just click the link, or did you also enter credentials?</li>
+                                    <li>Did you download or open any files?</li>
+                                    <li>What device were you using?</li>
+                                </ul>
+                                
+                                <p><strong>If credentials were entered (HIGH PRIORITY):</strong></p>
+                                <ul class="key-points">
+                                    <li>Reset their password immediately via Azure AD</li>
+                                    <li>Revoke all active sessions and refresh tokens</li>
+                                    <li>Check for malicious inbox rules (forwarding to external addresses)</li>
+                                    <li>Review Azure AD sign-in logs for unauthorized access</li>
+                                    <li>Check for OAuth app consents they didn't authorize</li>
+                                </ul>
+                                
+                                <p><strong>If they only clicked (MEDIUM PRIORITY):</strong></p>
+                                <ul class="key-points">
+                                    <li>Run a full Defender scan on their device</li>
+                                    <li>Check browser download history</li>
+                                    <li>Monitor their account for 48-72 hours</li>
+                                </ul>
+                                
+                                <p><strong>For all cases:</strong></p>
+                                <ul class="key-points">
+                                    <li>Block the sender and malicious URL organization-wide</li>
+                                    <li>Search for other recipients who received the same email</li>
+                                    <li>Report the phishing URL to Microsoft and our threat intel feeds</li>
+                                    <li>Use this as a teachable moment - schedule brief security refresher</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Code Example</div>
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span class="code-block-lang">PowerShell - Phishing Response</span>
+                                    <button class="code-block-copy">Copy</button>
+                                </div>
+<pre><code><span class="comment"># Quick phishing response script</span>
+<span class="variable">$user</span> = <span class="string">"faculty.member@ibu.ca"</span>
+
+<span class="comment"># 1. Reset password and revoke sessions</span>
+<span class="function">Set-MgUserPassword</span> -UserId <span class="variable">$user</span> -ForceChangePasswordNextSignIn
+<span class="function">Revoke-MgUserSignInSession</span> -UserId <span class="variable">$user</span>
+
+<span class="comment"># 2. Check for malicious inbox rules</span>
+<span class="function">Get-MgUserMailFolderMessageRule</span> -UserId <span class="variable">$user</span> -MailFolderId Inbox |
+    <span class="function">Where-Object</span> { <span class="variable">$_</span>.Actions.ForwardTo -ne <span class="variable">$null</span> }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q3</span>
+                            <span>How do you prioritize security incidents when multiple alerts fire simultaneously?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Tests your ability to triage effectively - critical skill when you're the primary security resource.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I use a risk-based prioritization framework considering four factors:</p>
+                                
+                                <p><strong>1. Threat Severity:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Critical:</strong> Active attack, data breach in progress</li>
+                                    <li><strong>High:</strong> Compromised privileged account, malware on server</li>
+                                    <li><strong>Medium:</strong> Malware on workstation, policy violation</li>
+                                    <li><strong>Low:</strong> Suspicious but unconfirmed activity</li>
+                                </ul>
+                                
+                                <p><strong>2. Asset Value:</strong></p>
+                                <ul class="key-points">
+                                    <li>Systems containing student PII get higher priority</li>
+                                    <li>Financial systems (tuition, payroll) are critical</li>
+                                    <li>Admin/privileged systems take precedence over user workstations</li>
+                                </ul>
+                                
+                                <p><strong>3. Scope of Impact:</strong></p>
+                                <ul class="key-points">
+                                    <li>Organization-wide threat > department > individual</li>
+                                    <li>Spreading threat > contained threat</li>
+                                </ul>
+                                
+                                <p><strong>4. Containability:</strong></p>
+                                <ul class="key-points">
+                                    <li>Can we quickly contain this while we handle a higher priority item?</li>
+                                    <li>Sometimes a 30-second containment action lets us focus on bigger issues</li>
+                                </ul>
+                                
+                                <p><strong>Practical Example:</strong> If I see a ransomware alert and a failed login attempt simultaneously, ransomware gets immediate attention - I might quickly block the suspicious IP (30 seconds) then focus fully on ransomware containment.</p>
+                                
+                                <p>I also leverage automation - well-tuned SOAR playbooks can handle initial containment for common scenarios while I focus on complex incidents."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q4</span>
+                            <span>Describe your experience with XDR platforms for incident response.</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">The job mentions XDR specifically - they want to confirm you can leverage Microsoft Defender XDR for threat detection and response.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I have extensive experience with Microsoft Defender XDR (formerly Microsoft 365 Defender), which provides unified visibility across endpoints, email, identity, and cloud apps.</p>
+                                
+                                <p><strong>Key XDR Capabilities I Use Daily:</strong></p>
+                                
+                                <p><strong>1. Incident Correlation:</strong></p>
+                                <ul class="key-points">
+                                    <li>XDR automatically correlates related alerts into incidents</li>
+                                    <li>Example: Phishing email → Credential theft → Suspicious sign-in → Data access all linked as one incident</li>
+                                    <li>This dramatically reduces investigation time versus siloed tools</li>
+                                </ul>
+                                
+                                <p><strong>2. Advanced Hunting with KQL:</strong></p>
+                                <ul class="key-points">
+                                    <li>I write custom KQL queries to hunt for threats not caught by built-in detections</li>
+                                    <li>Cross-table queries correlating endpoint, identity, and email data</li>
+                                </ul>
+                                
+                                <p><strong>3. Automated Response:</strong></p>
+                                <ul class="key-points">
+                                    <li>Configure automated investigation and remediation for common threats</li>
+                                    <li>Auto-isolate compromised devices while preserving evidence</li>
+                                    <li>Auto-disable compromised accounts</li>
+                                </ul>
+                                
+                                <p><strong>4. Attack Timeline:</strong></p>
+                                <ul class="key-points">
+                                    <li>Device timeline shows exactly what happened and when</li>
+                                    <li>Critical for root cause analysis and scope assessment</li>
+                                </ul>
+                                
+                                <p>For IBU, I'd leverage Defender XDR to unify security operations across the M365 environment, providing single-pane-of-glass visibility for the IT team."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Code Example - XDR Hunt Query</div>
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span class="code-block-lang">KQL - Cross-Domain Threat Hunt</span>
+                                    <button class="code-block-copy">Copy</button>
+                                </div>
+<pre><code><span class="comment">// Hunt: Phishing leading to credential compromise</span>
+<span class="keyword">let</span> phishingClicks = <span class="variable">EmailEvents</span>
+| <span class="keyword">where</span> ThreatTypes <span class="keyword">has</span> <span class="string">"Phish"</span>
+| <span class="keyword">where</span> DeliveryAction == <span class="string">"Delivered"</span>
+| <span class="keyword">project</span> RecipientEmailAddress, NetworkMessageId, Timestamp;
+
+<span class="keyword">let</span> suspiciousSignIns = <span class="variable">AADSignInEventsBeta</span>
+| <span class="keyword">where</span> RiskLevelDuringSignIn <span class="keyword">in</span> (<span class="string">"high"</span>, <span class="string">"medium"</span>)
+| <span class="keyword">project</span> AccountUpn, Timestamp, IPAddress, RiskLevelDuringSignIn;
+
+phishingClicks
+| <span class="keyword">join kind</span>=inner suspiciousSignIns 
+    <span class="keyword">on</span> $left.RecipientEmailAddress == $right.AccountUpn
+| <span class="keyword">where</span> suspiciousSignIns.Timestamp between 
+    (phishingClicks.Timestamp .. (phishingClicks.Timestamp + 24h))
+| <span class="keyword">project</span> User=AccountUpn, PhishingTime=phishingClicks.Timestamp, 
+    SignInTime=suspiciousSignIns.Timestamp, SignInIP=IPAddress, Risk=RiskLevelDuringSignIn</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q5</span>
+                            <span>How do you document incidents and maintain chain of custody for potential legal proceedings?</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                        </div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Why They Ask</div>
+                            <p class="answer-text">Proper documentation is critical for compliance reporting, insurance claims, and potential legal action.</p>
+                        </div>
+                        
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Documentation and evidence handling are critical - especially given PIPEDA reporting requirements. My approach:</p>
+                                
+                                <p><strong>Incident Documentation:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Timeline:</strong> Chronological record of all events with timestamps</li>
+                                    <li><strong>Actions taken:</strong> Who did what, when, and why</li>
+                                    <li><strong>Evidence collected:</strong> Screenshots, logs, memory dumps</li>
+                                    <li><strong>Decisions made:</strong> Rationale for key decisions</li>
+                                    <li><strong>Communications:</strong> All internal and external communications logged</li>
+                                </ul>
+                                
+                                <p><strong>Chain of Custody:</strong></p>
+                                <ul class="key-points">
+                                    <li>Document who collected evidence, when, and how</li>
+                                    <li>Use write-blockers for disk imaging</li>
+                                    <li>Hash all collected files (SHA-256) to prove integrity</li>
+                                    <li>Store evidence in secure, access-controlled location</li>
+                                    <li>Log every access to evidence</li>
+                                </ul>
+                                
+                                <p><strong>For IBU specifically:</strong></p>
+                                <ul class="key-points">
+                                    <li>I'd use a ticketing system to track incidents with required fields</li>
+                                    <li>Create templates for common incident types</li>
+                                    <li>Ensure documentation meets PIPEDA breach notification requirements</li>
+                                    <li>Coordinate with legal counsel on evidence preservation for serious incidents</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Communication Templates -->
+                <div class="section-divider"><span>Communication Templates</span></div>
+                
+                <h2>3.5 Communication Templates</h2>
+                
+                <div class="card">
+                    <h3>Initial Incident Notification (Internal)</h3>
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span class="code-block-lang">Email Template</span>
+                            <button class="code-block-copy">Copy</button>
+                        </div>
+<pre><code>Subject: [SEVERITY] Security Incident - [Brief Description] - [Ticket#]
+
+INCIDENT SUMMARY
+================
+Incident ID: INC-2024-001
+Severity: [Critical/High/Medium/Low]
+Status: [Active/Contained/Resolved]
+Reported: [Date/Time]
+Affected Systems: [List systems/users]
+
+CURRENT SITUATION
+================
+[Brief description of what happened and current state]
+
+IMPACT
+======
+- Users affected: [Number/Groups]
+- Systems affected: [List]
+- Data at risk: [Type - e.g., student records, financial]
+
+ACTIONS TAKEN
+=============
+1. [Action and time]
+2. [Action and time]
+3. [Action and time]
+
+NEXT STEPS
+==========
+- [Planned action]
+- [Planned action]
+
+NEXT UPDATE
+===========
+Expected: [Time] or upon significant development
+
+Contact: [Your name] - [Phone/Email]</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Page Navigation -->
+                <div class="page-navigation">
+                    <a href="cybersecurity-fundamentals.html" class="page-nav-btn prev">
+                        <div>
+                            <div class="page-nav-label">Previous</div>
+                            <div class="page-nav-title">← Cybersecurity Fundamentals</div>
+                        </div>
+                    </a>
+                    <a href="endpoint-protection.html" class="page-nav-btn next">
+                        <div>
+                            <div class="page-nav-label">Next Section</div>
+                            <div class="page-nav-title">Endpoint Protection →</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

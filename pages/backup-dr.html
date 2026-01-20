@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup & Disaster Recovery - IBU Interview Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section"><div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item active" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-separator">/</span><span class="breadcrumb-item current">Backup & Disaster Recovery</span></div>
+                <div class="header-actions"><button class="header-btn" id="searchBtn">🔍 Search</button><button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button></div>
+            </header>
+            
+            <div class="content-body">
+                <h1>💾 Backup & Disaster Recovery</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Business continuity planning, disaster recovery strategies, RTO/RPO definitions, and backup testing procedures.</p>
+                
+                <h2>7.1 Key Concepts</h2>
+                
+                <div class="card">
+                    <h3>RTO vs RPO</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">RECOVERY OBJECTIVES TIMELINE</div>
+<pre>
+    LAST BACKUP              DISASTER                    RECOVERY
+        │                       │                           │
+        ▼                       ▼                           ▼
+────────●───────────────────────●───────────────────────────●────────────►
+        │                       │                           │           TIME
+        │◄──────────────────────│                           │
+        │         RPO           │◄──────────────────────────│
+        │  (Data Loss Window)   │          RTO              │
+        │                       │   (Downtime Window)       │
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  RPO (Recovery Point Objective)                                             │
+│  • Maximum acceptable data loss measured in time                            │
+│  • Determines backup frequency                                              │
+│  • Example: RPO of 1 hour = hourly backups minimum                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  RTO (Recovery Time Objective)                                              │
+│  • Maximum acceptable downtime                                              │
+│  • Determines recovery infrastructure needed                                │
+│  • Example: RTO of 4 hours = must restore within 4 hours                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+IBU EXAMPLE OBJECTIVES:
+┌──────────────────────┬────────┬────────┬─────────────────────────────────────┐
+│ System               │ RTO    │ RPO    │ Justification                       │
+├──────────────────────┼────────┼────────┼─────────────────────────────────────┤
+│ Student Portal       │ 2 hrs  │ 15 min │ Critical for enrollment/grades      │
+│ Email (M365)         │ 1 hr   │ 0      │ Microsoft SLA covers this           │
+│ File Servers         │ 4 hrs  │ 1 hr   │ Important but not real-time         │
+│ Financial Systems    │ 2 hrs  │ 15 min │ Regulatory/compliance needs         │
+│ Website              │ 8 hrs  │ 24 hrs │ Can tolerate longer outage          │
+└──────────────────────┴────────┴────────┴─────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>3-2-1 Backup Rule</h3>
+                    <div class="ascii-diagram green">
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          3-2-1 BACKUP STRATEGY                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│     3 COPIES                2 MEDIA TYPES              1 OFFSITE           │
+│  ┌─────────────┐          ┌─────────────┐          ┌─────────────┐         │
+│  │  PRODUCTION │          │    LOCAL    │          │    CLOUD    │         │
+│  │    DATA     │          │   BACKUP    │          │   BACKUP    │         │
+│  │             │          │   (NAS)     │          │   (Azure)   │         │
+│  │  ┌───────┐  │          │  ┌───────┐  │          │  ┌───────┐  │         │
+│  │  │ Copy 1│  │          │  │ Copy 2│  │          │  │ Copy 3│  │         │
+│  │  └───────┘  │          │  └───────┘  │          │  └───────┘  │         │
+│  └─────────────┘          └─────────────┘          └─────────────┘         │
+│                                                                             │
+│  WHY: Protects against hardware failure, ransomware, site disasters        │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                <h2>7.2 Interview Questions</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q1</span><span>How would you design a backup strategy for IBU?</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I would implement a tiered backup strategy:</p>
+                                <p><strong>Tier 1 - Critical Systems (Student Portal, Finance):</strong></p>
+                                <ul class="key-points">
+                                    <li>Continuous replication or 15-minute snapshots</li>
+                                    <li>Local backup + Azure cloud backup</li>
+                                    <li>RTO: 2 hours, RPO: 15 minutes</li>
+                                </ul>
+                                <p><strong>Tier 2 - Important Systems (File Servers, Databases):</strong></p>
+                                <ul class="key-points">
+                                    <li>Hourly incremental, daily full backups</li>
+                                    <li>30-day local retention, 1-year cloud archive</li>
+                                    <li>RTO: 4 hours, RPO: 1 hour</li>
+                                </ul>
+                                <p><strong>Tier 3 - Standard Systems (Workstations, Archives):</strong></p>
+                                <ul class="key-points">
+                                    <li>Daily backups, 7-day retention</li>
+                                    <li>Primarily rely on OneDrive/SharePoint for user data</li>
+                                </ul>
+                                <p><strong>Microsoft 365:</strong> Leverage native retention policies plus third-party backup (Veeam/Commvault) for long-term retention and granular recovery."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q2</span><span>How do you test disaster recovery plans?</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"DR testing should be regular and progressively more realistic:</p>
+                                <ul class="key-points">
+                                    <li><strong>Monthly:</strong> Backup verification - confirm backups complete, test file-level restore</li>
+                                    <li><strong>Quarterly:</strong> Tabletop exercise - walk through scenarios with stakeholders</li>
+                                    <li><strong>Bi-annually:</strong> Partial failover - restore critical systems to DR environment</li>
+                                    <li><strong>Annually:</strong> Full DR test - complete failover during maintenance window</li>
+                                </ul>
+                                <p>Document results, measure against RTO/RPO, and update plans based on findings."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q3</span><span>What's the difference between BCP and DRP?</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p><strong>BCP (Business Continuity Plan):</strong></p>
+                                <ul class="key-points">
+                                    <li>Broader scope - how the entire organization continues operations</li>
+                                    <li>Includes people, processes, facilities, not just IT</li>
+                                    <li>Example: If campus is inaccessible, how do classes continue?</li>
+                                </ul>
+                                <p><strong>DRP (Disaster Recovery Plan):</strong></p>
+                                <ul class="key-points">
+                                    <li>IT-focused - restoring technology systems</li>
+                                    <li>Technical procedures for system recovery</li>
+                                    <li>Example: Steps to restore servers after hardware failure</li>
+                                </ul>
+                                <p>DRP is a subset of BCP. For IBU, BCP would cover switching to remote learning while DRP covers restoring the LMS server."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="network-infrastructure.html" class="page-nav-btn prev"><div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Network Infrastructure</div></div></a>
+                    <a href="telephony.html" class="page-nav-btn next"><div><div class="page-nav-label">Next</div><div class="page-nav-title">Telephony →</div></div></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

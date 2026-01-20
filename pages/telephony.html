@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephony Systems - IBU Interview Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
+            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section"><div class="nav-section-title">Infrastructure</div>
+                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
+                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
+                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
+                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
+                    <div class="nav-item active" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-separator">/</span><span class="breadcrumb-item current">Telephony Systems</span></div>
+                <div class="header-actions"><button class="header-btn" id="searchBtn">🔍 Search</button><button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button></div>
+            </header>
+            
+            <div class="content-body">
+                <h1>📞 Telephony Systems</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">8x8 UCaaS administration, VoIP security, and Teams Phone integration for university communications.</p>
+                
+                <h2>8.1 VoIP/UCaaS Overview</h2>
+                
+                <div class="card">
+                    <h3>8x8 XCaaS Platform</h3>
+                    <div class="ascii-diagram">
+                        <div class="ascii-diagram-title">8x8 UNIFIED COMMUNICATIONS ARCHITECTURE</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        8x8 XCaaS PLATFORM                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│    VOICE                   MEETINGS              CONTACT CENTER            │
+│  ┌─────────────┐         ┌─────────────┐        ┌─────────────┐            │
+│  │  8x8 Work   │         │  8x8 Meet   │        │  8x8 Contact│            │
+│  │             │         │             │        │    Center   │            │
+│  │ • Desk phone│         │ • Video conf│        │ • Call queue│            │
+│  │ • Softphone │         │ • Screen    │        │ • IVR       │            │
+│  │ • Mobile app│         │   share     │        │ • Analytics │            │
+│  │ • Voicemail │         │ • Recording │        │ • Reporting │            │
+│  └─────────────┘         └─────────────┘        └─────────────┘            │
+│         │                       │                      │                    │
+│         └───────────────────────┼──────────────────────┘                   │
+│                                 │                                           │
+│                                 ▼                                           │
+│                    ┌─────────────────────────┐                             │
+│                    │   ADMIN CONSOLE         │                             │
+│                    │   admin.8x8.com         │                             │
+│                    │                         │                             │
+│                    │   • User management     │                             │
+│                    │   • Call routing        │                             │
+│                    │   • Analytics/CDR       │                             │
+│                    │   • Security settings   │                             │
+│                    └─────────────────────────┘                             │
+│                                                                             │
+│  SECURITY FEATURES:                                                        │
+│  • TLS encryption for signaling        • SRTP for media encryption        │
+│  • SSO integration (Azure AD)          • Role-based access control        │
+│  • Call recording compliance           • Audit logging                    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+</pre>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>VoIP Security Considerations</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Threat</th>
+                                    <th>Description</th>
+                                    <th>Mitigation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Eavesdropping</strong></td>
+                                    <td>Intercepting voice calls</td>
+                                    <td>SRTP encryption, TLS for signaling</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Toll Fraud</strong></td>
+                                    <td>Unauthorized long-distance calls</td>
+                                    <td>Call restrictions, fraud detection alerts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vishing</strong></td>
+                                    <td>Voice phishing attacks</td>
+                                    <td>User training, caller ID verification</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DoS Attacks</strong></td>
+                                    <td>Overwhelming phone systems</td>
+                                    <td>Rate limiting, cloud-based protection</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SRTP Downgrade</strong></td>
+                                    <td>Forcing unencrypted calls</td>
+                                    <td>Enforce SRTP, disable fallback</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section-divider"><span>Interview Questions</span></div>
+                <h2>8.2 Interview Questions</h2>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q1</span><span>What experience do you have with VoIP/UCaaS administration?</span></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I have experience administering VoIP systems including:"</p>
+                                <ul class="key-points">
+                                    <li><strong>User Management:</strong> Provisioning extensions, managing hunt groups, configuring auto-attendants</li>
+                                    <li><strong>Call Routing:</strong> Setting up ring groups for departments, after-hours routing, holiday schedules</li>
+                                    <li><strong>Integration:</strong> SSO with Azure AD for single sign-on, directory sync for contacts</li>
+                                    <li><strong>Security:</strong> Ensuring encryption is enforced, setting call restrictions for international dialing</li>
+                                    <li><strong>Troubleshooting:</strong> Call quality issues (QoS configuration), connectivity problems, softphone issues</li>
+                                </ul>
+                                <p>For IBU's 8x8 system, I'd integrate with Azure AD for SSO and ensure proper call routing for different departments - admissions, registrar, IT help desk, etc."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q2</span><span>How would you secure a VoIP system?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"VoIP security requires attention to both infrastructure and administrative controls:"</p>
+                                <p><strong>Network Security:</strong></p>
+                                <ul class="key-points">
+                                    <li>Dedicated VLAN for voice traffic - isolate from data network</li>
+                                    <li>QoS prioritization for voice packets</li>
+                                    <li>Firewall rules limiting SIP/RTP traffic to known endpoints</li>
+                                    <li>NAT traversal considerations for remote workers</li>
+                                </ul>
+                                <p><strong>Encryption:</strong></p>
+                                <ul class="key-points">
+                                    <li>TLS for signaling (SIP over TLS)</li>
+                                    <li>SRTP for media encryption</li>
+                                    <li>Disable unencrypted fallback</li>
+                                    <li>Verify encryption is end-to-end, not just to provider</li>
+                                </ul>
+                                <p><strong>Access Control:</strong></p>
+                                <ul class="key-points">
+                                    <li>SSO integration (Azure AD)</li>
+                                    <li>MFA for admin access</li>
+                                    <li>Role-based permissions (admin vs. user vs. receptionist)</li>
+                                    <li>Separate admin credentials from user accounts</li>
+                                </ul>
+                                <p><strong>Fraud Prevention:</strong></p>
+                                <ul class="key-points">
+                                    <li>International call restrictions by default</li>
+                                    <li>Premium rate number blocking</li>
+                                    <li>Anomaly detection for unusual calling patterns</li>
+                                    <li>Regular audit of call records and billing</li>
+                                    <li>PIN protection for outbound long distance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q3">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q3</span><span>A professor reports terrible call quality during lectures. How do you troubleshoot?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Call quality issues are usually network-related. My systematic approach:"</p>
+                                
+                                <p><strong>Gather Information:</strong></p>
+                                <ul class="key-points">
+                                    <li>When does it happen? (specific times = congestion)</li>
+                                    <li>Consistent or intermittent?</li>
+                                    <li>Wired or WiFi connection?</li>
+                                    <li>What symptoms? (choppy, delayed, one-way audio, drops)</li>
+                                </ul>
+                                
+                                <p><strong>Diagnose by Symptom:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Choppy/robotic audio:</strong> Likely packet loss - check network path, WiFi interference</li>
+                                    <li><strong>Delayed audio:</strong> High latency - check WAN links, QoS misconfiguration</li>
+                                    <li><strong>One-way audio:</strong> NAT/firewall issue - check SIP ALG settings, port forwarding</li>
+                                    <li><strong>Complete drops:</strong> Network instability - check switch/AP logs for errors</li>
+                                </ul>
+                                
+                                <p><strong>Technical Investigation:</strong></p>
+                                <ul class="key-points">
+                                    <li>Check 8x8 analytics dashboard for call quality scores (MOS)</li>
+                                    <li>Review Meraki network analytics during problem timeframe</li>
+                                    <li>Verify QoS is properly tagging voice traffic (DSCP 46 for voice)</li>
+                                    <li>If WiFi: check for channel interference, consider wired connection</li>
+                                    <li>Test from different location to isolate local vs. network-wide issue</li>
+                                </ul>
+                                
+                                <p><strong>Common Fixes:</strong></p>
+                                <ul class="key-points">
+                                    <li>Enable QoS if not configured</li>
+                                    <li>Move to wired connection if WiFi-related</li>
+                                    <li>Increase bandwidth allocation for voice VLAN</li>
+                                    <li>Update network drivers on endpoint</li>
+                                    <li>Disable SIP ALG on router if causing NAT issues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q4">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q4</span><span>What is toll fraud and how do you prevent it?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Toll fraud is when attackers gain unauthorized access to your phone system to make expensive calls - usually international or premium rate numbers - leaving you with the bill."</p>
+                                
+                                <p><strong>How It Happens:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Compromised credentials:</strong> Attackers guess weak voicemail PINs or admin passwords</li>
+                                    <li><strong>DISA abuse:</strong> Direct Inward System Access lets external callers dial out - attackers exploit this</li>
+                                    <li><strong>SIP registration hijacking:</strong> Attackers register unauthorized devices</li>
+                                    <li><strong>After-hours attacks:</strong> Most fraud occurs nights/weekends when no one is watching</li>
+                                </ul>
+                                
+                                <p><strong>Prevention Measures:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Strong authentication:</strong> Complex voicemail PINs, MFA for admin access</li>
+                                    <li><strong>International call restrictions:</strong> Whitelist specific countries needed, block all others by default</li>
+                                    <li><strong>Premium rate blocking:</strong> Block 900 numbers and international premium services</li>
+                                    <li><strong>Call spending limits:</strong> Set alerts and auto-cutoffs for unusual spending</li>
+                                    <li><strong>Disable unused features:</strong> Turn off DISA, call forwarding to external if not needed</li>
+                                </ul>
+                                
+                                <p><strong>Detection & Response:</strong></p>
+                                <ul class="key-points">
+                                    <li>Monitor call detail records for unusual patterns</li>
+                                    <li>Set alerts for international calls outside business hours</li>
+                                    <li>Review monthly bills for unexpected charges</li>
+                                    <li>If fraud detected: disable affected extensions immediately, contact carrier</li>
+                                </ul>
+                                
+                                <p>One weekend of toll fraud can result in tens of thousands of dollars in charges. Prevention is far cheaper than cleanup."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card" id="q5">
+                    <div class="question-header">
+                        <div class="question-title"><span class="question-number">Q5</span><span>What's the difference between UCaaS and traditional PBX?</span></div>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
+                        <span class="question-toggle">▼</span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Understanding this is important for planning and troubleshooting:</p>
+                                
+                                <p><strong>Traditional PBX (Private Branch Exchange):</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Location:</strong> Physical hardware on-premises</li>
+                                    <li><strong>Ownership:</strong> You buy, maintain, and upgrade it</li>
+                                    <li><strong>Connections:</strong> Analog lines (POTS) or digital trunks (PRI/T1)</li>
+                                    <li><strong>Features:</strong> Fixed - what you bought is what you get</li>
+                                    <li><strong>Scaling:</strong> Requires hardware purchase and installation</li>
+                                    <li><strong>Cost model:</strong> High upfront, lower ongoing (but maintenance/upgrades add up)</li>
+                                </ul>
+                                
+                                <p><strong>UCaaS (Unified Communications as a Service) - like 8x8:</strong></p>
+                                <ul class="key-points">
+                                    <li><strong>Location:</strong> Cloud-hosted by provider</li>
+                                    <li><strong>Ownership:</strong> Subscription service - provider manages everything</li>
+                                    <li><strong>Connections:</strong> Internet-based (SIP trunking)</li>
+                                    <li><strong>Features:</strong> Constantly updated - video, chat, SMS, integrations</li>
+                                    <li><strong>Scaling:</strong> Add licenses instantly - no hardware needed</li>
+                                    <li><strong>Cost model:</strong> Low upfront, predictable monthly per-user</li>
+                                </ul>
+                                
+                                <p><strong>Why Universities Often Choose UCaaS:</strong></p>
+                                <ul class="key-points">
+                                    <li>No need for specialized telephony staff</li>
+                                    <li>Easy integration with Teams/M365</li>
+                                    <li>Supports remote/hybrid work seamlessly</li>
+                                    <li>Automatic disaster recovery - if campus goes down, calls still work</li>
+                                    <li>Predictable budgeting (OpEx vs. CapEx)</li>
+                                </ul>
+                                
+                                <p>The tradeoff is dependency on internet connectivity and the provider's reliability."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="backup-dr.html" class="page-nav-btn prev"><div><div class="page-nav-label">Previous</div><div class="page-nav-title">← Backup & DR</div></div></a>
+                    <a href="behavioral-interview.html" class="page-nav-btn next"><div><div class="page-nav-label">Next</div><div class="page-nav-title">Behavioral Interview →</div></div></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="overlay"></div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
