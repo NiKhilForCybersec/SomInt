@@ -6,134 +6,100 @@
     <title>Incident Response - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item" data-page="index">
-                        <span class="nav-icon">🏠</span>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
                         <span>Dashboard</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals">
-                        <span class="nav-icon">🛡️</span>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
                         <span>Cybersecurity Fundamentals</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item active" data-page="incident-response">
-                        <span class="nav-icon">🚨</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item active" data-page="incident-response" class="nav-item active">
+                        <span class="nav-icon">IR</span>
                         <span>Incident Response</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="vulnerability-management">
-                        <span class="nav-icon">🔍</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
                         <span>Vulnerability Management</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="identity-access">
-                        <span class="nav-icon">🔐</span>
-                        <span>Identity & Access Mgmt</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="dlp-compliance">
-                        <span class="nav-icon">📋</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
                         <span>DLP & Compliance</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="security-awareness">
-                        <span class="nav-icon">🎓</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
                         <span>Security Awareness</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection">
-                        <span class="nav-icon">💻</span>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
                         <span>Endpoint Protection</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="microsoft-365">
-                        <span class="nav-icon">☁️</span>
-                        <span>Microsoft 365 Admin</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="network-infrastructure">
-                        <span class="nav-icon">🌐</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
                         <span>Network Infrastructure</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="backup-dr">
-                        <span class="nav-icon">💾</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
                         <span>Backup & DR</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="telephony">
-                        <span class="nav-icon">📞</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
                         <span>Telephony</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview">
-                        <span class="nav-icon">🗣️</span>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
                         <span>Behavioral Questions</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="scenario-exercises">
-                        <span class="nav-icon">📝</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
                         <span>Scenario Exercises</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety">
-                        <span class="nav-icon">📅</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
                         <span>30-60-90 Day Plan</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label">
-                        <span>Overall Progress</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -147,15 +113,15 @@
                     <span class="breadcrumb-item current">Incident Response</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                     <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>🚨 Incident Response</h1>
+                <h1>Incident Response</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Methodologies, playbooks, and practical approaches to security incident handling for the university environment.
                 </p>
@@ -168,59 +134,59 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">INCIDENT RESPONSE PHASES</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    NIST INCIDENT RESPONSE LIFECYCLE                             │
-└─────────────────────────────────────────────────────────────────────────────────┘
 
-    ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-    │   PREPARATION   │      │   DETECTION &   │      │  CONTAINMENT,   │
-    │                 │─────►│   ANALYSIS      │─────►│  ERADICATION &  │
-    │                 │      │                 │      │  RECOVERY       │
-    └─────────────────┘      └─────────────────┘      └────────┬────────┘
-            ▲                                                   │
-            │                                                   │
-            │            ┌─────────────────┐                    │
-            │            │  POST-INCIDENT  │                    │
-            └────────────│    ACTIVITY     │◄───────────────────┘
-                         │ (Lessons Learned)│
-                         └─────────────────┘
+                    NIST INCIDENT RESPONSE LIFECYCLE                             
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 1: PREPARATION                                                            │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│ • Develop IR plan and playbooks          • Configure logging and monitoring     │
-│ • Establish IR team and contacts         • Deploy security tools (SIEM, EDR)    │
-│ • Conduct training and exercises         • Create communication templates       │
-│ • Define incident severity levels        • Prepare forensic toolkit             │
-└─────────────────────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 2: DETECTION & ANALYSIS                                                   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│ • Monitor security alerts                • Determine incident scope             │
-│ • Correlate events from multiple sources • Identify affected systems            │
-│ • Validate and triage incidents          • Document initial findings            │
-│ • Classify severity and priority         • Preserve evidence                    │
-└─────────────────────────────────────────────────────────────────────────────────┘
+                
+       PREPARATION            DETECTION &           CONTAINMENT,   
+                        ANALYSIS        ERADICATION &  
+                                                    RECOVERY       
+                
+                                                               
+                                                               
+                                            
+                          POST-INCIDENT                      
+                ACTIVITY     
+                          (Lessons Learned)
+                         
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 3: CONTAINMENT, ERADICATION & RECOVERY                                    │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│ CONTAINMENT:           ERADICATION:           RECOVERY:                         │
-│ • Isolate systems      • Remove malware       • Restore from backups            │
-│ • Block IPs/domains    • Close vulnerabilities• Rebuild if needed               │
-│ • Disable accounts     • Reset credentials    • Verify system integrity         │
-│ • Short vs long-term   • Patch systems        • Monitor for recurrence          │
-└─────────────────────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│ PHASE 4: POST-INCIDENT ACTIVITY                                                 │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│ • Conduct lessons learned meeting        • Update playbooks and procedures      │
-│ • Document incident timeline             • Improve detection capabilities       │
-│ • Calculate impact and costs             • Train staff on findings              │
-│ • Report to stakeholders                 • Share threat intel (if appropriate)  │
-└─────────────────────────────────────────────────────────────────────────────────┘
+ PHASE 1: PREPARATION                                                            
+
+ • Develop IR plan and playbooks          • Configure logging and monitoring     
+ • Establish IR team and contacts         • Deploy security tools (SIEM, EDR)    
+ • Conduct training and exercises         • Create communication templates       
+ • Define incident severity levels        • Prepare forensic toolkit             
+
+
+
+ PHASE 2: DETECTION & ANALYSIS                                                   
+
+ • Monitor security alerts                • Determine incident scope             
+ • Correlate events from multiple sources • Identify affected systems            
+ • Validate and triage incidents          • Document initial findings            
+ • Classify severity and priority         • Preserve evidence                    
+
+
+
+ PHASE 3: CONTAINMENT, ERADICATION & RECOVERY                                    
+
+ CONTAINMENT:           ERADICATION:           RECOVERY:                         
+ • Isolate systems      • Remove malware       • Restore from backups            
+ • Block IPs/domains    • Close vulnerabilities• Rebuild if needed               
+ • Disable accounts     • Reset credentials    • Verify system integrity         
+ • Short vs long-term   • Patch systems        • Monitor for recurrence          
+
+
+
+ PHASE 4: POST-INCIDENT ACTIVITY                                                 
+
+ • Conduct lessons learned meeting        • Update playbooks and procedures      
+ • Document incident timeline             • Improve detection capabilities       
+ • Calculate impact and costs             • Train staff on findings              
+ • Report to stakeholders                 • Share threat intel (if appropriate)  
+
 </pre>
                     </div>
                 </div>
@@ -278,74 +244,74 @@
                     <div class="ascii-diagram orange">
                         <div class="ascii-diagram-title">RANSOMWARE INCIDENT DECISION TREE</div>
 <pre>
-                    ┌───────────────────────────────┐
-                    │   RANSOMWARE DETECTED/        │
-                    │   REPORTED                    │
-                    └──────────────┬────────────────┘
-                                   │
-                                   ▼
-                    ┌───────────────────────────────┐
-                    │ IMMEDIATE ACTIONS (First 15m) │
-                    │ • DO NOT power off systems    │
-                    │ • Disconnect from network     │
-                    │ • Photograph ransom note      │
-                    │ • Notify IT Director/CIO      │
-                    └──────────────┬────────────────┘
-                                   │
-                                   ▼
-              ┌────────────────────────────────────────────┐
-              │         Is it spreading actively?          │
-              └─────────────────────┬──────────────────────┘
-                        ┌───────────┴───────────┐
-                        │ YES                   │ NO
-                        ▼                       ▼
-         ┌─────────────────────┐    ┌─────────────────────┐
-         │ EMERGENCY ISOLATION │    │ CONTROLLED RESPONSE │
-         │ • Disable network   │    │ • Isolate affected  │
-         │   ports at switch   │    │   systems only      │
-         │ • Block SMB (445)   │    │ • Preserve evidence │
-         │ • Shut down shares  │    │ • Begin analysis    │
-         └──────────┬──────────┘    └──────────┬──────────┘
-                    │                          │
-                    └───────────┬──────────────┘
-                                │
-                                ▼
-                    ┌───────────────────────────────┐
-                    │     SCOPE ASSESSMENT          │
-                    │ • What systems encrypted?     │
-                    │ • What data affected?         │
-                    │ • Entry point identified?     │
-                    └──────────────┬────────────────┘
-                                   │
-                                   ▼
-              ┌────────────────────────────────────────────┐
-              │      Are clean backups available?          │
-              └─────────────────────┬──────────────────────┘
-                        ┌───────────┴───────────┐
-                        │ YES                   │ NO
-                        ▼                       ▼
-         ┌─────────────────────┐    ┌─────────────────────┐
-         │ RESTORE FROM BACKUP │    │ ASSESS OPTIONS      │
-         │ • Verify backup      │    │ • Decryptor exists? │
-         │   integrity          │    │ • Data criticality? │
-         │ • Rebuild systems    │    │ • Legal/insurance   │
-         │ • Restore data       │    │   consultation      │
-         └─────────────────────┘    └─────────────────────┘
-                                   │
-                                   ▼
-                    ┌───────────────────────────────┐
-                    │     POST-INCIDENT             │
-                    │ • Root cause analysis         │
-                    │ • Report to PIPEDA (72 hrs)   │
-                    │ • Update security controls    │
-                    │ • Lessons learned             │
-                    └───────────────────────────────┘
+                    
+                       RANSOMWARE DETECTED/        
+                       REPORTED                    
+                    
+                                   
+                                   
+                    
+                     IMMEDIATE ACTIONS (First 15m) 
+                     • DO NOT power off systems    
+                     • Disconnect from network     
+                     • Photograph ransom note      
+                     • Notify IT Director/CIO      
+                    
+                                   
+                                   
+              
+                       Is it spreading actively?          
+              
+                        
+                         YES                    NO
+                                               
+             
+          EMERGENCY ISOLATION      CONTROLLED RESPONSE 
+          • Disable network        • Isolate affected  
+            ports at switch          systems only      
+          • Block SMB (445)        • Preserve evidence 
+          • Shut down shares       • Begin analysis    
+             
+                                              
+                    
+                                
+                                
+                    
+                         SCOPE ASSESSMENT          
+                     • What systems encrypted?     
+                     • What data affected?         
+                     • Entry point identified?     
+                    
+                                   
+                                   
+              
+                    Are clean backups available?          
+              
+                        
+                         YES                    NO
+                                               
+             
+          RESTORE FROM BACKUP      ASSESS OPTIONS      
+          • Verify backup           • Decryptor exists? 
+            integrity               • Data criticality? 
+          • Rebuild systems         • Legal/insurance   
+          • Restore data              consultation      
+             
+                                   
+                                   
+                    
+                         POST-INCIDENT             
+                     • Root cause analysis         
+                     • Report to PIPEDA (72 hrs)   
+                     • Update security controls    
+                     • Lessons learned             
+                    
 </pre>
                     </div>
                 </div>
                 
                 <div class="alert danger">
-                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-icon">!</div>
                     <div class="alert-content">
                         <div class="alert-title">Critical: Never Pay Ransom Without Consultation</div>
                         <div class="alert-text">Payment decisions must involve executive leadership, legal counsel, and potentially law enforcement. Payment does not guarantee data recovery and may violate sanctions laws.</div>
@@ -459,56 +425,56 @@
                     <div class="ascii-diagram green">
                         <div class="ascii-diagram-title">PHISHING RESPONSE DECISION TREE</div>
 <pre>
-                    ┌───────────────────────────────┐
-                    │   PHISHING REPORTED/DETECTED  │
-                    └──────────────┬────────────────┘
-                                   │
-                                   ▼
-              ┌────────────────────────────────────────────┐
-              │      Did the user interact with it?        │
-              └─────────────────────┬──────────────────────┘
-                        ┌───────────┴───────────┐
-                        │ NO                    │ YES
-                        ▼                       ▼
-         ┌─────────────────────┐    ┌─────────────────────────┐
-         │ LOW PRIORITY        │    │ What type of interaction?│
-         │ • Block sender      │    └────────────┬────────────┘
-         │ • Delete from inbox │           ┌─────┴─────┐
-         │ • Report to M365    │           │           │
-         │ • Update filters    │           ▼           ▼
-         └─────────────────────┘    ┌───────────┐ ┌───────────────┐
-                                    │ Clicked   │ │ Entered       │
-                                    │ Link Only │ │ Credentials   │
-                                    └─────┬─────┘ └───────┬───────┘
-                                          │               │
-                                          ▼               ▼
-                               ┌─────────────────┐ ┌─────────────────┐
-                               │ MEDIUM PRIORITY │ │ HIGH PRIORITY   │
-                               │ • Scan endpoint │ │ • Reset password│
-                               │ • Check for     │ │   IMMEDIATELY   │
-                               │   downloads     │ │ • Revoke tokens │
-                               │ • Monitor user  │ │ • Check for     │
-                               │   activity      │ │   inbox rules   │
-                               └─────────────────┘ │ • Audit account │
-                                                   │   activity      │
-                                                   │ • Scan endpoint │
-                                                   └─────────────────┘
-                                                           │
-                                                           ▼
-                               ┌────────────────────────────────────────┐
-                               │    Was there unauthorized access?      │
-                               └───────────────────┬────────────────────┘
-                                           ┌───────┴───────┐
-                                           │ YES           │ NO
-                                           ▼               ▼
-                            ┌─────────────────────┐   ┌─────────────┐
-                            │ CRITICAL - BREACH   │   │ Close       │
-                            │ • Full account audit│   │ incident    │
-                            │ • Check for data    │   │ Document    │
-                            │   access/exfil      │   │ Train user  │
-                            │ • Incident report   │   └─────────────┘
-                            │ • Privacy assessment│
-                            └─────────────────────┘
+                    
+                       PHISHING REPORTED/DETECTED  
+                    
+                                   
+                                   
+              
+                    Did the user interact with it?        
+              
+                        
+                         NO                     YES
+                                               
+             
+          LOW PRIORITY             What type of interaction?
+          • Block sender          
+          • Delete from inbox            
+          • Report to M365                          
+          • Update filters                          
+              
+                                     Clicked     Entered       
+                                     Link Only   Credentials   
+                                     
+                                                         
+                                                         
+                                
+                                MEDIUM PRIORITY   HIGH PRIORITY   
+                                • Scan endpoint   • Reset password
+                                • Check for         IMMEDIATELY   
+                                  downloads       • Revoke tokens 
+                                • Monitor user    • Check for     
+                                  activity          inbox rules   
+                                 • Audit account 
+                                                      activity      
+                                                    • Scan endpoint 
+                                                   
+                                                           
+                                                           
+                               
+                                   Was there unauthorized access?      
+                               
+                                           
+                                            YES            NO
+                                                          
+                               
+                             CRITICAL - BREACH       Close       
+                             • Full account audit    incident    
+                             • Check for data        Document    
+                               access/exfil          Train user  
+                             • Incident report      
+                             • Privacy assessment
+                            
 </pre>
                     </div>
                 </div>
@@ -573,9 +539,9 @@
                             <span>Walk me through how you would respond to a ransomware attack at IBU.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -660,9 +626,9 @@
                             <span>A faculty member reports they clicked a phishing link. What do you do?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -738,9 +704,9 @@
                             <span>How do you prioritize security incidents when multiple alerts fire simultaneously?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -796,9 +762,9 @@
                             <span>Describe your experience with XDR platforms for incident response.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -880,9 +846,9 @@ phishingClicks
                             <span>How do you document incidents and maintain chain of custody for potential legal proceedings?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

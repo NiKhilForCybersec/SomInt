@@ -6,134 +6,100 @@
     <title>Cybersecurity Fundamentals - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item" data-page="index">
-                        <span class="nav-icon">🏠</span>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
                         <span>Dashboard</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item active" data-page="cybersecurity-fundamentals">
-                        <span class="nav-icon">🛡️</span>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item active" data-page="cybersecurity-fundamentals" class="nav-item active">
+                        <span class="nav-icon">CF</span>
                         <span>Cybersecurity Fundamentals</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="incident-response">
-                        <span class="nav-icon">🚨</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
                         <span>Incident Response</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="vulnerability-management">
-                        <span class="nav-icon">🔍</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
                         <span>Vulnerability Management</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="identity-access">
-                        <span class="nav-icon">🔐</span>
-                        <span>Identity & Access Mgmt</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="dlp-compliance">
-                        <span class="nav-icon">📋</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
                         <span>DLP & Compliance</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="security-awareness">
-                        <span class="nav-icon">🎓</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
                         <span>Security Awareness</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection">
-                        <span class="nav-icon">💻</span>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
                         <span>Endpoint Protection</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="microsoft-365">
-                        <span class="nav-icon">☁️</span>
-                        <span>Microsoft 365 Admin</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="network-infrastructure">
-                        <span class="nav-icon">🌐</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
                         <span>Network Infrastructure</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="backup-dr">
-                        <span class="nav-icon">💾</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
                         <span>Backup & DR</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="telephony">
-                        <span class="nav-icon">📞</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
                         <span>Telephony</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview">
-                        <span class="nav-icon">🗣️</span>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
                         <span>Behavioral Questions</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="scenario-exercises">
-                        <span class="nav-icon">📝</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
                         <span>Scenario Exercises</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety">
-                        <span class="nav-icon">📅</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
                         <span>30-60-90 Day Plan</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label">
-                        <span>Overall Progress</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -147,15 +113,15 @@
                     <span class="breadcrumb-item current">Cybersecurity Fundamentals</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                     <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>🛡️ Cybersecurity Fundamentals</h1>
+                <h1>Cybersecurity Fundamentals</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Core security concepts, frameworks, and methodologies essential for the Infrastructure & Cybersecurity Specialist role.
                 </p>
@@ -176,18 +142,18 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">CIA TRIAD - Foundation of Information Security</div>
 <pre>
-                         ┌─────────────────┐
-                         │ CONFIDENTIALITY │
-                         │   (Secrecy)     │
-                         └────────┬────────┘
-                                  │
-               ┌──────────────────┼──────────────────┐
-               │                  │                  │
-               ▼                  │                  ▼
-     ┌─────────────────┐         │         ┌─────────────────┐
-     │   INTEGRITY     │◄────────┴────────►│  AVAILABILITY   │
-     │  (Accuracy)     │                   │   (Access)      │
-     └─────────────────┘                   └─────────────────┘
+                         
+                          CONFIDENTIALITY 
+                            (Secrecy)     
+                         
+                                  
+               
+                                                   
+                                                   
+                       
+        INTEGRITY       AVAILABILITY   
+       (Accuracy)                           (Access)      
+                        
 
      CONFIDENTIALITY: Only authorized users can access data
      INTEGRITY: Data is accurate and unaltered  
@@ -209,46 +175,46 @@
                     <div class="ascii-diagram green">
                         <div class="ascii-diagram-title">LAYERED SECURITY ARCHITECTURE</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           DEFENSE IN DEPTH                                  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  LAYER 1: POLICIES & PROCEDURES                                            │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Security policies, training, acceptable use, incident response plans  │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 2: PHYSICAL SECURITY                                                │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Access controls, cameras, locks, secure facilities, visitor logs      │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 3: PERIMETER SECURITY                                               │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Firewalls, DMZ, VPN, IDS/IPS, WAF, DDoS protection                   │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 4: NETWORK SECURITY                                                 │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Segmentation, VLANs, NAC, network monitoring, encryption             │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 5: ENDPOINT SECURITY                                                │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Antivirus, EDR, patch management, device hardening, MDM              │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 6: APPLICATION SECURITY                                             │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Secure coding, input validation, authentication, authorization       │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-│  LAYER 7: DATA SECURITY                                                    │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │ Encryption, DLP, backup, access controls, classification             │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                           DEFENSE IN DEPTH                                  
+
+                                                                             
+  LAYER 1: POLICIES & PROCEDURES                                            
+   
+   Security policies, training, acceptable use, incident response plans   
+   
+                                                                             
+  LAYER 2: PHYSICAL SECURITY                                                
+   
+   Access controls, cameras, locks, secure facilities, visitor logs       
+   
+                                                                             
+  LAYER 3: PERIMETER SECURITY                                               
+   
+   Firewalls, DMZ, VPN, IDS/IPS, WAF, DDoS protection                    
+   
+                                                                             
+  LAYER 4: NETWORK SECURITY                                                 
+   
+   Segmentation, VLANs, NAC, network monitoring, encryption              
+   
+                                                                             
+  LAYER 5: ENDPOINT SECURITY                                                
+   
+   Antivirus, EDR, patch management, device hardening, MDM               
+   
+                                                                             
+  LAYER 6: APPLICATION SECURITY                                             
+   
+   Secure coding, input validation, authentication, authorization        
+   
+                                                                             
+  LAYER 7: DATA SECURITY                                                    
+   
+   Encryption, DLP, backup, access controls, classification              
+   
+                                                                             
+
 </pre>
                     </div>
                 </div>
@@ -264,31 +230,31 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">CHOOSING THE RIGHT FRAMEWORK</div>
 <pre>
-                        ┌─────────────────────────┐
-                        │ What is your primary    │
-                        │ compliance requirement? │
-                        └───────────┬─────────────┘
-                                    │
-          ┌─────────────────────────┼─────────────────────────┐
-          │                         │                         │
-          ▼                         ▼                         ▼
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│ Government/     │      │ Industry        │      │ General Best    │
-│ Regulatory      │      │ Specific        │      │ Practice        │
-└────────┬────────┘      └────────┬────────┘      └────────┬────────┘
-         │                        │                        │
-    ┌────┴────┐              ┌────┴────┐              ┌────┴────┐
-    ▼         ▼              ▼         ▼              ▼         ▼
-┌───────┐ ┌───────┐    ┌───────┐ ┌───────┐    ┌───────┐ ┌───────┐
-│ NIST  │ │FedRAMP│    │PCI DSS│ │ HIPAA │    │ISO    │ │ CIS   │
-│ CSF   │ │       │    │(Cards)│ │(Health)│   │27001  │ │Controls│
-└───────┘ └───────┘    └───────┘ └───────┘    └───────┘ └───────┘
+                        
+                         What is your primary    
+                         compliance requirement? 
+                        
+                                    
+          
+                                                            
+                                                            
+            
+ Government/            Industry               General Best    
+ Regulatory             Specific               Practice        
+            
+                                                         
+                                
+                                                           
+           
+ NIST   FedRAMP    PCI DSS  HIPAA     ISO      CIS   
+ CSF               (Cards) (Health)   27001   Controls
+           
 
 EDUCATION SECTOR SPECIFICS (Canada):
-├── PIPEDA (Personal Information Protection)
-├── FIPPA (Freedom of Information and Protection of Privacy)
-├── CASL (Canada's Anti-Spam Legislation)
-└── Provincial education ministry requirements
+ PIPEDA (Personal Information Protection)
+ FIPPA (Freedom of Information and Protection of Privacy)
+ CASL (Canada's Anti-Spam Legislation)
+ Provincial education ministry requirements
 </pre>
                     </div>
                 </div>
@@ -299,27 +265,27 @@ EDUCATION SECTOR SPECIFICS (Canada):
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">NIST CSF - FIVE CORE FUNCTIONS</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    NIST CYBERSECURITY FRAMEWORK                             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
-│   │ IDENTIFY │───►│ PROTECT  │───►│  DETECT  │───►│ RESPOND  │───►│ RECOVER  │
-│   └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
-│        │              │               │               │               │
-│        ▼              ▼               ▼               ▼               ▼
-│   ┌──────────┐  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
-│   │• Asset   │  │• Access  │   │• Anomaly │   │• Response│   │• Recovery│
-│   │  Mgmt    │  │  Control │   │  Detection│  │  Planning│   │  Planning│
-│   │• Business│  │• Training│   │• Security│   │• Comms   │   │• Improve-│
-│   │  Context │  │• Data    │   │  Monitor │   │• Analysis│   │  ments   │
-│   │• Govern- │  │  Security│   │• Detection│  │• Mitigate│   │• Comms   │
-│   │  ance    │  │• Info    │   │  Processes│  │          │   │          │
-│   │• Risk    │  │  Protect │   │           │   │          │   │          │
-│   │  Assess  │  │• Maint   │   │           │   │          │   │          │
-│   └──────────┘  └──────────┘   └──────────┘   └──────────┘   └──────────┘
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                    NIST CYBERSECURITY FRAMEWORK                             
+
+                                                                             
+                   
+    IDENTIFY  PROTECT    DETECT   RESPOND   RECOVER  
+                   
+                                                                   
+                                                                   
+              
+   • Asset     • Access     • Anomaly    • Response   • Recovery
+     Mgmt        Control      Detection    Planning     Planning
+   • Business  • Training   • Security   • Comms      • Improve-
+     Context   • Data         Monitor    • Analysis     ments   
+   • Govern-     Security   • Detection  • Mitigate   • Comms   
+     ance      • Info         Processes                         
+   • Risk        Protect                                         
+     Assess    • Maint                                           
+              
+                                                                             
+
 </pre>
                     </div>
                 </div>
@@ -330,32 +296,32 @@ EDUCATION SECTOR SPECIFICS (Canada):
                     <div class="ascii-diagram purple">
 <pre>
 ISO 27001:2022 CONTROL DOMAINS
-═══════════════════════════════════════════════════════════════════════════════
+
 
 A.5  Organizational Controls (37 controls)
-     ├── Information security policies
-     ├── Organization of information security
-     ├── Human resource security
-     └── Asset management
+      Information security policies
+      Organization of information security
+      Human resource security
+      Asset management
 
 A.6  People Controls (8 controls)
-     ├── Screening
-     ├── Terms of employment
-     ├── Security awareness
-     └── Disciplinary process
+      Screening
+      Terms of employment
+      Security awareness
+      Disciplinary process
 
 A.7  Physical Controls (14 controls)
-     ├── Secure areas
-     ├── Equipment security
-     └── Clear desk/screen
+      Secure areas
+      Equipment security
+      Clear desk/screen
 
 A.8  Technological Controls (34 controls)
-     ├── User endpoint devices
-     ├── Privileged access
-     ├── Access control
-     ├── Cryptography
-     ├── Network security
-     └── Application security
+      User endpoint devices
+      Privileged access
+      Access control
+      Cryptography
+      Network security
+      Application security
 </pre>
                     </div>
                 </div>
@@ -370,48 +336,48 @@ A.8  Technological Controls (34 controls)
                     <div class="ascii-diagram orange">
                         <div class="ascii-diagram-title">MITRE ATT&CK ENTERPRISE TACTICS</div>
 <pre>
-┌───────────────────────────────────────────────────────────────────────────────┐
-│                           ATTACK PROGRESSION                                  │
-└───────────────────────────────────────────────────────────────────────────────┘
+
+                           ATTACK PROGRESSION                                  
+
 
      INITIAL ACCESS          EXECUTION         PERSISTENCE        PRIVILEGE
-          │                      │                  │             ESCALATION
-          ▼                      ▼                  ▼                  │
-    ┌───────────┐          ┌───────────┐     ┌───────────┐            │
-    │• Phishing │          │• PowerShell│    │• Registry │            ▼
-    │• Exploit  │    ───►  │• Scripts  │ ─►  │  Run Keys │     ┌───────────┐
-    │  Public   │          │• WMI      │     │• Scheduled│     │• Token    │
-    │  App      │          │• Command  │     │  Tasks    │     │  Manipu-  │
-    │• Valid    │          │  Line     │     │• Services │     │  lation   │
-    │  Accounts │          └───────────┘     └───────────┘     │• Exploit  │
-    └───────────┘                                              │  Vulns    │
-                                                               └───────────┘
-          │
-          ▼
+                                                               ESCALATION
+                                                                    
+                               
+    • Phishing           • PowerShell    • Registry             
+    • Exploit        • Scripts       Run Keys      
+      Public             • WMI           • Scheduled     • Token    
+      App                • Command         Tasks           Manipu-  
+    • Valid                Line          • Services        lation   
+      Accounts                     • Exploit  
+                                                    Vulns    
+                                                               
+          
+          
     DEFENSE EVASION     CREDENTIAL ACCESS    DISCOVERY      LATERAL MOVEMENT
-          │                    │                 │                  │
-          ▼                    ▼                 ▼                  ▼
-    ┌───────────┐        ┌───────────┐    ┌───────────┐      ┌───────────┐
-    │• Disable  │        │• Brute    │    │• Network  │      │• RDP      │
-    │  Security │        │  Force    │    │  Scan     │      │• SMB/     │
-    │• Masquer- │        │• Keylog   │    │• Account  │      │  Admin    │
-    │  ading    │        │• Mimikatz │    │  Discovery│      │  Shares   │
-    │• Process  │        │• Pass-the-│    │• System   │      │• SSH      │
-    │  Injection│        │  Hash     │    │  Info     │      │• WinRM    │
-    └───────────┘        └───────────┘    └───────────┘      └───────────┘
-          │
-          ▼
+                                                                 
+                                                                 
+                      
+    • Disable          • Brute        • Network        • RDP      
+      Security           Force          Scan           • SMB/     
+    • Masquer-         • Keylog       • Account          Admin    
+      ading            • Mimikatz       Discovery        Shares   
+    • Process          • Pass-the-    • System         • SSH      
+      Injection          Hash           Info           • WinRM    
+                      
+          
+          
       COLLECTION         EXFILTRATION         IMPACT
-          │                    │                 │
-          ▼                    ▼                 ▼
-    ┌───────────┐        ┌───────────┐    ┌───────────┐
-    │• Data from│        │• Over C2  │    │• Ransomware│
-    │  Local    │        │• Cloud    │    │• Data      │
-    │  System   │        │  Storage  │    │  Destruction│
-    │• Screen   │        │• Web      │    │• Defacement│
-    │  Capture  │        │  Service  │    │• DoS       │
-    │• Email    │        │           │    │            │
-    └───────────┘        └───────────┘    └───────────┘
+                                               
+                                               
+                
+    • Data from        • Over C2      • Ransomware
+      Local            • Cloud        • Data      
+      System             Storage        Destruction
+    • Screen           • Web          • Defacement
+      Capture            Service      • DoS       
+    • Email                                       
+                
 </pre>
                     </div>
                 </div>
@@ -426,46 +392,46 @@ A.8  Technological Controls (34 controls)
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">CYBER KILL CHAIN WITH DEFENSES</div>
 <pre>
-    ┌─────────────┐
-    │   RECON     │  Research, identify targets, harvest emails
-    │   PHASE     │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: OSINT monitoring, social media policy
-           │
-           ▼
-    ┌─────────────┐
-    │ WEAPONIZE   │  Create malware, pair exploit with backdoor
-    │   PHASE     │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: Threat intelligence, malware analysis
-           │
-           ▼
-    ┌─────────────┐
-    │  DELIVERY   │  Transmit weapon via email, web, USB
-    │   PHASE     │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: Email filtering, web proxy, user training
-           │
-           ▼
-    ┌─────────────┐
-    │ EXPLOITATION│  Exploit vulnerability to execute code
-    │   PHASE     │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: Patching, DEP, ASLR, endpoint protection
-           │
-           ▼
-    ┌─────────────┐
-    │INSTALLATION │  Install malware, backdoor, rootkit
-    │   PHASE     │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: EDR, application whitelisting, HIPS
-           │
-           ▼
-    ┌─────────────┐
-    │  COMMAND &  │  Establish C2 channel for remote control
-    │  CONTROL    │  ────────────────────────────────────────────
-    └──────┬──────┘  DEFENSE: Network monitoring, DNS filtering, proxy
-           │
-           ▼
-    ┌─────────────┐
-    │  ACTIONS ON │  Achieve goals: data theft, destruction, ransom
-    │  OBJECTIVES │  ────────────────────────────────────────────
-    └─────────────┘  DEFENSE: DLP, access controls, monitoring, backup
+    
+       RECON       Research, identify targets, harvest emails
+       PHASE       
+      DEFENSE: OSINT monitoring, social media policy
+           
+           
+    
+     WEAPONIZE     Create malware, pair exploit with backdoor
+       PHASE       
+      DEFENSE: Threat intelligence, malware analysis
+           
+           
+    
+      DELIVERY     Transmit weapon via email, web, USB
+       PHASE       
+      DEFENSE: Email filtering, web proxy, user training
+           
+           
+    
+     EXPLOITATION  Exploit vulnerability to execute code
+       PHASE       
+      DEFENSE: Patching, DEP, ASLR, endpoint protection
+           
+           
+    
+    INSTALLATION   Install malware, backdoor, rootkit
+       PHASE       
+      DEFENSE: EDR, application whitelisting, HIPS
+           
+           
+    
+      COMMAND &    Establish C2 channel for remote control
+      CONTROL      
+      DEFENSE: Network monitoring, DNS filtering, proxy
+           
+           
+    
+      ACTIONS ON   Achieve goals: data theft, destruction, ransom
+      OBJECTIVES   
+      DEFENSE: DLP, access controls, monitoring, backup
 </pre>
                     </div>
                 </div>
@@ -483,9 +449,9 @@ A.8  Technological Controls (34 controls)
                             <span>Explain the NIST Cybersecurity Framework and how you would implement it at IBU.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -559,9 +525,9 @@ A.8  Technological Controls (34 controls)
                             <span>What is the difference between NIST and ISO 27001, and when would you use each?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -651,9 +617,9 @@ A.8  Technological Controls (34 controls)
                             <span>Explain the MITRE ATT&CK framework and how you use it in threat detection.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -713,9 +679,9 @@ A.8  Technological Controls (34 controls)
                             <span>How would you handle cybersecurity for a diverse user population (students, faculty, staff)?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -779,9 +745,9 @@ A.8  Technological Controls (34 controls)
                             <span>What compliance frameworks are relevant to a Canadian university?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

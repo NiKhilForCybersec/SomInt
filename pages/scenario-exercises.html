@@ -6,41 +6,99 @@
     <title>Scenario Exercises - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
-            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+                <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
+                </div>
+            </div>
             <nav class="sidebar-nav">
-                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
-                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
-                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
-                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
-                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
-                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
-                    <div class="nav-item active" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item active" data-page="scenario-exercises" class="nav-item active">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
         </aside>
         
         <main class="main-content">
@@ -53,13 +111,13 @@
                     <span class="breadcrumb-item current">Scenario Exercises</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>📝 Scenario-Based Exercises</h1>
+                <h1>Scenario-Based Exercises</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Practice responding to realistic technical scenarios you may encounter during your interview at IBU.
                 </p>
@@ -71,61 +129,61 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">SCENARIO RESPONSE FRAMEWORK</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    STRUCTURED PROBLEM-SOLVING APPROACH                      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  1. CLARIFY THE SITUATION                                           │   │
-│   │  ─────────────────────────────────────────────────────────────────  │   │
-│   │  • Ask clarifying questions before diving in                        │   │
-│   │  • Understand scope, constraints, and priorities                    │   │
-│   │  • "Can I ask a few questions to make sure I understand?"           │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                        │
-│                                    ▼                                        │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  2. THINK OUT LOUD                                                  │   │
-│   │  ─────────────────────────────────────────────────────────────────  │   │
-│   │  • Share your thought process - interviewers want to see HOW        │   │
-│   │  • "My first thought is... but I should also consider..."           │   │
-│   │  • Don't jump to solutions - show your analysis                     │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                        │
-│                                    ▼                                        │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  3. PRIORITIZE                                                      │   │
-│   │  ─────────────────────────────────────────────────────────────────  │   │
-│   │  • For incidents: life safety → containment → eradication           │   │
-│   │  • For projects: quick wins → high impact → foundation building     │   │
-│   │  • State your prioritization logic explicitly                       │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                        │
-│                                    ▼                                        │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  4. PROPOSE ACTIONS                                                 │   │
-│   │  ─────────────────────────────────────────────────────────────────  │   │
-│   │  • Specific, actionable steps with clear sequence                   │   │
-│   │  • Include who, what, when where relevant                           │   │
-│   │  • Address both immediate and long-term needs                       │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                        │
-│                                    ▼                                        │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  5. CONSIDER RISKS & ALTERNATIVES                                   │   │
-│   │  ─────────────────────────────────────────────────────────────────  │   │
-│   │  • What could go wrong with your approach?                          │   │
-│   │  • What alternatives exist?                                         │   │
-│   │  • What tradeoffs are you making?                                   │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                    STRUCTURED PROBLEM-SOLVING APPROACH                      
+
+                                                                             
+      
+     1. CLARIFY THE SITUATION                                              
+          
+     • Ask clarifying questions before diving in                           
+     • Understand scope, constraints, and priorities                       
+     • "Can I ask a few questions to make sure I understand?"              
+      
+                                                                            
+                                                                            
+      
+     2. THINK OUT LOUD                                                     
+          
+     • Share your thought process - interviewers want to see HOW           
+     • "My first thought is... but I should also consider..."              
+     • Don't jump to solutions - show your analysis                        
+      
+                                                                            
+                                                                            
+      
+     3. PRIORITIZE                                                         
+          
+     • For incidents: life safety → containment → eradication              
+     • For projects: quick wins → high impact → foundation building        
+     • State your prioritization logic explicitly                          
+      
+                                                                            
+                                                                            
+      
+     4. PROPOSE ACTIONS                                                    
+          
+     • Specific, actionable steps with clear sequence                      
+     • Include who, what, when where relevant                              
+     • Address both immediate and long-term needs                          
+      
+                                                                            
+                                                                            
+      
+     5. CONSIDER RISKS & ALTERNATIVES                                      
+          
+     • What could go wrong with your approach?                             
+     • What alternatives exist?                                            
+     • What tradeoffs are you making?                                      
+      
+                                                                             
+
 </pre>
                     </div>
                 </div>
                 
                 <div class="alert-box alert-info">
-                    <div class="alert-icon">💡</div>
+                    <div class="alert-icon">•</div>
                     <div class="alert-content">
                         <strong>Pro Tip: It's Okay to Ask Questions</strong><br>
                         In scenario questions, interviewers often intentionally leave out details. Asking smart clarifying questions shows real-world problem-solving skills. Questions like "Is this during business hours?", "What's our backup situation?", or "Who else needs to be notified?" demonstrate experience.
@@ -142,8 +200,8 @@
                             <span class="question-number">S1</span>
                             <span>Ransomware Detection: Multiple endpoints show encryption activity at 2 AM.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -200,8 +258,8 @@
                             <span class="question-number">S2</span>
                             <span>Phishing Campaign: Students receiving fake financial aid emails.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -260,8 +318,8 @@
                             <span class="question-number">S3</span>
                             <span>Data Breach: Student records found on dark web forum.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -330,8 +388,8 @@
                             <span class="question-number">S4</span>
                             <span>Network Outage: Campus WiFi goes down during peak hours.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -396,8 +454,8 @@
                             <span class="question-number">S5</span>
                             <span>New Employee Onboarding: Design the Day 1 IT experience.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -466,8 +524,8 @@
                             <span class="question-number">S6</span>
                             <span>Budget Prioritization: You have $50K for security improvements. What do you do?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -535,8 +593,8 @@
                             <span class="question-number">S7</span>
                             <span>Policy Creation: Develop a BYOD policy for students and faculty.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

@@ -6,66 +6,100 @@
     <title>Microsoft 365 Administration - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar (same as other pages) -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
-                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
-                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
-                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
-                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
-                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item active" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item active" data-page="microsoft-365" class="nav-item active">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
-                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label"><span>Overall Progress</span><span>0%</span></div>
-                    <div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -79,14 +113,14 @@
                     <span class="breadcrumb-item current">Microsoft 365 Admin</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>☁️ Microsoft 365 Administration</h1>
+                <h1>Microsoft 365 Administration</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Azure AD/Entra ID, Conditional Access, licensing, Exchange Online, and M365 security configuration for university environments.
                 </p>
@@ -99,44 +133,44 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">MICROSOFT 365 ADMIN PORTAL ECOSYSTEM</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    MICROSOFT 365 ADMIN PORTALS                                  │
-└─────────────────────────────────────────────────────────────────────────────────┘
+
+                    MICROSOFT 365 ADMIN PORTALS                                  
+
 
     IDENTITY & ACCESS                      SECURITY
-    ┌─────────────────────────┐           ┌─────────────────────────┐
-    │ ENTRA ADMIN CENTER      │           │ SECURITY.MICROSOFT.COM  │
-    │ entra.microsoft.com     │           │                         │
-    │                         │           │ • Defender XDR          │
-    │ • Users & Groups        │           │ • Threat Analytics      │
-    │ • App Registrations     │           │ • Secure Score          │
-    │ • Conditional Access    │           │ • Attack Simulator      │
-    │ • Identity Protection   │           │ • Hunting               │
-    │ • PIM                   │           │                         │
-    └─────────────────────────┘           └─────────────────────────┘
+               
+     ENTRA ADMIN CENTER                  SECURITY.MICROSOFT.COM  
+     entra.microsoft.com                                         
+                                         • Defender XDR          
+     • Users & Groups                    • Threat Analytics      
+     • App Registrations                 • Secure Score          
+     • Conditional Access                • Attack Simulator      
+     • Identity Protection               • Hunting               
+     • PIM                                                       
+               
 
     COMPLIANCE                             ENDPOINT MANAGEMENT
-    ┌─────────────────────────┐           ┌─────────────────────────┐
-    │ PURVIEW COMPLIANCE      │           │ INTUNE ADMIN CENTER     │
-    │ compliance.microsoft.com│           │ intune.microsoft.com    │
-    │                         │           │                         │
-    │ • DLP Policies          │           │ • Device Management     │
-    │ • Sensitivity Labels    │           │ • App Management        │
-    │ • Retention Policies    │           │ • Compliance Policies   │
-    │ • eDiscovery            │           │ • Security Baselines    │
-    │ • Audit Logs            │           │ • Autopilot             │
-    └─────────────────────────┘           └─────────────────────────┘
+               
+     PURVIEW COMPLIANCE                  INTUNE ADMIN CENTER     
+     compliance.microsoft.com            intune.microsoft.com    
+                                                                 
+     • DLP Policies                      • Device Management     
+     • Sensitivity Labels                • App Management        
+     • Retention Policies                • Compliance Policies   
+     • eDiscovery                        • Security Baselines    
+     • Audit Logs                        • Autopilot             
+               
 
     COLLABORATION                          UNIFIED ADMIN
-    ┌─────────────────────────┐           ┌─────────────────────────┐
-    │ EXCHANGE ADMIN CENTER   │           │ M365 ADMIN CENTER       │
-    │ admin.exchange.microsoft│           │ admin.microsoft.com     │
-    │                         │           │                         │
-    │ • Mail Flow Rules       │           │ • User Management       │
-    │ • Mailbox Settings      │           │ • Licensing             │
-    │ • Anti-spam/Phishing    │           │ • Billing               │
-    │ • Connectors            │           │ • Service Health        │
-    └─────────────────────────┘           └─────────────────────────┘
+               
+     EXCHANGE ADMIN CENTER               M365 ADMIN CENTER       
+     admin.exchange.microsoft            admin.microsoft.com     
+                                                                 
+     • Mail Flow Rules                   • User Management       
+     • Mailbox Settings                  • Licensing             
+     • Anti-spam/Phishing                • Billing               
+     • Connectors                        • Service Health        
+               
 </pre>
                     </div>
                 </div>
@@ -151,64 +185,64 @@
                     <div class="ascii-diagram green">
                         <div class="ascii-diagram-title">CONDITIONAL ACCESS EVALUATION FLOW</div>
 <pre>
-                         ┌───────────────────┐
-                         │   USER SIGN-IN    │
-                         │    ATTEMPT        │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │  FIRST FACTOR     │
-                         │  (Password/FIDO)  │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-              ┌────────────────────────────────────────────┐
-              │     CONDITIONAL ACCESS POLICY EVALUATION   │
-              └────────────────────────────────────────────┘
-                                   │
-         ┌─────────────────────────┼─────────────────────────┐
-         │                         │                         │
-         ▼                         ▼                         ▼
-   ┌───────────┐           ┌───────────┐           ┌───────────┐
-   │   USER/   │           │   APP     │           │ CONDITIONS│
-   │   GROUP   │           │           │           │           │
-   │  assigned │           │ targeted  │           │ • Location│
-   │    to     │           │    by     │           │ • Device  │
-   │  policy?  │           │  policy?  │           │ • Risk    │
-   └─────┬─────┘           └─────┬─────┘           └─────┬─────┘
-         │                       │                       │
-         └───────────────────────┼───────────────────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │  ALL CONDITIONS MET?   │
-                    └───────────┬────────────┘
-                        ┌───────┴───────┐
-                        │ NO            │ YES
-                        ▼               ▼
-              ┌─────────────────┐  ┌─────────────────────────────┐
-              │ Policy doesn't  │  │   GRANT CONTROLS REQUIRED   │
-              │ apply - next    │  │                             │
-              │ policy or allow │  │  • Require MFA              │
-              └─────────────────┘  │  • Require compliant device │
-                                   │  • Require Hybrid AD Join   │
-                                   │  • Require approved app     │
-                                   │  • Require app protection   │
-                                   └─────────────┬───────────────┘
-                                                 │
-                                                 ▼
-                                    ┌────────────────────────┐
-                                    │ USER SATISFIES GRANTS? │
-                                    └───────────┬────────────┘
-                                        ┌───────┴───────┐
-                                        │ NO            │ YES
-                                        ▼               ▼
-                              ┌─────────────────┐  ┌─────────────────┐
-                              │  ACCESS DENIED  │  │ ACCESS GRANTED  │
-                              │  (or blocked)   │  │ (with session   │
-                              └─────────────────┘  │  controls)      │
-                                                   └─────────────────┘
+                         
+                            USER SIGN-IN    
+                             ATTEMPT        
+                         
+                                   
+                                   
+                         
+                           FIRST FACTOR     
+                           (Password/FIDO)  
+                         
+                                   
+                                   
+              
+                   CONDITIONAL ACCESS POLICY EVALUATION   
+              
+                                   
+         
+                                                           
+                                                           
+                         
+      USER/                 APP                 CONDITIONS
+      GROUP                                               
+     assigned             targeted              • Location
+       to                    by                 • Device  
+     policy?               policy?              • Risk    
+                         
+                                                       
+         
+                                 
+                                 
+                    
+                      ALL CONDITIONS MET?   
+                    
+                        
+                         NO             YES
+                                       
+                
+               Policy doesn't       GRANT CONTROLS REQUIRED   
+               apply - next                                   
+               policy or allow     • Require MFA              
+                  • Require compliant device 
+                                     • Require Hybrid AD Join   
+                                     • Require approved app     
+                                     • Require app protection   
+                                   
+                                                 
+                                                 
+                                    
+                                     USER SATISFIES GRANTS? 
+                                    
+                                        
+                                         NO             YES
+                                                       
+                                
+                                ACCESS DENIED     ACCESS GRANTED  
+                                (or blocked)      (with session   
+                                  controls)      
+                                                   
 </pre>
                     </div>
                 </div>
@@ -268,7 +302,7 @@
                 </div>
                 
                 <div class="alert warning">
-                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-icon">!</div>
                     <div class="alert-content">
                         <div class="alert-title">Always Have Break-Glass Accounts</div>
                         <div class="alert-text">Exclude 2 emergency access accounts from all Conditional Access policies. These should be cloud-only, have long complex passwords, and be monitored for any use.</div>
@@ -295,63 +329,63 @@
                             <tbody>
                                 <tr>
                                     <td>Office Web Apps</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Office Desktop Apps</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Azure AD P1 (Conditional Access)</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Azure AD P2 (Identity Protection, PIM)</td>
-                                    <td>✗</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Defender for Office 365 P1</td>
-                                    <td>✗</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Defender for Office 365 P2</td>
-                                    <td>✗</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Defender for Endpoint P1</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Defender for Endpoint P2</td>
-                                    <td>✗</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Information Protection (DLP, Labels)</td>
                                     <td>Basic</td>
-                                    <td>✓</td>
-                                    <td>✓ (Auto-labeling)</td>
+                                    <td></td>
+                                    <td> (Auto-labeling)</td>
                                 </tr>
                                 <tr>
                                     <td>Intune</td>
-                                    <td>✗</td>
-                                    <td>✓</td>
-                                    <td>✓</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -373,9 +407,9 @@
                             <span>How would you design Conditional Access policies for a university with students, faculty, and staff?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -424,9 +458,9 @@
                             <span>A user is locked out and can't access their account. How do you troubleshoot?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -478,9 +512,9 @@
                             <span>How do you secure privileged admin accounts in Azure AD?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

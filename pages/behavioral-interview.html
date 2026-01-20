@@ -6,134 +6,100 @@
     <title>Behavioral Interview - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item" data-page="index">
-                        <span class="nav-icon">🏠</span>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
                         <span>Dashboard</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals">
-                        <span class="nav-icon">🛡️</span>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
                         <span>Cybersecurity Fundamentals</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="incident-response">
-                        <span class="nav-icon">🚨</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
                         <span>Incident Response</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="vulnerability-management">
-                        <span class="nav-icon">🔍</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
                         <span>Vulnerability Management</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="identity-access">
-                        <span class="nav-icon">🔐</span>
-                        <span>Identity & Access Mgmt</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="dlp-compliance">
-                        <span class="nav-icon">📋</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
                         <span>DLP & Compliance</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="security-awareness">
-                        <span class="nav-icon">🎓</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
                         <span>Security Awareness</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection">
-                        <span class="nav-icon">💻</span>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
                         <span>Endpoint Protection</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="microsoft-365">
-                        <span class="nav-icon">☁️</span>
-                        <span>Microsoft 365 Admin</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="network-infrastructure">
-                        <span class="nav-icon">🌐</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
                         <span>Network Infrastructure</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="backup-dr">
-                        <span class="nav-icon">💾</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
                         <span>Backup & DR</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="telephony">
-                        <span class="nav-icon">📞</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
                         <span>Telephony</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item active" data-page="behavioral-interview">
-                        <span class="nav-icon">🗣️</span>
+                    <a href="behavioral-interview.html" class="nav-item active" data-page="behavioral-interview" class="nav-item active">
+                        <span class="nav-icon">BI</span>
                         <span>Behavioral Questions</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="scenario-exercises">
-                        <span class="nav-icon">📝</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
                         <span>Scenario Exercises</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety">
-                        <span class="nav-icon">📅</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
                         <span>30-60-90 Day Plan</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label">
-                        <span>Overall Progress</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -147,15 +113,15 @@
                     <span class="breadcrumb-item current">Behavioral Questions</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                     <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>🗣️ Behavioral Interview Questions</h1>
+                <h1>Behavioral Interview Questions</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     STAR method responses for leadership, conflict resolution, problem-solving, and teamwork scenarios.
                 </p>
@@ -166,35 +132,35 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">STAR METHOD FOR BEHAVIORAL INTERVIEWS</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         STAR METHOD FRAMEWORK                               │
-└─────────────────────────────────────────────────────────────────────────────┘
 
-   ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-   │                 │    │                 │    │                 │    │                 │
-   │   SITUATION     │───▶│     TASK        │───▶│    ACTION       │───▶│    RESULT       │
-   │                 │    │                 │    │                 │    │                 │
-   └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │                       │
-         │                       │                       │                       │
-         ▼                       ▼                       ▼                       ▼
-   ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-   │ Set the scene   │    │ Your specific   │    │ Steps YOU took  │    │ Measurable      │
-   │                 │    │ responsibility  │    │                 │    │ outcomes        │
-   │ • When/where    │    │                 │    │ • Be specific   │    │                 │
-   │ • Context       │    │ • Your role     │    │ • Use "I" not   │    │ • Quantify      │
-   │ • Challenge     │    │ • Goal to       │    │   "we"          │    │ • What changed  │
-   │                 │    │   achieve       │    │ • Show thinking │    │ • What learned  │
-   └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
+                         STAR METHOD FRAMEWORK                               
 
-   ┌─────────────────────────────────────────────────────────────────────────────┐
-   │ TIMING: Situation + Task = 20%  |  Action = 60%  |  Result = 20%           │
-   └─────────────────────────────────────────────────────────────────────────────┘
+
+               
+                                                                                   
+      SITUATION          TASK            ACTION           RESULT       
+                                                                                   
+               
+                                                                              
+                                                                              
+                                                                              
+               
+    Set the scene        Your specific        Steps YOU took       Measurable      
+                         responsibility                            outcomes        
+    • When/where                              • Be specific                        
+    • Context            • Your role          • Use "I" not        • Quantify      
+    • Challenge          • Goal to              "we"               • What changed  
+                           achieve            • Show thinking      • What learned  
+               
+
+   
+    TIMING: Situation + Task = 20%  |  Action = 60%  |  Result = 20%           
+   
 </pre>
                     </div>
                     
                     <div class="alert-box info">
-                        <div class="alert-title">💡 Pro Tips for STAR Responses</div>
+                        <div class="alert-title">• Pro Tips for STAR Responses</div>
                         <ul class="key-points">
                             <li><strong>Be specific:</strong> Use real examples with concrete details</li>
                             <li><strong>Quantify results:</strong> "Reduced incidents by 40%" beats "improved security"</li>
@@ -218,9 +184,9 @@
                             <span>Tell me about a time you led a security initiative or project.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -276,9 +242,9 @@
                             <span>Describe a time you identified a security risk that others had overlooked.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -324,9 +290,9 @@
                             <span>Tell me about a complex technical problem you solved.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -367,9 +333,9 @@
                             <span>Describe a time you had to make a quick decision with limited information.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -419,9 +385,9 @@
                             <span>Tell me about a time you disagreed with a colleague or manager about a security decision.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -467,9 +433,9 @@
                             <span>How do you explain technical security concepts to non-technical stakeholders?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -550,9 +516,9 @@
                             <span>Tell me about a time you had to learn a new technology quickly.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -593,9 +559,9 @@
                             <span>Describe a failure or mistake you made and what you learned from it.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -655,9 +621,9 @@
                             <span>Why are you interested in working at a university vs. corporate environment?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -685,9 +651,9 @@
                             <span>How would you handle a professor who refuses to follow security policies?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

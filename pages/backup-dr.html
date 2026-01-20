@@ -4,35 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backup & Disaster Recovery - IBU Interview Preparation</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
-            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+                <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
+                </div>
+            </div>
             <nav class="sidebar-nav">
-                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
-                <div class="nav-section"><div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item active" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item active" data-page="backup-dr" class="nav-item active">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
         </aside>
         
         <main class="main-content">
             <header class="content-header">
                 <div class="breadcrumb"><a href="../index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-separator">/</span><span class="breadcrumb-item current">Backup & Disaster Recovery</span></div>
-                <div class="header-actions"><button class="header-btn" id="searchBtn">🔍 Search</button><button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button></div>
+                <div class="header-actions"><button class="header-btn" id="searchBtn"> Search</button><button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button></div>
             </header>
             
             <div class="content-body">
-                <h1>💾 Backup & Disaster Recovery</h1>
+                <h1>Backup & Disaster Recovery</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Business continuity planning, disaster recovery strategies, RTO/RPO definitions, and backup testing procedures.</p>
                 
                 <h2>7.1 Key Concepts</h2>
@@ -43,37 +117,37 @@
                         <div class="ascii-diagram-title">RECOVERY OBJECTIVES TIMELINE</div>
 <pre>
     LAST BACKUP              DISASTER                    RECOVERY
-        │                       │                           │
-        ▼                       ▼                           ▼
-────────●───────────────────────●───────────────────────────●────────────►
-        │                       │                           │           TIME
-        │◄──────────────────────│                           │
-        │         RPO           │◄──────────────────────────│
-        │  (Data Loss Window)   │          RTO              │
-        │                       │   (Downtime Window)       │
+                                                          
+                                                          
 
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  RPO (Recovery Point Objective)                                             │
-│  • Maximum acceptable data loss measured in time                            │
-│  • Determines backup frequency                                              │
-│  • Example: RPO of 1 hour = hourly backups minimum                          │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  RTO (Recovery Time Objective)                                              │
-│  • Maximum acceptable downtime                                              │
-│  • Determines recovery infrastructure needed                                │
-│  • Example: RTO of 4 hours = must restore within 4 hours                    │
-└─────────────────────────────────────────────────────────────────────────────┘
+                                                                     TIME
+                                   
+                 RPO           
+          (Data Loss Window)             RTO              
+                                  (Downtime Window)       
+
+
+  RPO (Recovery Point Objective)                                             
+  • Maximum acceptable data loss measured in time                            
+  • Determines backup frequency                                              
+  • Example: RPO of 1 hour = hourly backups minimum                          
+
+  RTO (Recovery Time Objective)                                              
+  • Maximum acceptable downtime                                              
+  • Determines recovery infrastructure needed                                
+  • Example: RTO of 4 hours = must restore within 4 hours                    
+
 
 IBU EXAMPLE OBJECTIVES:
-┌──────────────────────┬────────┬────────┬─────────────────────────────────────┐
-│ System               │ RTO    │ RPO    │ Justification                       │
-├──────────────────────┼────────┼────────┼─────────────────────────────────────┤
-│ Student Portal       │ 2 hrs  │ 15 min │ Critical for enrollment/grades      │
-│ Email (M365)         │ 1 hr   │ 0      │ Microsoft SLA covers this           │
-│ File Servers         │ 4 hrs  │ 1 hr   │ Important but not real-time         │
-│ Financial Systems    │ 2 hrs  │ 15 min │ Regulatory/compliance needs         │
-│ Website              │ 8 hrs  │ 24 hrs │ Can tolerate longer outage          │
-└──────────────────────┴────────┴────────┴─────────────────────────────────────┘
+
+ System                RTO     RPO     Justification                       
+
+ Student Portal        2 hrs   15 min  Critical for enrollment/grades      
+ Email (M365)          1 hr    0       Microsoft SLA covers this           
+ File Servers          4 hrs   1 hr    Important but not real-time         
+ Financial Systems     2 hrs   15 min  Regulatory/compliance needs         
+ Website               8 hrs   24 hrs  Can tolerate longer outage          
+
 </pre>
                     </div>
                 </div>
@@ -82,22 +156,22 @@ IBU EXAMPLE OBJECTIVES:
                     <h3>3-2-1 Backup Rule</h3>
                     <div class="ascii-diagram green">
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          3-2-1 BACKUP STRATEGY                              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│     3 COPIES                2 MEDIA TYPES              1 OFFSITE           │
-│  ┌─────────────┐          ┌─────────────┐          ┌─────────────┐         │
-│  │  PRODUCTION │          │    LOCAL    │          │    CLOUD    │         │
-│  │    DATA     │          │   BACKUP    │          │   BACKUP    │         │
-│  │             │          │   (NAS)     │          │   (Azure)   │         │
-│  │  ┌───────┐  │          │  ┌───────┐  │          │  ┌───────┐  │         │
-│  │  │ Copy 1│  │          │  │ Copy 2│  │          │  │ Copy 3│  │         │
-│  │  └───────┘  │          │  └───────┘  │          │  └───────┘  │         │
-│  └─────────────┘          └─────────────┘          └─────────────┘         │
-│                                                                             │
-│  WHY: Protects against hardware failure, ransomware, site disasters        │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                          3-2-1 BACKUP STRATEGY                              
+
+                                                                             
+     3 COPIES                2 MEDIA TYPES              1 OFFSITE           
+                               
+    PRODUCTION               LOCAL                  CLOUD             
+      DATA                  BACKUP                 BACKUP             
+                            (NAS)                  (Azure)            
+                                           
+     Copy 1               Copy 2               Copy 3           
+                                           
+                               
+                                                                             
+  WHY: Protects against hardware failure, ransomware, site disasters        
+
 </pre>
                     </div>
                 </div>
@@ -108,7 +182,7 @@ IBU EXAMPLE OBJECTIVES:
                 <div class="question-card" id="q1">
                     <div class="question-header">
                         <div class="question-title"><span class="question-number">Q1</span><span>How would you design a backup strategy for IBU?</span></div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -141,7 +215,7 @@ IBU EXAMPLE OBJECTIVES:
                 <div class="question-card" id="q2">
                     <div class="question-header">
                         <div class="question-title"><span class="question-number">Q2</span><span>How do you test disaster recovery plans?</span></div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -163,7 +237,7 @@ IBU EXAMPLE OBJECTIVES:
                 <div class="question-card" id="q3">
                     <div class="question-header">
                         <div class="question-title"><span class="question-number">Q3</span><span>What's the difference between BCP and DRP?</span></div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

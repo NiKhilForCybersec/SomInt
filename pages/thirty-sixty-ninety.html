@@ -6,41 +6,99 @@
     <title>30-60-90 Day Plan - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
-            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+                <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
+                </div>
+            </div>
             <nav class="sidebar-nav">
-                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
-                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
-                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
-                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
-                    <div class="nav-item" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
-                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
-                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
-                    <div class="nav-item active" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item active" data-page="thirty-sixty-ninety" class="nav-item active">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
         </aside>
         
         <main class="main-content">
@@ -53,13 +111,13 @@
                     <span class="breadcrumb-item current">30-60-90 Day Plan</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>📅 30-60-90 Day Plan</h1>
+                <h1>30-60-90 Day Plan</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     A structured plan demonstrating how you would approach your first 90 days as Infrastructure & Cybersecurity Specialist at IBU.
                 </p>
@@ -71,37 +129,37 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">30-60-90 DAY PROGRESSION</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         90-DAY ONBOARDING PLAN                              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  DAYS 1-30: LEARN                  ║  DAYS 31-60: CONTRIBUTE               │
-│  ═══════════════════════           ║  ════════════════════════             │
-│                                    ║                                       │
-│  • Understand environment          ║  • Own routine operations             │
-│  • Build relationships             ║  • Identify quick wins                │
-│  • Document current state          ║  • Implement improvements             │
-│  • Learn tools & processes         ║  • Build SOPs                         │
-│  • Shadow & observe                ║  • Lead small projects                │
-│                                    ║                                       │
-│  Goal: Deep understanding          ║  Goal: Add measurable value           │
-│  Success: No major mistakes        ║  Success: 2-3 quick wins delivered    │
-│                                    ║                                       │
-├────────────────────────────────────╬───────────────────────────────────────┤
-│                                    ║                                       │
-│  DAYS 61-90: LEAD                                                          │
-│  ════════════════════════════════════════════════════════════════          │
-│                                                                             │
-│  • Drive strategic initiatives                                              │
-│  • Present roadmap to leadership                                            │
-│  • Establish metrics & reporting                                            │
-│  • Mentor/train others                                                      │
-│  • Plan next quarter priorities                                             │
-│                                                                             │
-│  Goal: Shape security direction                                             │
-│  Success: Approved 6-month roadmap, established credibility                 │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                         90-DAY ONBOARDING PLAN                              
+
+                                                                             
+  DAYS 1-30: LEARN                    DAYS 31-60: CONTRIBUTE               
+                            
+                                                                           
+  • Understand environment            • Own routine operations             
+  • Build relationships               • Identify quick wins                
+  • Document current state            • Implement improvements             
+  • Learn tools & processes           • Build SOPs                         
+  • Shadow & observe                  • Lead small projects                
+                                                                           
+  Goal: Deep understanding            Goal: Add measurable value           
+  Success: No major mistakes          Success: 2-3 quick wins delivered    
+                                                                           
+
+                                                                           
+  DAYS 61-90: LEAD                                                          
+            
+                                                                             
+  • Drive strategic initiatives                                              
+  • Present roadmap to leadership                                            
+  • Establish metrics & reporting                                            
+  • Mentor/train others                                                      
+  • Plan next quarter priorities                                             
+                                                                             
+  Goal: Shape security direction                                             
+  Success: Approved 6-month roadmap, established credibility                 
+                                                                             
+
 </pre>
                     </div>
                 </div>
@@ -156,7 +214,7 @@
                 </div>
                 
                 <div class="alert-box alert-info">
-                    <div class="alert-icon">🎯</div>
+                    <div class="alert-icon">→</div>
                     <div class="alert-content">
                         <strong>Day 30 Deliverable: Discovery Report</strong><br>
                         A written summary for my manager including: current state assessment, identified risks, preliminary recommendations, and questions needing clarification. This demonstrates initiative and creates a baseline for measuring progress.
@@ -233,7 +291,7 @@
                 </div>
                 
                 <div class="alert-box alert-success">
-                    <div class="alert-icon">✅</div>
+                    <div class="alert-icon"></div>
                     <div class="alert-content">
                         <strong>Day 60 Deliverable: Quick Wins Report</strong><br>
                         Document completed improvements with before/after metrics where possible. Example: "MFA enrollment increased from 65% to 98%", "Reduced stale accounts from 47 to 0", "First phishing simulation completed: 18% click rate, establishing baseline."
@@ -277,29 +335,29 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">YEAR 1 SECURITY ROADMAP</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  Q1 (Months 1-3)          │  Q2 (Months 4-6)                               │
-│  ═══════════════          │  ═══════════════                               │
-│  FOUNDATION               │  VISIBILITY                                    │
-│  • Complete discovery     │  • Enhanced monitoring                         │
-│  • Quick wins             │  • Vulnerability management program            │
-│  • Basic documentation    │  • Security awareness rollout                  │
-│  • MFA completion         │  • Improved alerting & response                │
-├───────────────────────────┼─────────────────────────────────────────────────┤
-│  Q3 (Months 7-9)          │  Q4 (Months 10-12)                             │
-│  ═══════════════          │  ════════════════                              │
-│  RESILIENCE               │  MATURITY                                      │
-│  • DR testing             │  • Compliance audit preparation                │
-│  • Incident response      │  • Advanced threat protection                  │
-│    exercises              │  • Year 2 planning                             │
-│  • Access review program  │  • Metrics & reporting maturity                │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+  Q1 (Months 1-3)            Q2 (Months 4-6)                               
+                                             
+  FOUNDATION                 VISIBILITY                                    
+  • Complete discovery       • Enhanced monitoring                         
+  • Quick wins               • Vulnerability management program            
+  • Basic documentation      • Security awareness rollout                  
+  • MFA completion           • Improved alerting & response                
+
+  Q3 (Months 7-9)            Q4 (Months 10-12)                             
+                                            
+  RESILIENCE                 MATURITY                                      
+  • DR testing               • Compliance audit preparation                
+  • Incident response        • Advanced threat protection                  
+    exercises                • Year 2 planning                             
+  • Access review program    • Metrics & reporting maturity                
+
 </pre>
                     </div>
                 </div>
                 
                 <div class="alert-box alert-info">
-                    <div class="alert-icon">📊</div>
+                    <div class="alert-icon">≡</div>
                     <div class="alert-content">
                         <strong>Day 90 Deliverable: Leadership Presentation</strong><br>
                         A formal presentation to IT Director and relevant leadership covering: 90-day accomplishments, current security posture assessment, proposed 12-month roadmap, resource/budget requests, and success metrics.
@@ -403,7 +461,7 @@
                 </div>
                 
                 <div class="alert-box alert-success">
-                    <div class="alert-icon">🎉</div>
+                    <div class="alert-icon"></div>
                     <div class="alert-content">
                         <strong>You're Ready!</strong><br>
                         You've prepared thoroughly with this guide. Trust your experience, be authentic, and show them the value you'll bring to IBU. Good luck!
@@ -419,40 +477,40 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">YOUR VALUE PROPOSITION</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         WHY HIRE YOU?                                       │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  EXPERIENCE                      │  SKILLS                                  │
-│  ───────────────────────         │  ───────────────────────                 │
-│  • 12 years IT experience        │  • Microsoft Security Stack (Defender,  │
-│  • 4 years focused cybersecurity │    Sentinel, Purview, Intune)           │
-│  • Enterprise environments       │  • SIEM/EDR (Cortex XDR, Splunk)        │
-│  • Compliance (PIPEDA, NIST)     │  • Network Security (Meraki, firewalls) │
-│  • Project leadership (DLP)      │  • Identity & Access Management         │
-│                                  │  • Incident Response                    │
-│                                                                             │
-│  HIGHER-ED FIT                   │  SOFT SKILLS                            │
-│  ───────────────────────         │  ───────────────────────                 │
-│  • Understand diverse users      │  • Strong communicator                  │
-│  • Balance security & usability  │  • Documentation-focused                │
-│  • Mission-driven motivation     │  • Collaborative approach               │
-│  • Experience with compliance    │  • Continuous learner                   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         KEY STORIES TO TELL                                 │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  1. Incident Response: Ransomware containment at Siemens                    │
-│  2. Project Leadership: Purview DLP migration from Symantec                 │
-│  3. Communication: Stakeholder presentations for DLP rollout                │
-│  4. Problem-Solving: Complex alert investigation & resolution               │
-│  5. Learning from Failure: Change management lesson (GPO incident)          │
-│  6. Cross-team Collaboration: Working with HR/Finance on compliance         │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+                         WHY HIRE YOU?                                       
+
+                                                                             
+  EXPERIENCE                        SKILLS                                  
+                              
+  • 12 years IT experience          • Microsoft Security Stack (Defender,  
+  • 4 years focused cybersecurity     Sentinel, Purview, Intune)           
+  • Enterprise environments         • SIEM/EDR (Cortex XDR, Splunk)        
+  • Compliance (PIPEDA, NIST)       • Network Security (Meraki, firewalls) 
+  • Project leadership (DLP)        • Identity & Access Management         
+                                    • Incident Response                    
+                                                                             
+  HIGHER-ED FIT                     SOFT SKILLS                            
+                              
+  • Understand diverse users        • Strong communicator                  
+  • Balance security & usability    • Documentation-focused                
+  • Mission-driven motivation       • Collaborative approach               
+  • Experience with compliance      • Continuous learner                   
+                                                                             
+
+
+
+                         KEY STORIES TO TELL                                 
+
+                                                                             
+  1. Incident Response: Ransomware containment at Siemens                    
+  2. Project Leadership: Purview DLP migration from Symantec                 
+  3. Communication: Stakeholder presentations for DLP rollout                
+  4. Problem-Solving: Complex alert investigation & resolution               
+  5. Learning from Failure: Change management lesson (GPO incident)          
+  6. Cross-team Collaboration: Working with HR/Finance on compliance         
+                                                                             
+
 </pre>
                     </div>
                 </div>

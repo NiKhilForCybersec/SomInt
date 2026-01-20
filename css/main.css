@@ -37,11 +37,11 @@
     --border-muted: #21262d;
     --border-accent: #58a6ff;
     
-    /* Typography */
-    --font-display: 'Orbitron', 'Rajdhani', sans-serif;
-    --font-heading: 'Rajdhani', 'Segoe UI', sans-serif;
-    --font-body: 'JetBrains Mono', 'Fira Code', monospace;
-    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    /* Typography - Clean & Professional */
+    --font-display: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-heading: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
     
     /* Spacing */
     --sidebar-width: 280px;
@@ -121,9 +121,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0;
 }
 
 h2 {
@@ -207,10 +207,9 @@ code {
 
 .sidebar-logo {
     font-family: var(--font-display);
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--cyan);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -219,19 +218,22 @@ code {
 .sidebar-logo .logo-icon {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, var(--cyan) 0%, var(--green) 100%);
-    border-radius: 8px;
+    background: var(--cyan);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--bg-primary);
+    letter-spacing: -0.5px;
 }
 
 .sidebar-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
-    margin-top: 0.5rem;
-    letter-spacing: 1px;
+    margin-top: 0.25rem;
+    font-weight: 400;
 }
 
 /* Search Box */
@@ -291,8 +293,9 @@ code {
     font-size: 0.7rem;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     padding: 0.75rem 1.5rem 0.5rem;
+    font-weight: 600;
 }
 
 .nav-item {
@@ -319,9 +322,23 @@ code {
 }
 
 .nav-item .nav-icon {
-    font-size: 1rem;
-    width: 20px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    width: 28px;
+    height: 20px;
     text-align: center;
+    line-height: 20px;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    flex-shrink: 0;
+    font-family: var(--font-body);
+}
+
+.nav-item:hover .nav-icon,
+.nav-item.active .nav-icon {
+    color: var(--cyan);
+    background: rgba(88, 166, 255, 0.15);
 }
 
 .nav-item .nav-status {
@@ -1075,8 +1092,17 @@ tr:hover td {
 }
 
 .alert-icon {
-    font-size: 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
     flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: currentColor;
+    color: var(--bg-primary);
 }
 
 .alert-content {
@@ -1099,7 +1125,10 @@ tr:hover td {
     border: 1px solid var(--cyan);
 }
 
-.alert.info .alert-icon,
+.alert.info .alert-icon {
+    background: var(--cyan);
+    color: var(--bg-primary);
+}
 .alert.info .alert-title {
     color: var(--cyan);
 }
@@ -1109,7 +1138,10 @@ tr:hover td {
     border: 1px solid var(--orange);
 }
 
-.alert.warning .alert-icon,
+.alert.warning .alert-icon {
+    background: var(--orange);
+    color: var(--bg-primary);
+}
 .alert.warning .alert-title {
     color: var(--orange);
 }
@@ -1119,7 +1151,10 @@ tr:hover td {
     border: 1px solid var(--red);
 }
 
-.alert.danger .alert-icon,
+.alert.danger .alert-icon {
+    background: var(--red);
+    color: var(--bg-primary);
+}
 .alert.danger .alert-title {
     color: var(--red);
 }
@@ -1129,9 +1164,56 @@ tr:hover td {
     border: 1px solid var(--green);
 }
 
-.alert.success .alert-icon,
+.alert.success .alert-icon {
+    background: var(--green);
+    color: var(--bg-primary);
+}
 .alert.success .alert-title {
     color: var(--green);
+}
+
+/* Alert Box variant (used in supplementary guide) */
+.alert-box {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+}
+
+.alert-box .alert-icon {
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.alert-box.alert-warning {
+    border-color: var(--orange);
+    background: rgba(210, 153, 34, 0.1);
+}
+
+.alert-box.alert-warning .alert-icon {
+    background: var(--orange);
+    color: var(--bg-primary);
+}
+
+.alert-box.alert-info {
+    border-color: var(--cyan);
+    background: rgba(88, 166, 255, 0.1);
+}
+
+.alert-box.alert-info .alert-icon {
+    background: var(--cyan);
+    color: var(--bg-primary);
 }
 
 /* Section Divider */

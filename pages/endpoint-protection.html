@@ -6,119 +6,100 @@
     <title>Endpoint Protection - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item" data-page="index">
-                        <span class="nav-icon">🏠</span>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
                         <span>Dashboard</span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals">
-                        <span class="nav-icon">🛡️</span>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
                         <span>Cybersecurity Fundamentals</span>
-                    </div>
-                    <div class="nav-item" data-page="incident-response">
-                        <span class="nav-icon">🚨</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
                         <span>Incident Response</span>
-                    </div>
-                    <div class="nav-item" data-page="vulnerability-management">
-                        <span class="nav-icon">🔍</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
                         <span>Vulnerability Management</span>
-                    </div>
-                    <div class="nav-item" data-page="identity-access">
-                        <span class="nav-icon">🔐</span>
-                        <span>Identity & Access Mgmt</span>
-                    </div>
-                    <div class="nav-item" data-page="dlp-compliance">
-                        <span class="nav-icon">📋</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
                         <span>DLP & Compliance</span>
-                    </div>
-                    <div class="nav-item" data-page="security-awareness">
-                        <span class="nav-icon">🎓</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
                         <span>Security Awareness</span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item active" data-page="endpoint-protection">
-                        <span class="nav-icon">💻</span>
+                    <a href="endpoint-protection.html" class="nav-item active" data-page="endpoint-protection" class="nav-item active">
+                        <span class="nav-icon">EP</span>
                         <span>Endpoint Protection</span>
-                    </div>
-                    <div class="nav-item" data-page="microsoft-365">
-                        <span class="nav-icon">☁️</span>
-                        <span>Microsoft 365 Admin</span>
-                    </div>
-                    <div class="nav-item" data-page="network-infrastructure">
-                        <span class="nav-icon">🌐</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
                         <span>Network Infrastructure</span>
-                    </div>
-                    <div class="nav-item" data-page="backup-dr">
-                        <span class="nav-icon">💾</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
                         <span>Backup & DR</span>
-                    </div>
-                    <div class="nav-item" data-page="telephony">
-                        <span class="nav-icon">📞</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
                         <span>Telephony</span>
-                    </div>
+                    </a>
                 </div>
-                
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview">
-                        <span class="nav-icon">🗣️</span>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
                         <span>Behavioral Questions</span>
-                    </div>
-                    <div class="nav-item" data-page="scenario-exercises">
-                        <span class="nav-icon">📝</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
                         <span>Scenario Exercises</span>
-                    </div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety">
-                        <span class="nav-icon">📅</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
                         <span>30-60-90 Day Plan</span>
-                    </div>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label">
-                        <span>Overall Progress</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -132,15 +113,15 @@
                     <span class="breadcrumb-item current">Endpoint Protection</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                     <button class="header-btn" onclick="toggleAllQuestions(false)">Collapse All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>💻 Endpoint Protection</h1>
+                <h1>Endpoint Protection</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Microsoft Defender for Endpoint, Intune MDM, and comprehensive endpoint security strategies for university environments.
                 </p>
@@ -153,51 +134,51 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">MICROSOFT ENDPOINT SECURITY ECOSYSTEM</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    MICROSOFT DEFENDER XDR (Unified Portal)                      │
-│                         security.microsoft.com                                   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  ┌────────────┐ │
-│  │   DEFENDER FOR  │  │   DEFENDER FOR  │  │   DEFENDER FOR  │  │  DEFENDER  │ │
-│  │    ENDPOINT     │  │   OFFICE 365    │  │    IDENTITY     │  │  FOR CLOUD │ │
-│  │                 │  │                 │  │                 │  │    APPS    │ │
-│  │  • EDR          │  │  • Safe Links   │  │  • Azure AD     │  │  • CASB    │ │
-│  │  • AV           │  │  • Safe Attach  │  │    Protection   │  │  • Shadow  │ │
-│  │  • ASR Rules    │  │  • Anti-phish   │  │  • Risk-based   │  │    IT      │ │
-│  │  • Device Ctrl  │  │  • ZAP          │  │    Access       │  │  • App     │ │
-│  │                 │  │                 │  │                 │  │    Control │ │
-│  └────────┬────────┘  └────────┬────────┘  └────────┬────────┘  └─────┬──────┘ │
-│           │                    │                    │                  │        │
-│           └────────────────────┴────────────────────┴──────────────────┘        │
-│                                       │                                         │
-│                                       ▼                                         │
-│                    ┌─────────────────────────────────────┐                      │
-│                    │      MICROSOFT SENTINEL (SIEM)      │                      │
-│                    │   • Log aggregation & correlation   │                      │
-│                    │   • Advanced hunting (KQL)          │                      │
-│                    │   • Automated playbooks (SOAR)      │                      │
-│                    └─────────────────────────────────────┘                      │
-│                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                      MICROSOFT INTUNE (Device Management)                        │
-│                          intune.microsoft.com                                    │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                 │
-│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  ┌────────────┐ │
-│  │   COMPLIANCE    │  │ CONFIGURATION   │  │      APP        │  │  SECURITY  │ │
-│  │    POLICIES     │  │    PROFILES     │  │   MANAGEMENT    │  │  BASELINES │ │
-│  │                 │  │                 │  │                 │  │            │ │
-│  │  • Device health│  │  • WiFi/VPN     │  │  • App deploy   │  │  • Win 11  │ │
-│  │  • Encryption   │  │  • Email config │  │  • App protect  │  │  • Edge    │ │
-│  │  • Password     │  │  • Restrictions │  │  • MAM policies │  │  • M365    │ │
-│  │  • OS version   │  │  • Certificates │  │  • Store apps   │  │  • Defender│ │
-│  └─────────────────┘  └─────────────────┘  └─────────────────┘  └────────────┘ │
-│                                                                                 │
-│  SUPPORTED PLATFORMS: Windows 10/11, macOS, iOS/iPadOS, Android, Linux          │
-└─────────────────────────────────────────────────────────────────────────────────┘
+                    MICROSOFT DEFENDER XDR (Unified Portal)                      
+                         security.microsoft.com                                   
+
+                                                                                 
+         
+     DEFENDER FOR       DEFENDER FOR       DEFENDER FOR      DEFENDER   
+      ENDPOINT          OFFICE 365          IDENTITY         FOR CLOUD  
+                                                               APPS     
+    • EDR              • Safe Links       • Azure AD         • CASB     
+    • AV               • Safe Attach        Protection       • Shadow   
+    • ASR Rules        • Anti-phish       • Risk-based         IT       
+    • Device Ctrl      • ZAP                Access           • App      
+                                                               Control  
+         
+                                                                             
+                   
+                                                                                
+                                                                                
+                                          
+                          MICROSOFT SENTINEL (SIEM)                            
+                       • Log aggregation & correlation                         
+                       • Advanced hunting (KQL)                                
+                       • Automated playbooks (SOAR)                            
+                                          
+                                                                                 
+
+
+
+                      MICROSOFT INTUNE (Device Management)                        
+                          intune.microsoft.com                                    
+
+                                                                                 
+         
+     COMPLIANCE       CONFIGURATION           APP            SECURITY   
+      POLICIES           PROFILES          MANAGEMENT        BASELINES  
+                                                                        
+    • Device health    • WiFi/VPN         • App deploy       • Win 11   
+    • Encryption       • Email config     • App protect      • Edge     
+    • Password         • Restrictions     • MAM policies     • M365     
+    • OS version       • Certificates     • Store apps       • Defender 
+         
+                                                                                 
+  SUPPORTED PLATFORMS: Windows 10/11, macOS, iOS/iPadOS, Android, Linux          
+
 </pre>
                     </div>
                 </div>
@@ -361,52 +342,52 @@
                         <div class="ascii-diagram-title">ASR RULES - PRIORITY DEPLOYMENT</div>
 <pre>
 CRITICAL RULES (Deploy Immediately)
-═══════════════════════════════════════════════════════════════════════════════
+
 
 RULE: Block Office apps from creating executable content
 GUID: 3b576869-a4ec-4529-8536-b80a7769e899
-├── Blocks: Office creating .exe, .dll, .scr files
-├── Impact: Low (minimal legitimate use)
-└── IBU Use: Prevent macro-based malware
+ Blocks: Office creating .exe, .dll, .scr files
+ Impact: Low (minimal legitimate use)
+ IBU Use: Prevent macro-based malware
 
 RULE: Block Office apps from creating child processes  
 GUID: d4f940ab-401b-4efc-aadc-ad5f3c50688a
-├── Blocks: Word/Excel spawning cmd.exe, PowerShell
-├── Impact: Low-Medium
-└── IBU Use: Stop fileless malware from Office docs
+ Blocks: Word/Excel spawning cmd.exe, PowerShell
+ Impact: Low-Medium
+ IBU Use: Stop fileless malware from Office docs
 
 RULE: Block executable content from email client and webmail
 GUID: be9ba2d9-53ea-4cdc-84e5-9b1eeee46550
-├── Blocks: Running executables from Outlook
-├── Impact: Low
-└── IBU Use: Prevent email-delivered malware
+ Blocks: Running executables from Outlook
+ Impact: Low
+ IBU Use: Prevent email-delivered malware
 
 RULE: Block credential stealing from LSASS
 GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
-├── Blocks: Mimikatz-style credential dumps
-├── Impact: Low
-└── IBU Use: Protect against lateral movement
+ Blocks: Mimikatz-style credential dumps
+ Impact: Low
+ IBU Use: Protect against lateral movement
 
 HIGH PRIORITY RULES (Deploy in Audit First)
-═══════════════════════════════════════════════════════════════════════════════
+
 
 RULE: Block process creations from PSExec and WMI commands
 GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c
-├── Blocks: Remote execution via PSExec/WMI
-├── Impact: Medium (may affect IT tools)
-└── IBU Use: Block lateral movement
+ Blocks: Remote execution via PSExec/WMI
+ Impact: Medium (may affect IT tools)
+ IBU Use: Block lateral movement
 
 RULE: Block untrusted and unsigned processes from USB
 GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
-├── Blocks: Running unsigned code from removable media
-├── Impact: Medium
-└── IBU Use: Protect lab computers from USB threats
+ Blocks: Running unsigned code from removable media
+ Impact: Medium
+ IBU Use: Protect lab computers from USB threats
 
 RULE: Use advanced protection against ransomware
 GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
-├── Blocks: Suspicious ransomware behaviors
-├── Impact: Low
-└── IBU Use: Additional ransomware protection layer
+ Blocks: Suspicious ransomware behaviors
+ Impact: Low
+ IBU Use: Additional ransomware protection layer
 </pre>
                     </div>
                 </div>
@@ -451,9 +432,9 @@ GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
                             <span>How would you implement device management for a mix of university-owned and student personal devices?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -517,9 +498,9 @@ GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
                             <span>Explain how Microsoft Defender for Endpoint detects and responds to threats.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -580,9 +561,9 @@ GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
                             <span>What are Attack Surface Reduction rules and which would you prioritize for a university?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -621,9 +602,9 @@ GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
                             <span>A device is detected with malware. Walk me through your response using Defender for Endpoint.</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -679,9 +660,9 @@ GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
                             <span>How do you handle endpoint security for remote users and work-from-home scenarios?</span>
                         </div>
                         <div class="question-actions">
-                            <button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button>
+                            <button class="question-action-btn bookmark-btn" title="Bookmark"></button>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

@@ -6,41 +6,99 @@
     <title>DLP & Compliance - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <div class="sidebar-header"><div class="sidebar-logo"><div class="logo-icon">🛡️</div><div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div></div></div>
-            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
+                <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
+                </div>
+            </div>
             <nav class="sidebar-nav">
-                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
-                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
-                    <div class="nav-item" data-page="vulnerability-management"><span class="nav-icon">🔍</span><span>Vulnerability Management</span></div>
-                    <div class="nav-item" data-page="identity-access"><span class="nav-icon">🔐</span><span>Identity & Access Mgmt</span></div>
-                    <div class="nav-item active" data-page="dlp-compliance"><span class="nav-icon">📋</span><span>DLP & Compliance</span></div>
-                    <div class="nav-item" data-page="security-awareness"><span class="nav-icon">🎓</span><span>Security Awareness</span></div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item active" data-page="dlp-compliance" class="nav-item active">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
-                    <div class="nav-item" data-page="scenario-exercises"><span class="nav-icon">📝</span><span>Scenario Exercises</span></div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
         </aside>
         
         <main class="main-content">
@@ -53,13 +111,13 @@
                     <span class="breadcrumb-item current">DLP & Compliance</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
-                    <button class="header-btn" id="bookmarksBtn">📌 Bookmarks</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
+                    <button class="header-btn" id="bookmarksBtn">• Bookmarks</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>📋 Data Loss Prevention & Compliance</h1>
+                <h1>Data Loss Prevention & Compliance</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
                     Comprehensive guide to protecting sensitive data and ensuring regulatory compliance in Canadian educational institutions.
                 </p>
@@ -73,7 +131,7 @@
                     <p><strong>Think of it like this:</strong> Imagine a security guard at a building exit who checks everyone's bags. But instead of physical items, DLP checks digital content (emails, file uploads, USB transfers) for sensitive information like credit card numbers, student records, or confidential documents.</p>
                     
                     <div class="alert-box alert-info">
-                        <div class="alert-icon">💡</div>
+                        <div class="alert-icon">•</div>
                         <div class="alert-content">
                             <strong>Why Universities Need DLP</strong><br>
                             Universities handle massive amounts of sensitive data: student grades, financial aid information, Social Insurance Numbers, health records, research data, and payment information. A single data breach can result in regulatory fines, lawsuits, and severe reputational damage.
@@ -83,31 +141,31 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">HOW DLP WORKS - THE INSPECTION FLOW</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         DATA LOSS PREVENTION FLOW                           │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   USER ACTION                 DLP INSPECTION              RESPONSE          │
-│   ───────────                 ──────────────              ────────          │
-│                                                                             │
-│   ┌─────────────┐            ┌─────────────┐            ┌─────────────┐    │
-│   │ Send Email  │───────────▶│ Scan for    │───────────▶│ ALLOW       │    │
-│   │ with        │            │ Sensitive   │  No Match  │ (Log only)  │    │
-│   │ Attachment  │            │ Data Types  │            └─────────────┘    │
-│   └─────────────┘            │             │                               │
-│                              │ • SIN #s    │            ┌─────────────┐    │
-│   ┌─────────────┐            │ • Credit    │  Match     │ WARN        │    │
-│   │ Upload to   │───────────▶│   Cards     │───────────▶│ (User sees  │    │
-│   │ Cloud       │            │ • Student   │            │  popup)     │    │
-│   │ Storage     │            │   Records   │            └─────────────┘    │
-│   └─────────────┘            │ • Keywords  │                               │
-│                              │ • Document  │            ┌─────────────┐    │
-│   ┌─────────────┐            │   Types     │  Critical  │ BLOCK       │    │
-│   │ Copy to     │───────────▶│             │───────────▶│ (Prevented  │    │
-│   │ USB Drive   │            └─────────────┘            │  + Alert)   │    │
-│   └─────────────┘                                       └─────────────┘    │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                         DATA LOSS PREVENTION FLOW                           
+
+                                                                             
+   USER ACTION                 DLP INSPECTION              RESPONSE          
+                                            
+                                                                             
+                               
+    Send Email   Scan for     ALLOW           
+    with                     Sensitive     No Match   (Log only)      
+    Attachment               Data Types                  
+                                                           
+                               • SIN #s                    
+                • Credit      Match      WARN            
+    Upload to      Cards      (User sees      
+    Cloud                    • Student                 popup)         
+    Storage                    Records                   
+                • Keywords                                 
+                               • Document                  
+                  Types       Critical   BLOCK           
+    Copy to                   (Prevented      
+    USB Drive                             + Alert)       
+                                              
+                                                                             
+
 </pre>
                     </div>
                 </div>
@@ -159,39 +217,39 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">MICROSOFT PURVIEW DLP COVERAGE</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                      MICROSOFT PURVIEW DLP                                  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                    UNIFIED POLICY ENGINE                            │   │
-│   │              (Create once, apply everywhere)                        │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                    │                                        │
-│           ┌────────────────────────┼────────────────────────┐               │
-│           ▼                        ▼                        ▼               │
-│   ┌───────────────┐       ┌───────────────┐       ┌───────────────┐        │
-│   │   EXCHANGE    │       │  SHAREPOINT   │       │    TEAMS      │        │
-│   │   ONLINE      │       │  & ONEDRIVE   │       │               │        │
-│   │               │       │               │       │               │        │
-│   │ • Email body  │       │ • Documents   │       │ • Chat msgs   │        │
-│   │ • Attachments │       │ • Sharing     │       │ • File shares │        │
-│   │ • Recipients  │       │ • Downloads   │       │ • Channels    │        │
-│   └───────────────┘       └───────────────┘       └───────────────┘        │
-│           │                        │                        │               │
-│           └────────────────────────┼────────────────────────┘               │
-│                                    ▼                                        │
-│   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                    ENDPOINT DLP                                     │   │
-│   │              (Windows 10/11 via Intune)                             │   │
-│   │                                                                     │   │
-│   │  • USB/removable media    • Cloud uploads (Dropbox, Google Drive)  │   │
-│   │  • Printing sensitive     • Copy/paste to other apps               │   │
-│   │  • Network shares         • Bluetooth transfers                    │   │
-│   │  • Screen capture         • RDP clipboard                          │   │
-│   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                      MICROSOFT PURVIEW DLP                                  
+
+                                                                             
+      
+                       UNIFIED POLICY ENGINE                               
+                 (Create once, apply everywhere)                           
+      
+                                                                            
+                          
+                                                                          
+                         
+      EXCHANGE             SHAREPOINT              TEAMS              
+      ONLINE               & ONEDRIVE                                 
+                                                                      
+    • Email body          • Documents           • Chat msgs           
+    • Attachments         • Sharing             • File shares         
+    • Recipients          • Downloads           • Channels            
+                         
+                                                                          
+                          
+                                                                            
+      
+                       ENDPOINT DLP                                        
+                 (Windows 10/11 via Intune)                                
+                                                                           
+     • USB/removable media    • Cloud uploads (Dropbox, Google Drive)     
+     • Printing sensitive     • Copy/paste to other apps                  
+     • Network shares         • Bluetooth transfers                       
+     • Screen capture         • RDP clipboard                             
+      
+                                                                             
+
 </pre>
                     </div>
                 </div>
@@ -304,38 +362,38 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">SENSITIVITY LABELS - HOW THEY WORK</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       SENSITIVITY LABEL LIFECYCLE                           │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐      │
-│   │  LABEL APPLIED  │────▶│   PROTECTIONS   │────▶│  TRAVELS WITH   │      │
-│   │                 │     │   ACTIVATED     │     │  DOCUMENT       │      │
-│   └─────────────────┘     └─────────────────┘     └─────────────────┘      │
-│                                                                             │
-│   HOW LABELS GET APPLIED:                                                   │
-│                                                                             │
-│   ┌─────────────┐  User selects label manually in Word/Excel/Outlook       │
-│   │   MANUAL    │  "I know this document is Confidential"                  │
-│   └─────────────┘                                                          │
-│                                                                             │
-│   ┌─────────────┐  Auto-labeling based on content detection                │
-│   │   AUTO      │  "This doc contains SIN, auto-apply Restricted"          │
-│   └─────────────┘                                                          │
-│                                                                             │
-│   ┌─────────────┐  Forced label for certain locations/groups               │
-│   │   DEFAULT   │  "All HR folder docs default to Confidential"            │
-│   └─────────────┘                                                          │
-│                                                                             │
-│   WHAT LABELS CAN DO:                                                       │
-│                                                                             │
-│   ┌────────────────────────────────────────────────────────────────────┐   │
-│   │ ENCRYPT     │ WATERMARK   │ RESTRICT    │ PREVENT    │ TRACK      │   │
-│   │ Document    │ Headers/    │ Printing,   │ External   │ Access &   │   │
-│   │ Contents    │ Footers     │ Copy/Paste  │ Sharing    │ Usage      │   │
-│   └────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                       SENSITIVITY LABEL LIFECYCLE                           
+
+                                                                             
+                   
+     LABEL APPLIED     PROTECTIONS     TRAVELS WITH         
+                            ACTIVATED            DOCUMENT             
+                   
+                                                                             
+   HOW LABELS GET APPLIED:                                                   
+                                                                             
+     User selects label manually in Word/Excel/Outlook       
+      MANUAL      "I know this document is Confidential"                  
+                                                             
+                                                                             
+     Auto-labeling based on content detection                
+      AUTO        "This doc contains SIN, auto-apply Restricted"          
+                                                             
+                                                                             
+     Forced label for certain locations/groups               
+      DEFAULT     "All HR folder docs default to Confidential"            
+                                                             
+                                                                             
+   WHAT LABELS CAN DO:                                                       
+                                                                             
+      
+    ENCRYPT      WATERMARK    RESTRICT     PREVENT     TRACK         
+    Document     Headers/     Printing,    External    Access &      
+    Contents     Footers      Copy/Paste   Sharing     Usage         
+      
+                                                                             
+
 </pre>
                     </div>
                     
@@ -347,25 +405,25 @@
                         <tbody>
                             <tr>
                                 <td><strong>Public</strong></td>
-                                <td style="color: #2ecc71;">🟢 Green</td>
+                                <td style="color: #2ecc71;"> Green</td>
                                 <td>None - can be shared freely</td>
                                 <td>Course catalog, press releases</td>
                             </tr>
                             <tr>
                                 <td><strong>Internal</strong></td>
-                                <td style="color: #3498db;">🔵 Blue</td>
+                                <td style="color: #3498db;"> Blue</td>
                                 <td>Block external sharing</td>
                                 <td>Meeting notes, internal memos</td>
                             </tr>
                             <tr>
                                 <td><strong>Confidential</strong></td>
-                                <td style="color: #f39c12;">🟡 Yellow</td>
+                                <td style="color: #f39c12;"> Yellow</td>
                                 <td>Encrypt + Watermark + Restrict to specific groups</td>
                                 <td>Budget documents, HR policies</td>
                             </tr>
                             <tr>
                                 <td><strong>Highly Confidential</strong></td>
-                                <td style="color: #e74c3c;">🔴 Red</td>
+                                <td style="color: #e74c3c;"> Red</td>
                                 <td>Encrypt + No print + No copy + Track access</td>
                                 <td>Student grades, SIN data, financial aid</td>
                             </tr>
@@ -380,7 +438,7 @@
                     <p><strong>What is PIPEDA?</strong> The Personal Information Protection and Electronic Documents Act is Canada's federal privacy law governing how private-sector organizations collect, use, and disclose personal information in the course of commercial activities.</p>
                     
                     <div class="alert-box alert-warning">
-                        <div class="alert-icon">⚠️</div>
+                        <div class="alert-icon">!</div>
                         <div class="alert-content">
                             <strong>Important: Which Law Applies?</strong><br>
                             • <strong>Private universities (like IBU):</strong> PIPEDA applies<br>
@@ -467,44 +525,44 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">BREACH NOTIFICATION DECISION TREE</div>
 <pre>
-                    ┌─────────────────────────────┐
-                    │     BREACH DETECTED         │
-                    │  (unauthorized access,      │
-                    │   disclosure, or loss)      │
-                    └──────────────┬──────────────┘
-                                   │
-                                   ▼
-                    ┌─────────────────────────────┐
-                    │  Is there "REAL RISK OF     │
-                    │  SIGNIFICANT HARM" (RROSH)? │
-                    └──────────────┬──────────────┘
-                          │                │
+                    
+                         BREACH DETECTED         
+                      (unauthorized access,      
+                       disclosure, or loss)      
+                    
+                                   
+                                   
+                    
+                      Is there "REAL RISK OF     
+                      SIGNIFICANT HARM" (RROSH)? 
+                    
+                                          
                          YES              NO
-                          │                │
-                          ▼                ▼
-       ┌─────────────────────────┐  ┌─────────────────────┐
-       │   MANDATORY ACTIONS:    │  │  Record breach      │
-       │                         │  │  internally (keep   │
-       │ 1. Notify Privacy       │  │  records 24 months) │
-       │    Commissioner of      │  │                     │
-       │    Canada "as soon as   │  │  No external        │
-       │    feasible"            │  │  notification       │
-       │                         │  │  required           │
-       │ 2. Notify affected      │  └─────────────────────┘
-       │    individuals          │
-       │    directly             │
-       │                         │
-       │ 3. Notify other orgs    │
-       │    that can reduce      │
-       │    harm (e.g., banks)   │
-       └─────────────────────────┘
+                                          
+                                          
+         
+          MANDATORY ACTIONS:        Record breach      
+                                    internally (keep   
+        1. Notify Privacy           records 24 months) 
+           Commissioner of                             
+           Canada "as soon as       No external        
+           feasible"                notification       
+                                    required           
+        2. Notify affected        
+           individuals          
+           directly             
+                                
+        3. Notify other orgs    
+           that can reduce      
+           harm (e.g., banks)   
+       
 
        RROSH FACTORS TO CONSIDER:
-       ├─ Sensitivity of information (SIN = high, email = lower)
-       ├─ Probability data will be misused  
-       ├─ Was data encrypted? (encrypted = lower risk)
-       ├─ Who accessed it? (opportunistic vs. targeted attack)
-       └─ Potential consequences (identity theft, financial loss)
+        Sensitivity of information (SIN = high, email = lower)
+        Probability data will be misused  
+        Was data encrypted? (encrypted = lower risk)
+        Who accessed it? (opportunistic vs. targeted attack)
+        Potential consequences (identity theft, financial loss)
 </pre>
                     </div>
                     
@@ -563,8 +621,8 @@
                             <span class="question-number">Q1</span>
                             <span>How would you implement DLP to protect student data at a university?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -616,8 +674,8 @@
                             <span class="question-number">Q2</span>
                             <span>What is the difference between DLP and sensitivity labels?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -662,8 +720,8 @@
                             <span class="question-number">Q3</span>
                             <span>A data breach is discovered - student records found online. Walk me through your response.</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -722,8 +780,8 @@
                             <span class="question-number">Q4</span>
                             <span>How do you handle DLP false positives while maintaining security?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -772,8 +830,8 @@
                             <span class="question-number">Q5</span>
                             <span>What's the difference between PIPEDA and FIPPA, and which applies to IBU?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -817,8 +875,8 @@
                             <span class="question-number">Q6</span>
                             <span>How would you implement Endpoint DLP for USB and printing controls?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">

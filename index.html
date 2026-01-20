@@ -6,138 +6,100 @@
     <title>IBU Infrastructure & Cybersecurity Specialist - Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">IBU</div>
                     <div>
-                        <div>IBU SECURITY</div>
-                        <div class="sidebar-subtitle">Interview Prep Guide</div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search (Ctrl+K)">
-                </div>
-            </div>
-            
             <nav class="sidebar-nav">
-                <!-- Overview Section -->
                 <div class="nav-section">
                     <div class="nav-section-title">Overview</div>
-                    <div class="nav-item active" data-page="index">
-                        <span class="nav-icon">🏠</span>
+                    <a href="index.html" class="nav-item active" data-page="index">
+                        <span class="nav-icon">H</span>
                         <span>Dashboard</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Security Section -->
                 <div class="nav-section">
                     <div class="nav-section-title">Security & Compliance</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals">
-                        <span class="nav-icon">🛡️</span>
+                    <a href="pages/cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
                         <span>Cybersecurity Fundamentals</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="incident-response">
-                        <span class="nav-icon">🚨</span>
+                    </a>
+                    <a href="pages/incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
                         <span>Incident Response</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="vulnerability-management">
-                        <span class="nav-icon">🔍</span>
+                    </a>
+                    <a href="pages/vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
                         <span>Vulnerability Management</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="identity-access">
-                        <span class="nav-icon">🔐</span>
-                        <span>Identity & Access Mgmt</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="dlp-compliance">
-                        <span class="nav-icon">📋</span>
+                    </a>
+                    <a href="pages/identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="pages/dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
                         <span>DLP & Compliance</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="security-awareness">
-                        <span class="nav-icon">🎓</span>
+                    </a>
+                    <a href="pages/security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
                         <span>Security Awareness</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Infrastructure Section -->
                 <div class="nav-section">
                     <div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection">
-                        <span class="nav-icon">💻</span>
+                    <a href="pages/endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
                         <span>Endpoint Protection</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="microsoft-365">
-                        <span class="nav-icon">☁️</span>
-                        <span>Microsoft 365 Admin</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="network-infrastructure">
-                        <span class="nav-icon">🌐</span>
+                    </a>
+                    <a href="pages/microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="pages/network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
                         <span>Network Infrastructure</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="backup-dr">
-                        <span class="nav-icon">💾</span>
+                    </a>
+                    <a href="pages/backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
                         <span>Backup & DR</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="telephony">
-                        <span class="nav-icon">📞</span>
+                    </a>
+                    <a href="pages/telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
                         <span>Telephony</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Interview Prep Section -->
                 <div class="nav-section">
                     <div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview">
-                        <span class="nav-icon">🗣️</span>
+                    <a href="pages/behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
                         <span>Behavioral Questions</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="scenario-exercises">
-                        <span class="nav-icon">📝</span>
+                    </a>
+                    <a href="pages/scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
                         <span>Scenario Exercises</span>
-                        <span class="nav-status"></span>
-                    </div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety">
-                        <span class="nav-icon">📅</span>
+                    </a>
+                    <a href="pages/thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
                         <span>30-60-90 Day Plan</span>
-                        <span class="nav-status"></span>
-                    </div>
+                    </a>
+                    <a href="pages/supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            
-            <div class="sidebar-footer">
-                <div class="progress-overview">
-                    <div class="progress-label">
-                        <span>Overall Progress</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
         
         <!-- Main Content -->
@@ -150,15 +112,15 @@
                 </div>
                 <div class="header-actions">
                     <button class="header-btn" id="searchBtn">
-                        <span>🔍</span>
+                        <span></span>
                         <span>Search</span>
                     </button>
                     <button class="header-btn" id="bookmarksBtn">
-                        <span>📌</span>
+                        <span>•</span>
                         <span>Bookmarks</span>
                     </button>
                     <button class="header-btn" onclick="printPage()">
-                        <span>🖨️</span>
+                        <span></span>
                         <span>Print</span>
                     </button>
                 </div>
@@ -178,21 +140,21 @@
                     
                     <div class="job-meta">
                         <div class="job-meta-item">
-                            <div class="job-meta-icon">🏢</div>
+                            <div class="job-meta-icon"></div>
                             <div>
                                 <div class="job-meta-label">Department</div>
                                 <div class="job-meta-value">IT</div>
                             </div>
                         </div>
                         <div class="job-meta-item">
-                            <div class="job-meta-icon">👤</div>
+                            <div class="job-meta-icon"></div>
                             <div>
                                 <div class="job-meta-label">Reports To</div>
                                 <div class="job-meta-value">Director of IT</div>
                             </div>
                         </div>
                         <div class="job-meta-item">
-                            <div class="job-meta-icon">📍</div>
+                            <div class="job-meta-icon"></div>
                             <div>
                                 <div class="job-meta-label">Location</div>
                                 <div class="job-meta-value">Hybrid (4 onsite, 1 remote)</div>
@@ -210,19 +172,19 @@
                     <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">KEY FOCUS AREAS</h4>
                     <div class="focus-areas">
                         <div class="focus-area">
-                            <div class="focus-area-icon">🛡️</div>
+                            <div class="focus-area-icon"></div>
                             <div class="focus-area-title">Cybersecurity & XDR</div>
                         </div>
                         <div class="focus-area">
-                            <div class="focus-area-icon">☁️</div>
+                            <div class="focus-area-icon"></div>
                             <div class="focus-area-title">Microsoft 365 & Cloud</div>
                         </div>
                         <div class="focus-area">
-                            <div class="focus-area-icon">🌐</div>
+                            <div class="focus-area-icon"></div>
                             <div class="focus-area-title">Network Infrastructure</div>
                         </div>
                         <div class="focus-area">
-                            <div class="focus-area-icon">📞</div>
+                            <div class="focus-area-icon"></div>
                             <div class="focus-area-title">IT Support & Telephony</div>
                         </div>
                     </div>
@@ -278,85 +240,85 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="pages/cybersecurity-fundamentals.html">🛡️ Cybersecurity Fundamentals</a></td>
+                                <td><a href="pages/cybersecurity-fundamentals.html"> Cybersecurity Fundamentals</a></td>
                                 <td>CIA Triad, NIST, ISO 27001, MITRE ATT&CK, Kill Chain</td>
                                 <td>30+</td>
                                 <td>3-4 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/incident-response.html">🚨 Incident Response</a></td>
+                                <td><a href="pages/incident-response.html"> Incident Response</a></td>
                                 <td>IR Lifecycle, Playbooks, Threat Monitoring, XDR</td>
                                 <td>35+</td>
                                 <td>4-5 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/endpoint-protection.html">💻 Endpoint Protection</a></td>
+                                <td><a href="pages/endpoint-protection.html"> Endpoint Protection</a></td>
                                 <td>Defender for Endpoint, Intune, MDM, EDR</td>
                                 <td>30+</td>
                                 <td>3-4 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/microsoft-365.html">☁️ Microsoft 365 Admin</a></td>
+                                <td><a href="pages/microsoft-365.html"> Microsoft 365 Admin</a></td>
                                 <td>Azure AD, Conditional Access, Licensing, Exchange</td>
                                 <td>35+</td>
                                 <td>4-5 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/network-infrastructure.html">🌐 Network Infrastructure</a></td>
+                                <td><a href="pages/network-infrastructure.html"> Network Infrastructure</a></td>
                                 <td>Cisco Meraki, LAN/WAN, Firewall, Wireless</td>
                                 <td>25+</td>
                                 <td>3 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/backup-dr.html">💾 Backup & DR</a></td>
+                                <td><a href="pages/backup-dr.html"> Backup & DR</a></td>
                                 <td>BCP, DRP, RTO/RPO, Testing Strategies</td>
                                 <td>25+</td>
                                 <td>2-3 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/telephony.html">📞 Telephony</a></td>
+                                <td><a href="pages/telephony.html"> Telephony</a></td>
                                 <td>8x8, VoIP, Teams, Zoom, eFax</td>
                                 <td>20+</td>
                                 <td>2 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/vulnerability-management.html">🔍 Vulnerability Management</a></td>
+                                <td><a href="pages/vulnerability-management.html"> Vulnerability Management</a></td>
                                 <td>Nessus, CVSS, Patch Management, Scanning</td>
                                 <td>25+</td>
                                 <td>2-3 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/identity-access.html">🔐 Identity & Access</a></td>
+                                <td><a href="pages/identity-access.html"> Identity & Access</a></td>
                                 <td>Azure AD, MFA, SSO, PIM, PAM</td>
                                 <td>30+</td>
                                 <td>3-4 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/dlp-compliance.html">📋 DLP & Compliance</a></td>
+                                <td><a href="pages/dlp-compliance.html"> DLP & Compliance</a></td>
                                 <td>Purview, Sensitivity Labels, PIPEDA, FIPPA</td>
                                 <td>25+</td>
                                 <td>2-3 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/security-awareness.html">🎓 Security Awareness</a></td>
+                                <td><a href="pages/security-awareness.html"> Security Awareness</a></td>
                                 <td>Phishing Simulations, Training, Metrics</td>
                                 <td>20+</td>
                                 <td>2 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/behavioral-interview.html">🗣️ Behavioral Interview</a></td>
+                                <td><a href="pages/behavioral-interview.html"> Behavioral Interview</a></td>
                                 <td>STAR Method, Leadership, Problem-Solving</td>
                                 <td>30+</td>
                                 <td>3-4 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/scenario-exercises.html">📝 Scenario Exercises</a></td>
+                                <td><a href="pages/scenario-exercises.html"> Scenario Exercises</a></td>
                                 <td>Hands-on Labs, Troubleshooting, Documentation</td>
                                 <td>15+</td>
                                 <td>3-4 hrs</td>
                             </tr>
                             <tr>
-                                <td><a href="pages/thirty-sixty-ninety.html">📅 30-60-90 Day Plan</a></td>
+                                <td><a href="pages/thirty-sixty-ninety.html"> 30-60-90 Day Plan</a></td>
                                 <td>First 90 Days Strategy, Questions to Ask</td>
                                 <td>10+</td>
                                 <td>1-2 hrs</td>
@@ -519,7 +481,7 @@
                 <!-- Quick Tips -->
                 <h2>Quick Interview Tips</h2>
                 <div class="alert info">
-                    <div class="alert-icon">💡</div>
+                    <div class="alert-icon">•</div>
                     <div class="alert-content">
                         <div class="alert-title">Structure Your Answers</div>
                         <div class="alert-text">Use the STAR method (Situation, Task, Action, Result) for behavioral questions. For technical questions, start with the concept, then provide practical examples.</div>
@@ -527,7 +489,7 @@
                 </div>
                 
                 <div class="alert success">
-                    <div class="alert-icon">✓</div>
+                    <div class="alert-icon"></div>
                     <div class="alert-content">
                         <div class="alert-title">Connect to IBU's Context</div>
                         <div class="alert-text">Always relate your answers to the university environment - diverse users (students, faculty, staff), compliance requirements (PIPEDA, FIPPA), and the specific tools mentioned (Meraki, 8x8, M365).</div>
@@ -535,7 +497,7 @@
                 </div>
                 
                 <div class="alert warning">
-                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-icon">!</div>
                     <div class="alert-content">
                         <div class="alert-title">Avoid Common Mistakes</div>
                         <div class="alert-text">Don't be too theoretical - provide concrete examples. Don't overwhelm with jargon - explain complex concepts clearly. Don't forget to ask questions at the end.</div>

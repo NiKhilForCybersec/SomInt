@@ -3,427 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supplementary Study Guide - IBU Interview Gaps</title>
+    <title>Supplementary Guide - IBU Interview Preparation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-tertiary: #21262d;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
-            --accent-cyan: #58a6ff;
-            --accent-green: #3fb950;
-            --accent-orange: #d29922;
-            --accent-red: #f85149;
-            --border-color: #30363d;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 2rem;
-        }
-        
-        .container { max-width: 1200px; margin: 0 auto; }
-        
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-        
-        h2 {
-            font-family: 'Rajdhani', sans-serif;
-            color: var(--accent-green);
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        h3 {
-            color: var(--accent-cyan);
-            margin: 1.5rem 0 0.5rem;
-        }
-        
-        .alert {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent-orange);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        .alert-red { border-left-color: var(--accent-red); }
-        .alert-green { border-left-color: var(--accent-green); }
-        
-        .card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-        }
-        
-        code {
-            background: var(--bg-tertiary);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: var(--accent-green);
-        }
-        
-        pre {
-            background: var(--bg-tertiary);
-            padding: 1rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 1rem 0;
-            border: 1px solid var(--border-color);
-        }
-        
-        pre code {
-            background: none;
-            padding: 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-        
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border: 1px solid var(--border-color);
-        }
-        
-        th {
-            background: var(--bg-tertiary);
-            color: var(--accent-cyan);
-        }
-        
-        ul, ol {
-            margin: 0.5rem 0 0.5rem 1.5rem;
-        }
-        
-        li { margin: 0.25rem 0; }
-        
-        .highlight { color: var(--accent-cyan); font-weight: bold; }
-        .warning { color: var(--accent-orange); }
-        .success { color: var(--accent-green); }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🚨 SUPPLEMENTARY STUDY GUIDE</h1>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Critical gaps to fill before your IBU interview - Study Time: 2-3 hours</p>
-        
-        <div class="alert alert-red">
-            <strong>⚠️ HIGH PRIORITY GAPS</strong><br>
-            These topics are specifically mentioned in the job posting but have minimal coverage in the main guide. Study these first!
-        </div>
-        
-        <!-- SECTION 1: POLYCOM -->
-        <h2>1. Polycom VoIP Phones (HIGH PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>What You Need to Know</h3>
-            <p>IBU uses <strong>Polycom phones with 8x8</strong>. Polycom is a leading VoIP hardware manufacturer (now part of HP/Poly).</p>
-            
-            <h3>Common Polycom Models in Enterprise</h3>
-            <table>
-                <tr><th>Model</th><th>Use Case</th><th>Key Features</th></tr>
-                <tr><td>VVX 150/250</td><td>Basic desk phone</td><td>2-4 lines, HD audio</td></tr>
-                <tr><td>VVX 350/450</td><td>Standard office</td><td>6-12 lines, color display, Bluetooth</td></tr>
-                <tr><td>CCX 400/500/600</td><td>Teams-native phones</td><td>Built for Microsoft Teams</td></tr>
-                <tr><td>Trio 8500/8800</td><td>Conference rooms</td><td>360° pickup, daisy-chain capable</td></tr>
-            </table>
-            
-            <h3>Provisioning Polycom Phones with 8x8</h3>
-            <ol>
-                <li><strong>Factory reset</strong> the phone (if previously used)</li>
-                <li><strong>Connect to network</strong> - DHCP assigns IP, phone gets provisioning URL</li>
-                <li><strong>8x8 Admin Console</strong> → Phones → Add Device → Enter MAC address</li>
-                <li><strong>Assign to user</strong> - Phone auto-downloads config from 8x8 cloud</li>
-                <li><strong>Test</strong> - Verify dial tone, inbound/outbound calls, voicemail</li>
-            </ol>
-            
-            <h3>Common Troubleshooting</h3>
-            <table>
-                <tr><th>Issue</th><th>Cause</th><th>Solution</th></tr>
-                <tr><td>No dial tone</td><td>Registration failed</td><td>Check network, verify MAC in 8x8</td></tr>
-                <tr><td>One-way audio</td><td>NAT/firewall issue</td><td>Check SIP ALG settings, port forwarding</td></tr>
-                <tr><td>Echo/feedback</td><td>Audio settings</td><td>Adjust sidetone, check handset</td></tr>
-                <tr><td>Can't transfer calls</td><td>Feature not enabled</td><td>Check user permissions in 8x8 admin</td></tr>
-            </table>
-            
-            <h3>Interview Question & Answer</h3>
-            <p><strong>Q: "A faculty member says their Polycom phone isn't ringing. How do you troubleshoot?"</strong></p>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">
-                <p>"I'd take a systematic approach:</p>
-                <ol>
-                    <li><strong>Check physical:</strong> Is the phone powered on? Check Ethernet cable, PoE switch port</li>
-                    <li><strong>Check registration:</strong> Does the phone display show 'Registered' or an error? Look at the phone's status screen</li>
-                    <li><strong>Check 8x8 Admin:</strong> Is the phone showing online in the admin console? Is it assigned to the correct user?</li>
-                    <li><strong>Check DND:</strong> Is Do Not Disturb enabled? Check both on the phone and in 8x8 user settings</li>
-                    <li><strong>Check call forwarding:</strong> Are calls being forwarded elsewhere?</li>
-                    <li><strong>Test:</strong> Call from my cell to isolate if it's inbound-only or all calls</li>
-                </ol>
-                <p>Usually it's either DND accidentally enabled or a network registration issue."</p>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item" data-page="network-infrastructure">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item active" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
         
-        <!-- SECTION 2: ZOOM ADMIN -->
-        <h2>2. Zoom Enterprise Administration (HIGH PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>Zoom Admin Portal Key Areas</h3>
-            <table>
-                <tr><th>Section</th><th>What You Manage</th></tr>
-                <tr><td>User Management</td><td>Add/remove users, assign licenses, set roles</td></tr>
-                <tr><td>Account Settings</td><td>Default meeting settings, security, recording policies</td></tr>
-                <tr><td>Room Management</td><td>Zoom Rooms for conference spaces</td></tr>
-                <tr><td>Reports</td><td>Usage analytics, meeting history, registration</td></tr>
-                <tr><td>IM Management</td><td>Zoom Chat settings and policies</td></tr>
-            </table>
+        <main class="main-content">
+            <header class="content-header">
+                <div class="breadcrumb">
+                    <a href="../index.html" class="breadcrumb-item">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item current">Supplementary Guide</span>
+                </div>
+            </header>
             
-            <h3>Critical Security Settings for a University</h3>
-            <ul>
-                <li><strong>Waiting rooms:</strong> Enable by default - prevents Zoom bombing</li>
-                <li><strong>Passcodes:</strong> Require for all meetings</li>
-                <li><strong>Authentication:</strong> Require sign-in for external participants</li>
-                <li><strong>Screen sharing:</strong> Host only by default</li>
-                <li><strong>Recording:</strong> Disable local recording, enable cloud with retention policy</li>
-                <li><strong>Chat:</strong> Disable file transfer in meetings</li>
-                <li><strong>SSO:</strong> Integrate with Azure AD for single sign-on</li>
-            </ul>
-            
-            <h3>Zoom SSO Integration with Azure AD</h3>
-            <ol>
-                <li>In Zoom Admin → Single Sign-On → Enable SAML</li>
-                <li>In Azure AD → Enterprise Apps → Add Zoom</li>
-                <li>Configure SAML: Copy metadata URLs between platforms</li>
-                <li>Map attributes: email, displayName, department</li>
-                <li>Test with a pilot user before enforcing</li>
-            </ol>
-            
-            <h3>Interview Question & Answer</h3>
-            <p><strong>Q: "How would you prevent Zoom bombing for faculty lectures?"</strong></p>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">
-                <p>"Multiple layers of protection:</p>
-                <ol>
-                    <li><strong>Waiting rooms:</strong> All attendees wait until host admits them</li>
-                    <li><strong>Passcodes:</strong> Required, shared only through LMS (not public posts)</li>
-                    <li><strong>Authentication:</strong> Require participants to be signed into their IBU account</li>
-                    <li><strong>Lock meeting:</strong> Train faculty to lock once class starts</li>
-                    <li><strong>Disable join before host:</strong> Prevents early troublemakers</li>
-                    <li><strong>Screen sharing host-only:</strong> Students can't hijack the screen</li>
-                </ol>
-                <p>I'd also provide faculty training and a quick-reference guide for removing disruptive participants."</p>
-            </div>
-        </div>
-        
-        <!-- SECTION 3: TEAMS ROOMS -->
-        <h2>3. Microsoft Teams Rooms & AV (MEDIUM PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>Teams Rooms Basics</h3>
-            <p>Teams Rooms are dedicated meeting room devices running a specialized Teams client. They typically include:</p>
-            <ul>
-                <li><strong>Compute unit:</strong> Mini PC or integrated device (Logitech, Poly, Crestron)</li>
-                <li><strong>Touch controller:</strong> Tablet for starting/controlling meetings</li>
-                <li><strong>Camera:</strong> USB camera or integrated</li>
-                <li><strong>Speakers/Mic:</strong> Conference speakerphone or ceiling mics</li>
-                <li><strong>Display:</strong> TV or projector</li>
-            </ul>
-            
-            <h3>Teams Rooms Administration</h3>
-            <ul>
-                <li><strong>Teams Admin Center:</strong> Teams devices → Teams Rooms</li>
-                <li><strong>Pro Management Portal:</strong> If you have Teams Rooms Pro license</li>
-                <li><strong>Resource accounts:</strong> Each room needs a resource account with Room license</li>
-                <li><strong>Configuration profiles:</strong> Standardize settings across rooms</li>
-            </ul>
-            
-            <h3>Common Issues & Solutions</h3>
-            <table>
-                <tr><th>Issue</th><th>Solution</th></tr>
-                <tr><td>Room shows offline</td><td>Check network, restart device, verify account credentials</td></tr>
-                <tr><td>No audio in calls</td><td>Check USB connections, audio device settings</td></tr>
-                <tr><td>Can't join meetings</td><td>Verify resource account license, check calendar sync</td></tr>
-                <tr><td>Camera not working</td><td>USB connection, driver update, Teams app restart</td></tr>
-            </table>
-        </div>
-        
-        <!-- SECTION 4: KQL QUERIES -->
-        <h2>4. KQL Query Examples for Microsoft Sentinel (MEDIUM PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>Essential KQL Queries You Should Know</h3>
-            
-            <h4>1. Failed Sign-in Attempts (Brute Force Detection)</h4>
-            <pre><code>SigninLogs
-| where ResultType != 0  // Non-successful logins
+            <div class="content-body">
+                <h1>Supplementary Study Guide</h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Critical gaps to fill before your IBU interview - Study Time: 2-3 hours
+                </p>
+                
+                <div class="alert-box alert-warning">
+                    <div class="alert-icon">!</div>
+                    <div class="alert-content">
+                        <strong>High Priority Gaps</strong><br>
+                        These topics are specifically mentioned in the job posting but need extra study. Focus here first!
+                    </div>
+                </div>
+                
+                <h2>1. Polycom VoIP Phones</h2>
+                
+                <div class="card">
+                    <h3>What You Need to Know</h3>
+                    <p>IBU uses <strong>Polycom phones with 8x8</strong>. Polycom is a leading VoIP hardware manufacturer (now part of HP/Poly).</p>
+                    
+                    <h4>Common Polycom Models</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Model</th><th>Use Case</th><th>Key Features</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>VVX 150/250</td><td>Basic desk phone</td><td>2-4 lines, HD audio</td></tr>
+                            <tr><td>VVX 350/450</td><td>Standard office</td><td>6-12 lines, color display, Bluetooth</td></tr>
+                            <tr><td>CCX 400/500/600</td><td>Teams-native phones</td><td>Built for Microsoft Teams</td></tr>
+                            <tr><td>Trio 8500/8800</td><td>Conference rooms</td><td>360° pickup, daisy-chain capable</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <h4>Provisioning with 8x8</h4>
+                    <ol>
+                        <li>Factory reset the phone (if previously used)</li>
+                        <li>Connect to network - DHCP assigns IP, phone gets provisioning URL</li>
+                        <li>8x8 Admin Console → Phones → Add Device → Enter MAC address</li>
+                        <li>Assign to user - Phone auto-downloads config from 8x8 cloud</li>
+                        <li>Test - Verify dial tone, inbound/outbound calls, voicemail</li>
+                    </ol>
+                    
+                    <h4>Common Troubleshooting</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Issue</th><th>Cause</th><th>Solution</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>No dial tone</td><td>Registration failed</td><td>Check network, verify MAC in 8x8</td></tr>
+                            <tr><td>One-way audio</td><td>NAT/firewall issue</td><td>Check SIP ALG settings, port forwarding</td></tr>
+                            <tr><td>Echo/feedback</td><td>Audio settings</td><td>Adjust sidetone, check handset</td></tr>
+                            <tr><td>Can't transfer calls</td><td>Feature not enabled</td><td>Check user permissions in 8x8 admin</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="question-card" id="q1">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q1</span>
+                            <span>A faculty member says their Polycom phone isn't ringing. How do you troubleshoot?</span>
+                        </div>
+                        <span class="question-toggle"></span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"I'd take a systematic approach:</p>
+                                <ol>
+                                    <li><strong>Check physical:</strong> Is the phone powered on? Check Ethernet cable, PoE switch port</li>
+                                    <li><strong>Check registration:</strong> Does the phone display show 'Registered' or an error?</li>
+                                    <li><strong>Check 8x8 Admin:</strong> Is the phone showing online? Is it assigned correctly?</li>
+                                    <li><strong>Check DND:</strong> Is Do Not Disturb enabled on phone or in 8x8 settings?</li>
+                                    <li><strong>Check call forwarding:</strong> Are calls being forwarded elsewhere?</li>
+                                    <li><strong>Test:</strong> Call from my cell to isolate if it's inbound-only or all calls</li>
+                                </ol>
+                                <p>Usually it's either DND accidentally enabled or a network registration issue."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>2. Zoom Enterprise Administration</h2>
+                
+                <div class="card">
+                    <h3>Zoom Admin Portal Key Areas</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Section</th><th>What You Manage</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>User Management</td><td>Add/remove users, assign licenses, set roles</td></tr>
+                            <tr><td>Account Settings</td><td>Default meeting settings, security, recording policies</td></tr>
+                            <tr><td>Room Management</td><td>Zoom Rooms for conference spaces</td></tr>
+                            <tr><td>Reports</td><td>Usage analytics, meeting history</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <h4>Critical Security Settings for a University</h4>
+                    <ul class="key-points">
+                        <li><strong>Waiting rooms:</strong> Enable by default - prevents Zoom bombing</li>
+                        <li><strong>Passcodes:</strong> Require for all meetings</li>
+                        <li><strong>Authentication:</strong> Require sign-in for external participants</li>
+                        <li><strong>Screen sharing:</strong> Host only by default</li>
+                        <li><strong>Recording:</strong> Disable local, enable cloud with retention policy</li>
+                        <li><strong>SSO:</strong> Integrate with Azure AD for single sign-on</li>
+                    </ul>
+                </div>
+                
+                <div class="question-card" id="q2">
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span class="question-number">Q2</span>
+                            <span>How would you prevent Zoom bombing for faculty lectures?</span>
+                        </div>
+                        <span class="question-toggle"></span>
+                    </div>
+                    <div class="question-content">
+                        <div class="question-section">
+                            <div class="question-section-title">Sample Answer</div>
+                            <div class="answer-text">
+                                <p>"Multiple layers of protection:</p>
+                                <ol>
+                                    <li><strong>Waiting rooms:</strong> All attendees wait until host admits them</li>
+                                    <li><strong>Passcodes:</strong> Required, shared only through LMS (not public posts)</li>
+                                    <li><strong>Authentication:</strong> Require participants to be signed into their IBU account</li>
+                                    <li><strong>Lock meeting:</strong> Train faculty to lock once class starts</li>
+                                    <li><strong>Disable join before host:</strong> Prevents early troublemakers</li>
+                                    <li><strong>Screen sharing host-only:</strong> Students can't hijack the screen</li>
+                                </ol>
+                                <p>I'd also provide faculty training and a quick-reference guide."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>3. KQL Query Examples for Microsoft Sentinel</h2>
+                
+                <div class="card">
+                    <h3>Essential KQL Queries</h3>
+                    
+                    <h4>1. Failed Sign-in Attempts (Brute Force Detection)</h4>
+                    <pre><code>SigninLogs
+| where ResultType != 0
 | where TimeGenerated > ago(24h)
 | summarize FailedAttempts = count() by UserPrincipalName, IPAddress
 | where FailedAttempts > 10
 | order by FailedAttempts desc</code></pre>
-            
-            <h4>2. Impossible Travel Detection</h4>
-            <pre><code>SigninLogs
-| where TimeGenerated > ago(7d)
-| where ResultType == 0  // Successful logins only
-| summarize Locations = make_set(Location), 
-            LoginCount = count() by UserPrincipalName
-| where array_length(Locations) > 3</code></pre>
-            
-            <h4>3. Malware Detected on Endpoints</h4>
-            <pre><code>DeviceEvents
+                    
+                    <h4>2. Malware Detected on Endpoints</h4>
+                    <pre><code>DeviceEvents
 | where ActionType == "AntivirusDetection"
 | where TimeGenerated > ago(24h)
-| project TimeGenerated, DeviceName, FileName, 
-          FolderPath, SHA256, AccountName
+| project TimeGenerated, DeviceName, FileName, FolderPath, SHA256
 | order by TimeGenerated desc</code></pre>
-            
-            <h4>4. New Admin Role Assignments</h4>
-            <pre><code>AuditLogs
+                    
+                    <h4>3. New Admin Role Assignments</h4>
+                    <pre><code>AuditLogs
 | where OperationName == "Add member to role"
 | where TimeGenerated > ago(7d)
 | extend RoleName = tostring(TargetResources[0].displayName)
-| extend AddedUser = tostring(TargetResources[0].userPrincipalName)
-| project TimeGenerated, RoleName, AddedUser, InitiatedBy</code></pre>
-            
-            <h4>5. Data Exfiltration - Large Downloads</h4>
-            <pre><code>OfficeActivity
+| project TimeGenerated, RoleName, InitiatedBy</code></pre>
+                    
+                    <h4>4. Large File Downloads (Data Exfiltration)</h4>
+                    <pre><code>OfficeActivity
 | where Operation == "FileDownloaded"
 | where TimeGenerated > ago(24h)
-| summarize DownloadCount = count(), 
-            TotalSize = sum(FileSize) by UserId
+| summarize DownloadCount = count(), TotalSize = sum(FileSize) by UserId
 | where DownloadCount > 100 or TotalSize > 1000000000
 | order by TotalSize desc</code></pre>
-            
-            <h3>Interview Question & Answer</h3>
-            <p><strong>Q: "How would you use KQL to detect a compromised account?"</strong></p>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">
-                <p>"I'd look for several indicators:</p>
-                <ol>
-                    <li><strong>Impossible travel:</strong> Logins from geographically distant locations within short time</li>
-                    <li><strong>Failed then success:</strong> Multiple failures followed by success = password guessed</li>
-                    <li><strong>Unusual timing:</strong> Logins at 3 AM for a user who normally works 9-5</li>
-                    <li><strong>New devices/apps:</strong> First-time access from unknown device or legacy auth</li>
-                    <li><strong>Inbox rules:</strong> New forwarding rules (attackers hide their tracks)</li>
-                </ol>
-                <p>I'd create a hunting query combining these signals and potentially build an analytics rule to alert automatically."</p>
-            </div>
-        </div>
-        
-        <!-- SECTION 5: eFAX -->
-        <h2>5. eFax Administration (MEDIUM PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>What is eFax?</h3>
-            <p>eFax is a cloud fax service that sends/receives faxes via email or web portal - no physical fax machine needed.</p>
-            
-            <h3>Why Universities Still Use Fax</h3>
-            <ul>
-                <li><strong>Registrar:</strong> Transcript requests from other institutions</li>
-                <li><strong>Financial Aid:</strong> Government forms, verification documents</li>
-                <li><strong>HR:</strong> Background check authorizations</li>
-                <li><strong>Legal:</strong> Some documents still require fax for compliance</li>
-            </ul>
-            
-            <h3>eFax Admin Tasks</h3>
-            <ul>
-                <li>Assign fax numbers to users/departments</li>
-                <li>Configure email delivery (faxes arrive as PDF attachments)</li>
-                <li>Set retention policies for fax history</li>
-                <li>Manage cover page templates</li>
-                <li>Monitor usage and billing</li>
-            </ul>
-            
-            <h3>Common Issues</h3>
-            <table>
-                <tr><th>Issue</th><th>Solution</th></tr>
-                <tr><td>Fax not received</td><td>Check spam folder, verify fax number, check sender's machine</td></tr>
-                <tr><td>Fax failed to send</td><td>Verify recipient number, check file format (PDF best)</td></tr>
-                <tr><td>Poor quality</td><td>Ensure original is high resolution, use PDF not image</td></tr>
-            </table>
-        </div>
-        
-        <!-- SECTION 6: USER SUPPORT -->
-        <h2>6. Onsite IT Support Scenarios (MEDIUM PRIORITY)</h2>
-        
-        <div class="card">
-            <h3>Common Support Tickets You'll Handle</h3>
-            <p>The job mentions "Onsite IT Support" - expect questions about day-to-day troubleshooting:</p>
-            
-            <h4>Scenario 1: "My computer is slow"</h4>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin: 0.5rem 0;">
-                <ol>
-                    <li>Check Task Manager - what's using CPU/RAM?</li>
-                    <li>Check for pending Windows updates or restarts</li>
-                    <li>Check disk space (C: drive full?)</li>
-                    <li>Check for malware via Defender scan</li>
-                    <li>Check startup programs - disable unnecessary ones</li>
-                    <li>If old hardware: recommend replacement or RAM upgrade</li>
-                </ol>
-            </div>
-            
-            <h4>Scenario 2: "I can't connect to WiFi"</h4>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin: 0.5rem 0;">
-                <ol>
-                    <li>Verify they're connecting to correct SSID (Staff vs Guest)</li>
-                    <li>Check if other users in same area are affected</li>
-                    <li>Forget and reconnect to network</li>
-                    <li>Check Meraki dashboard for AP status</li>
-                    <li>Verify 802.1X credentials if enterprise auth</li>
-                    <li>Try different device to isolate user device vs network issue</li>
-                </ol>
-            </div>
-            
-            <h4>Scenario 3: "Outlook won't open / is frozen"</h4>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin: 0.5rem 0;">
-                <ol>
-                    <li>Close and reopen Outlook</li>
-                    <li>Try Outlook in Safe Mode: <code>outlook.exe /safe</code></li>
-                    <li>Check for Office updates</li>
-                    <li>Disable add-ins one by one</li>
-                    <li>Repair Office installation</li>
-                    <li>Delete and recreate Outlook profile (last resort)</li>
-                </ol>
-            </div>
-            
-            <h4>Scenario 4: "I think I clicked a phishing link"</h4>
-            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; margin: 0.5rem 0;">
-                <ol>
-                    <li><strong>Don't panic</strong> - thank them for reporting!</li>
-                    <li>Ask: Did you enter any credentials? Download anything?</li>
-                    <li>If credentials entered: Force password reset immediately</li>
-                    <li>If download: Disconnect from network, run full scan</li>
-                    <li>Check Azure AD sign-in logs for suspicious activity</li>
-                    <li>Report the phishing email to security team</li>
-                    <li>Document the incident</li>
-                </ol>
-            </div>
-        </div>
-        
-        <!-- SECTION 7: QUICK REFERENCE -->
-        <h2>7. Quick Reference Commands</h2>
-        
-        <div class="card">
-            <h3>PowerShell Commands to Memorize</h3>
-            
-            <h4>M365 User Management</h4>
-            <pre><code># Connect to M365
+                </div>
+                
+                <h2>4. PowerShell Commands to Memorize</h2>
+                
+                <div class="card">
+                    <h4>M365 User Management</h4>
+                    <pre><code># Connect to M365
 Connect-MgGraph -Scopes "User.ReadWrite.All"
 
 # Get user info
@@ -433,73 +297,102 @@ Get-MgUser -UserId "user@ibu.ca"
 $password = @{ Password = "TempP@ss123!"; ForceChangePasswordNextSignIn = $true }
 Update-MgUser -UserId "user@ibu.ca" -PasswordProfile $password
 
-# Check license
-Get-MgUserLicenseDetail -UserId "user@ibu.ca"
-
 # Block sign-in
 Update-MgUser -UserId "user@ibu.ca" -AccountEnabled:$false</code></pre>
-            
-            <h4>Exchange Online</h4>
-            <pre><code># Connect
+                    
+                    <h4>Exchange Online</h4>
+                    <pre><code># Connect
 Connect-ExchangeOnline
 
 # Check mailbox size
 Get-MailboxStatistics -Identity "user@ibu.ca" | Select TotalItemSize
 
-# Add full access to another mailbox
-Add-MailboxPermission -Identity "shared@ibu.ca" -User "user@ibu.ca" -AccessRights FullAccess
-
-# Convert to shared mailbox (for departing employee)
+# Convert to shared mailbox (departing employee)
 Set-Mailbox -Identity "departed@ibu.ca" -Type Shared
 
 # Search for phishing emails
-Get-MessageTrace -SenderAddress "attacker@evil.com" -StartDate (Get-Date).AddDays(-7) -EndDate (Get-Date)</code></pre>
-            
-            <h4>Intune/Endpoint</h4>
-            <pre><code># Force device sync
-Invoke-IntuneManagedDeviceSyncDevice -managedDeviceId "device-id"
-
-# Get device compliance status
-Get-MgDeviceManagementManagedDevice | Where-Object {$_.ComplianceState -ne "compliant"}</code></pre>
-        </div>
-        
-        <!-- FINAL CHECKLIST -->
-        <h2>📋 Pre-Interview Checklist</h2>
-        
-        <div class="card">
-            <h3>Night Before the Interview</h3>
-            <ul>
-                <li>☐ Review main guide: Focus on incident response & M365 sections</li>
-                <li>☐ Review this supplement: Polycom, Zoom, KQL queries</li>
-                <li>☐ Practice 3 STAR stories out loud</li>
-                <li>☐ Review 30-60-90 day plan</li>
-                <li>☐ Prepare 5 questions to ask them</li>
-                <li>☐ Research recent IBU news</li>
-            </ul>
-            
-            <h3>Day of Interview</h3>
-            <ul>
-                <li>☐ Arrive 15 minutes early</li>
-                <li>☐ Bring printed resume copies</li>
-                <li>☐ Have examples of documentation you've created (sanitized)</li>
-                <li>☐ Remember: They want you to succeed!</li>
-            </ul>
-            
-            <h3>Key Phrases to Use</h3>
-            <ul>
-                <li>"In my experience implementing DLP at Siemens..."</li>
-                <li>"I would take a phased approach..."</li>
-                <li>"My first priority would be..."</li>
-                <li>"I'd want to understand the current state before making changes..."</li>
-                <li>"I believe in balancing security with usability..."</li>
-            </ul>
-        </div>
-        
-        <div class="alert alert-green">
-            <strong>✅ YOU'RE READY!</strong><br>
-            With the main guide + this supplement, you have comprehensive coverage of all job requirements. Trust your experience, be authentic, and show them the value you'll bring to IBU. Good luck! 🎯
-        </div>
-        
+Get-MessageTrace -SenderAddress "attacker@evil.com" -StartDate (Get-Date).AddDays(-7)</code></pre>
+                </div>
+                
+                <h2>5. Common Helpdesk Scenarios</h2>
+                
+                <div class="card">
+                    <h4>Scenario: "My computer is slow"</h4>
+                    <ol>
+                        <li>Check Task Manager - what's using CPU/RAM?</li>
+                        <li>Check for pending Windows updates or restarts</li>
+                        <li>Check disk space (C: drive full?)</li>
+                        <li>Check for malware via Defender scan</li>
+                        <li>Check startup programs - disable unnecessary ones</li>
+                    </ol>
+                    
+                    <h4>Scenario: "I can't connect to WiFi"</h4>
+                    <ol>
+                        <li>Verify correct SSID (Staff vs Guest)</li>
+                        <li>Check if other users affected (network vs device)</li>
+                        <li>Forget and reconnect to network</li>
+                        <li>Check Meraki dashboard for AP status</li>
+                        <li>Verify 802.1X credentials</li>
+                    </ol>
+                    
+                    <h4>Scenario: "I think I clicked a phishing link"</h4>
+                    <ol>
+                        <li><strong>Don't panic</strong> - thank them for reporting!</li>
+                        <li>Ask: Did you enter credentials? Download anything?</li>
+                        <li>If credentials entered: Force password reset immediately</li>
+                        <li>If download: Disconnect from network, run full scan</li>
+                        <li>Check Azure AD sign-in logs for suspicious activity</li>
+                    </ol>
+                </div>
+                
+                <h2>6. Pre-Interview Checklist</h2>
+                
+                <div class="card">
+                    <h4>Night Before</h4>
+                    <ul class="key-points">
+                        <li> Review main guide: Focus on incident response & M365 sections</li>
+                        <li> Review this supplement: Polycom, Zoom, KQL queries</li>
+                        <li> Practice 3 STAR stories out loud</li>
+                        <li> Review 30-60-90 day plan</li>
+                        <li> Prepare 5 questions to ask them</li>
+                    </ul>
+                    
+                    <h4>Day of Interview</h4>
+                    <ul class="key-points">
+                        <li> Arrive 15 minutes early</li>
+                        <li> Bring printed resume copies</li>
+                        <li> Have examples of documentation you've created</li>
+                        <li> Remember: They want you to succeed!</li>
+                    </ul>
+                    
+                    <h4>Key Phrases to Use</h4>
+                    <ul class="key-points">
+                        <li>"In my experience implementing DLP at Siemens..."</li>
+                        <li>"I would take a phased approach..."</li>
+                        <li>"My first priority would be..."</li>
+                        <li>"I believe in balancing security with usability..."</li>
+                    </ul>
+                </div>
+                
+                <div class="alert-box alert-info">
+                    <div class="alert-icon"></div>
+                    <div class="alert-content">
+                        <strong>You're Ready!</strong><br>
+                        With the main guide + this supplement, you have comprehensive coverage. Trust your experience, be authentic, and show them the value you'll bring to IBU. Good luck! →
+                    </div>
+                </div>
+                
+                <div class="page-navigation">
+                    <a href="thirty-sixty-ninety.html" class="page-nav-btn prev">
+                        <div><div class="page-nav-label">Previous</div><div class="page-nav-title">← 30-60-90 Day Plan</div></div>
+                    </a>
+                    <a href="../index.html" class="page-nav-btn next">
+                        <div><div class="page-nav-label">Back to</div><div class="page-nav-title">Dashboard →</div></div>
+                    </a>
+                </div>
+            </div>
+        </main>
     </div>
+    <script src="../js/main.js"></script>
 </body>
 </html>

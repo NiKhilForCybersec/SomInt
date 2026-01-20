@@ -4,38 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Infrastructure - IBU Interview Preparation</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="app-container">
-        <aside class="sidebar">
+                <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <div class="logo-icon">🛡️</div>
-                    <div><div>IBU SECURITY</div><div class="sidebar-subtitle">Interview Prep Guide</div></div>
+                    <div class="logo-icon">IBU</div>
+                    <div>
+                        <div>Security Interview</div>
+                        <div class="sidebar-subtitle">Preparation Guide</div>
+                    </div>
                 </div>
             </div>
-            <div class="search-container"><div class="search-box"><span class="search-icon">🔍</span><input type="text" placeholder="Search (Ctrl+K)"></div></div>
             <nav class="sidebar-nav">
-                <div class="nav-section"><div class="nav-section-title">Overview</div><div class="nav-item" data-page="index"><span class="nav-icon">🏠</span><span>Dashboard</span></div></div>
-                <div class="nav-section"><div class="nav-section-title">Security</div>
-                    <div class="nav-item" data-page="cybersecurity-fundamentals"><span class="nav-icon">🛡️</span><span>Cybersecurity Fundamentals</span></div>
-                    <div class="nav-item" data-page="incident-response"><span class="nav-icon">🚨</span><span>Incident Response</span></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="../index.html" class="nav-item" data-page="index">
+                        <span class="nav-icon">H</span>
+                        <span>Dashboard</span>
+                    </a>
                 </div>
-                <div class="nav-section"><div class="nav-section-title">Infrastructure</div>
-                    <div class="nav-item" data-page="endpoint-protection"><span class="nav-icon">💻</span><span>Endpoint Protection</span></div>
-                    <div class="nav-item" data-page="microsoft-365"><span class="nav-icon">☁️</span><span>Microsoft 365 Admin</span></div>
-                    <div class="nav-item active" data-page="network-infrastructure"><span class="nav-icon">🌐</span><span>Network Infrastructure</span></div>
-                    <div class="nav-item" data-page="backup-dr"><span class="nav-icon">💾</span><span>Backup & DR</span></div>
-                    <div class="nav-item" data-page="telephony"><span class="nav-icon">📞</span><span>Telephony</span></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Security & Compliance</div>
+                    <a href="cybersecurity-fundamentals.html" class="nav-item" data-page="cybersecurity-fundamentals">
+                        <span class="nav-icon">CF</span>
+                        <span>Cybersecurity Fundamentals</span>
+                    </a>
+                    <a href="incident-response.html" class="nav-item" data-page="incident-response">
+                        <span class="nav-icon">IR</span>
+                        <span>Incident Response</span>
+                    </a>
+                    <a href="vulnerability-management.html" class="nav-item" data-page="vulnerability-management">
+                        <span class="nav-icon">VM</span>
+                        <span>Vulnerability Management</span>
+                    </a>
+                    <a href="identity-access.html" class="nav-item" data-page="identity-access">
+                        <span class="nav-icon">IA</span>
+                        <span>Identity & Access</span>
+                    </a>
+                    <a href="dlp-compliance.html" class="nav-item" data-page="dlp-compliance">
+                        <span class="nav-icon">DL</span>
+                        <span>DLP & Compliance</span>
+                    </a>
+                    <a href="security-awareness.html" class="nav-item" data-page="security-awareness">
+                        <span class="nav-icon">SA</span>
+                        <span>Security Awareness</span>
+                    </a>
                 </div>
-                <div class="nav-section"><div class="nav-section-title">Interview Prep</div>
-                    <div class="nav-item" data-page="behavioral-interview"><span class="nav-icon">🗣️</span><span>Behavioral Questions</span></div>
-                    <div class="nav-item" data-page="thirty-sixty-ninety"><span class="nav-icon">📅</span><span>30-60-90 Day Plan</span></div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Infrastructure</div>
+                    <a href="endpoint-protection.html" class="nav-item" data-page="endpoint-protection">
+                        <span class="nav-icon">EP</span>
+                        <span>Endpoint Protection</span>
+                    </a>
+                    <a href="microsoft-365.html" class="nav-item" data-page="microsoft-365">
+                        <span class="nav-icon">M3</span>
+                        <span>Microsoft 365</span>
+                    </a>
+                    <a href="network-infrastructure.html" class="nav-item active" data-page="network-infrastructure" class="nav-item active">
+                        <span class="nav-icon">NI</span>
+                        <span>Network Infrastructure</span>
+                    </a>
+                    <a href="backup-dr.html" class="nav-item" data-page="backup-dr">
+                        <span class="nav-icon">DR</span>
+                        <span>Backup & DR</span>
+                    </a>
+                    <a href="telephony.html" class="nav-item" data-page="telephony">
+                        <span class="nav-icon">TP</span>
+                        <span>Telephony</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Interview Prep</div>
+                    <a href="behavioral-interview.html" class="nav-item" data-page="behavioral-interview">
+                        <span class="nav-icon">BI</span>
+                        <span>Behavioral Questions</span>
+                    </a>
+                    <a href="scenario-exercises.html" class="nav-item" data-page="scenario-exercises">
+                        <span class="nav-icon">SE</span>
+                        <span>Scenario Exercises</span>
+                    </a>
+                    <a href="thirty-sixty-ninety.html" class="nav-item" data-page="thirty-sixty-ninety">
+                        <span class="nav-icon">90</span>
+                        <span>30-60-90 Day Plan</span>
+                    </a>
+                    <a href="supplementary-guide.html" class="nav-item" data-page="supplementary-guide">
+                        <span class="nav-icon">SG</span>
+                        <span>Supplementary Guide</span>
+                    </a>
                 </div>
             </nav>
-            <div class="sidebar-footer"><div class="progress-overview"><div class="progress-label"><span>Overall Progress</span><span>0%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width: 0%"></div></div></div></div>
         </aside>
         
         <main class="main-content">
@@ -45,13 +106,13 @@
                     <span class="breadcrumb-item current">Network Infrastructure</span>
                 </div>
                 <div class="header-actions">
-                    <button class="header-btn" id="searchBtn">🔍 Search</button>
+                    <button class="header-btn" id="searchBtn"> Search</button>
                     <button class="header-btn" onclick="toggleAllQuestions(true)">Expand All</button>
                 </div>
             </header>
             
             <div class="content-body">
-                <h1>🌐 Network Infrastructure</h1>
+                <h1>Network Infrastructure</h1>
                 <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Cisco Meraki, LAN/WAN management, firewall configuration, and wireless network security for university environments.</p>
                 
                 <h2>6.1 Cisco Meraki Overview</h2>
@@ -60,25 +121,25 @@
                     <div class="ascii-diagram">
                         <div class="ascii-diagram-title">CISCO MERAKI CLOUD-MANAGED ARCHITECTURE</div>
 <pre>
-                    ┌───────────────────────────────────────┐
-                    │      MERAKI CLOUD DASHBOARD          │
-                    │      dashboard.meraki.com            │
-                    └───────────────────┬───────────────────┘
-                                        │ HTTPS/TLS
-                                        │
-        ┌───────────────────────────────┼───────────────────────────────┐
-        │                               │                               │
-        ▼                               ▼                               ▼
-┌───────────────┐              ┌───────────────┐              ┌───────────────┐
-│  MX SECURITY  │              │  MS SWITCHES  │              │  MR WIRELESS  │
-│   APPLIANCE   │              │               │              │  ACCESS POINTS│
-│               │              │               │              │               │
-│ • Firewall    │              │ • L2/L3       │              │ • 802.11ax    │
-│ • VPN         │              │ • PoE         │              │ • WPA3        │
-│ • IDS/IPS     │              │ • VLAN        │              │ • RADIUS      │
-│ • Content     │              │ • STP         │              │ • Guest       │
-│   Filtering   │              │ • QoS         │              │   Portal      │
-└───────────────┘              └───────────────┘              └───────────────┘
+                    
+                          MERAKI CLOUD DASHBOARD          
+                          dashboard.meraki.com            
+                    
+                                         HTTPS/TLS
+                                        
+        
+                                                                      
+                                                                      
+                            
+  MX SECURITY                  MS SWITCHES                  MR WIRELESS  
+   APPLIANCE                                                ACCESS POINTS
+                                                                         
+ • Firewall                   • L2/L3                      • 802.11ax    
+ • VPN                        • PoE                        • WPA3        
+ • IDS/IPS                    • VLAN                       • RADIUS      
+ • Content                    • STP                        • Guest       
+   Filtering                  • QoS                          Portal      
+                            
 
 KEY BENEFITS:
 • Single pane of glass management      • Zero-touch deployment
@@ -93,28 +154,28 @@ KEY BENEFITS:
                     <div class="ascii-diagram green">
                         <div class="ascii-diagram-title">NETWORK SEGMENTATION - VLAN DESIGN</div>
 <pre>
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                        UNIVERSITY NETWORK VLANS                             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  VLAN 10: MANAGEMENT          VLAN 20: STAFF              VLAN 30: FACULTY │
-│  ┌─────────────────┐          ┌─────────────────┐         ┌────────────────┐│
-│  │ • Network devices│          │ • Admin staff   │         │ • Faculty PCs  ││
-│  │ • Servers (mgmt) │          │ • HR, Finance   │         │ • Research     ││
-│  │ • Highly secure  │          │ • Sensitive data│         │ • Lab systems  ││
-│  └─────────────────┘          └─────────────────┘         └────────────────┘│
-│                                                                             │
-│  VLAN 40: STUDENT             VLAN 50: GUEST              VLAN 60: IOT     │
-│  ┌─────────────────┐          ┌─────────────────┐         ┌────────────────┐│
-│  │ • Student devices│          │ • Visitors      │         │ • Printers     ││
-│  │ • Computer labs  │          │ • Limited access│         │ • AV equipment ││
-│  │ • Internet access│          │ • Internet only │         │ • HVAC/BMS     ││
-│  └─────────────────┘          └─────────────────┘         └────────────────┘│
-│                                                                             │
-│  FIREWALL RULES:                                                            │
-│  • Student → Staff: BLOCKED          • Guest → Internal: BLOCKED            │
-│  • IoT → Internet: RESTRICTED        • Management: ADMIN ONLY               │
-└─────────────────────────────────────────────────────────────────────────────┘
+
+                        UNIVERSITY NETWORK VLANS                             
+
+                                                                             
+  VLAN 10: MANAGEMENT          VLAN 20: STAFF              VLAN 30: FACULTY 
+                     
+   • Network devices           • Admin staff             • Faculty PCs  
+   • Servers (mgmt)            • HR, Finance             • Research     
+   • Highly secure             • Sensitive data          • Lab systems  
+                     
+                                                                             
+  VLAN 40: STUDENT             VLAN 50: GUEST              VLAN 60: IOT     
+                     
+   • Student devices           • Visitors                • Printers     
+   • Computer labs             • Limited access          • AV equipment 
+   • Internet access           • Internet only           • HVAC/BMS     
+                     
+                                                                             
+  FIREWALL RULES:                                                            
+  • Student → Staff: BLOCKED          • Guest → Internal: BLOCKED            
+  • IoT → Internet: RESTRICTED        • Management: ADMIN ONLY               
+
 </pre>
                     </div>
                 </div>
@@ -128,7 +189,7 @@ KEY BENEFITS:
                             <span class="question-number">Q1</span>
                             <span>How would you design network segmentation for a university campus?</span>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -155,7 +216,7 @@ KEY BENEFITS:
                             <span class="question-number">Q2</span>
                             <span>Explain your experience with Cisco Meraki and its advantages.</span>
                         </div>
-                        <span class="question-toggle">▼</span>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -182,8 +243,8 @@ KEY BENEFITS:
                             <span class="question-number">Q3</span>
                             <span>How do you secure a wireless network for diverse users?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -213,8 +274,8 @@ KEY BENEFITS:
                             <span class="question-number">Q4</span>
                             <span>What is 802.1X and how does it improve network security?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -259,8 +320,8 @@ KEY BENEFITS:
                             <span class="question-number">Q5</span>
                             <span>How would you troubleshoot slow network performance in a specific building?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
@@ -312,8 +373,8 @@ KEY BENEFITS:
                             <span class="question-number">Q6</span>
                             <span>What is QoS and why is it important in a university network?</span>
                         </div>
-                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark">🔖</button></div>
-                        <span class="question-toggle">▼</span>
+                        <div class="question-actions"><button class="question-action-btn bookmark-btn" title="Bookmark"></button></div>
+                        <span class="question-toggle"></span>
                     </div>
                     <div class="question-content">
                         <div class="question-section">
