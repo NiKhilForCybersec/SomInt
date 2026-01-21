@@ -14,6 +14,12 @@
         <!-- Sidebar Navigation -->
                 <aside class="sidebar">
             <div class="sidebar-header">
+                <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
                 <div class="sidebar-logo">
                     <div class="logo-icon">IBU</div>
                     <div>
@@ -101,10 +107,18 @@
                 </div>
             </nav>
         </aside>
+        <div class="overlay" id="overlay"></div>
         
         <!-- Main Content -->
         <main class="main-content">
             <header class="content-header">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
                 <div class="breadcrumb">
                     <a href="../index.html" class="breadcrumb-item">Home</a>
                     <span class="breadcrumb-separator">/</span>
@@ -694,9 +708,6 @@
                 </div>
             </div>
         </main>
-    </div>
-    
-    <div class="overlay"></div>
-    <script src="../js/main.js"></script>
+    </div><script src="../js/main.js"></script>
 </body>
 </html>

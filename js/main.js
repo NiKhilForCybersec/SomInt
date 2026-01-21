@@ -708,6 +708,25 @@ class Navigation {
             });
         }
 
+        // Sidebar close button
+        const sidebarClose = document.querySelector('.sidebar-close');
+        if (sidebarClose) {
+            sidebarClose.addEventListener('click', () => {
+                sidebar?.classList.remove('open');
+                overlay?.classList.remove('show');
+            });
+        }
+
+        // Close sidebar on nav item click (mobile)
+        document.querySelectorAll('.sidebar .nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    sidebar?.classList.remove('open');
+                    overlay?.classList.remove('show');
+                }
+            });
+        });
+
         // Nav item clicks
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
@@ -865,7 +884,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     console.log('IBU Interview Preparation loaded successfully!');
+    
+    // Make tables responsive
+    makeTablesResponsive();
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MOBILE RESPONSIVENESS
+// ─────────────────────────────────────────────────────────────────────────────
+function makeTablesResponsive() {
+    // Wrap tables in scrollable containers
+    document.querySelectorAll('table, .data-table').forEach(table => {
+        if (!table.parentElement.classList.contains('table-container')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-container';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        }
+    });
+    
+    // Wrap pre/code blocks for horizontal scrolling
+    document.querySelectorAll('pre').forEach(pre => {
+        if (!pre.parentElement.classList.contains('code-container')) {
+            pre.style.overflowX = 'auto';
+            pre.style.webkitOverflowScrolling = 'touch';
+        }
+    });
+    
+    // Wrap ASCII diagrams
+    document.querySelectorAll('.ascii-diagram').forEach(diagram => {
+        diagram.style.overflowX = 'auto';
+        diagram.style.webkitOverflowScrolling = 'touch';
+    });
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // UTILITY FUNCTIONS
